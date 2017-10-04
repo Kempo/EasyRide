@@ -1,5 +1,6 @@
 import java.io.File;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Manager {
@@ -7,11 +8,7 @@ public class Manager {
     private String destination;
     private String origin;
     private final String URL = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origin + "&destinations=" + destination + "&key=" + KEY;
-    private HashMap<String, Car> drivers = new HashMap<>(); // address, car information (# of spots, current occupants)
-
-    public HashMap<String, Car> getDrivers() {
-        return drivers;
-    }
+    private List<Driver> drivers = new ArrayList<Driver>();
 
     public void loadData(File f) { // method to load information from text file. to be changed later
 
@@ -23,4 +20,5 @@ public class Manager {
     private void setDestination(String s) {
         destination = s.replaceAll(" ", "_");
     }
+    private List<Driver> getDrivers() { return drivers; }
 }

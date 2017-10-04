@@ -1,4 +1,5 @@
 public class EasyRide {
+
     private static Manager m;
 
     public static void main(String[] args) {

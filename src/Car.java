@@ -1,15 +1,16 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Car {
     private final int total;
     private int spots; // begins with the total number of spots open, then it will decrease as occupants are added
-    private ArrayList<Object> occupants; // begins at 0, increases as occupants are assigned to their driver's car
+    private List<Rider> occupants; // begins at 0, increases as occupants are assigned to their driver's car
 
 
-    public Car(int s, ArrayList<Object> o) { //ArrayList<Object> will be changed later
+    public Car(int s, ArrayList<Rider> o) {
         spots = s;
         total = s;
-        occupants = (ArrayList<Object>)o.clone();
+        occupants = (ArrayList<Rider>)o.clone();
     }
 
     public void decreaseSpot() {
@@ -26,7 +27,7 @@ public class Car {
         }
     }
 
-    public ArrayList<Object> getOccupants() {
+    public List<Rider> getOccupants() {
         return occupants;
     }
 
