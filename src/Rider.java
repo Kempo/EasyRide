@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Rider {
     private String name; // name of the rider
     private String address; // his/her address
-    private ArrayList<Car> preferences = new ArrayList<>(); // the list of cars that they prefer (ordered by distance?)
+    private List<Driver> preferences = new ArrayList<>(); // the list of drivers that they prefer (ordered by distance?)
     private Car current; // their current car
 
     public Rider(String n, String a) {
@@ -11,7 +12,7 @@ public class Rider {
         address = a;
     }
 
-    public ArrayList<Car> getPreferences() {
+    public List<Driver> getPreferences() {
         return preferences;
     }
 

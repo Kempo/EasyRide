@@ -1,7 +1,8 @@
 public class Driver {
-    private String address;
-    private String name;
-    private Car car;
+    private String address; // driver's address
+    private String name; // his/her name
+    private Car car; // the car that he has, which contains the # of spots left and current occupants
+
     public Driver(String n, String a, Car c) {
         address = a;
         name = n;
@@ -9,6 +10,8 @@ public class Driver {
     }
 
     public String getAddress() { return address; }
+
     public String getName() { return name; }
+
     public Car getCar() { return car; }
 }
