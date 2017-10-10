@@ -4,7 +4,7 @@ import static spark.Spark.*;
 public class Server {
     public static void main(String[] args)
     {
-        getHerokuAssignedPort();
+        port(getHerokuAssignedPort());
         staticFileLocation("/public");
         get("/ping", (req, res) -> "pong");
     }

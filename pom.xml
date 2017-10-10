@@ -4,8 +4,7 @@
 
     <groupId>com.kempo.easyride</groupId>
     <artifactId>easyride</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <version>1.0</version>
 
     <name>easyride</name>
     <url>http://maven.apache.org</url>
@@ -41,7 +40,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>Server</mainClass>
+                            <mainClass>com/kempo/easyride/Server</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
