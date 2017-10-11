@@ -1,5 +1,27 @@
 <html>
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function sendData() {
+            $.post("/rides", "test data", function(result, error) {
+                $(".result").text(result);
+            });
+        }
+    </script>
+</head>
 <body>
 Welcome to EasyRide! The finest place to find a ride. We will get you from point A, to point B, very fast, with little hassle.
+<br>
+Upload a CSV with the following format (no headers): name, address, designation (either "driver" or "rider")
+<br>
+<input id="rides" type="file" accept=".csv">
+<br>
+<button onclick="sendData()">Submit</button>
+<div class="result">
+
+</div>
 </body>
 </html>

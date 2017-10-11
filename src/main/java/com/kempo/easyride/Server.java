@@ -1,4 +1,6 @@
 package com.kempo.easyride;
+import jdk.nashorn.internal.runtime.JSONFunctions;
+
 import static spark.Spark.*;
 
 public class Server {
@@ -7,6 +9,9 @@ public class Server {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
         get("/ping", (req, res) -> "pong");
+        post("/rides", (req, res) -> {
+           return "we've received your request.";
+        });
     }
 
     static int getHerokuAssignedPort() {
