@@ -1,3 +1,5 @@
+package com.kempo.easyride.model;
+
 public class Driver {
     private String address; // driver's address
     private String name; // his/her name

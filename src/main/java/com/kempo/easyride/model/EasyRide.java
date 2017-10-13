@@ -1,3 +1,5 @@
+package com.kempo.easyride.model;
+
 public class EasyRide {
 
     private static Manager m;

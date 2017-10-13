@@ -1,14 +1,26 @@
 <html>
 <head>
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+    <!--<script-->
+            <!--src="https://code.jquery.com/jquery-3.2.1.min.js"-->
+            <!--integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="-->
+            <!--crossorigin="anonymous"></script>-->
+    <script src="./jquery.js"></script>
     <script type="text/javascript">
         function sendData() {
-            $.post("/rides", "test data", function(result, error) {
-                $(".result").text(result);
-            });
+            var rides = $("#rides");
+            var files = rides[0]['files'];
+            var file = files[0];
+            var fr = new FileReader();
+
+            fr.onload = function(event) {
+                var result = event.target.result;
+                $.post("/rides", result, function(result, error) {
+                    result = result.replace(/\n/g, "<br>");
+                    $(".result").html(result);
+                });
+            };
+
+            var textFile = fr.readAsText(file);
         }
     </script>
 </head>

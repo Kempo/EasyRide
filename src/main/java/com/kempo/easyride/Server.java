@@ -1,16 +1,26 @@
 package com.kempo.easyride;
-import jdk.nashorn.internal.runtime.JSONFunctions;
 
-import static spark.Spark.*;
+import com.kempo.easyride.model.RawParticipants;
+import com.kempo.easyride.util.RideParser;
+
+import static spark.Spark.get;
+import static spark.Spark.port;
+import static spark.Spark.post;
+import static spark.Spark.staticFileLocation;
 
 public class Server {
+
+    private static RideParser parser = new RideParser();
+
     public static void main(String[] args)
     {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
         get("/ping", (req, res) -> "pong");
         post("/rides", (req, res) -> {
-           return "we've received your request.";
+            final RawParticipants participants = parser.parseInitialRequest(req.body());
+            System.out.println(participants);
+            return participants.toString();
         });
     }
 

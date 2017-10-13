@@ -1,3 +1,5 @@
+package com.kempo.easyride.model;
+
 import java.util.ArrayList;
 import java.util.List;
 
