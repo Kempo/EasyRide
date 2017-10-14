@@ -63,6 +63,15 @@ public class RawParticipants
         {
             sb.append(driver + "\n");
         }
+        if (unclassifieds.size() > 0)
+        {
+            sb.append("We weren't able to process these lines:\n");
+            for (final String line : unclassifieds)
+            {
+                sb.append(line);
+                sb.append("\n");
+            }
+        }
         return sb.toString();
     }
 }

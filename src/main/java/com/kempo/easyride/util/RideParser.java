@@ -25,10 +25,9 @@ public class RideParser
             {
                 participants.addUnclassified(line);
             }
-            if (DRIVER.equals(attrs[2].toLowerCase()))
+            else if (DRIVER.equals(attrs[2].toLowerCase()))
             {
-                final int spaces = Integer.valueOf(attrs[3]);
-                participants.addDriver(new RawDriver(attrs[0], attrs[1], spaces));
+                parseDriver(participants, line, attrs);
             }
             else if (RIDER.equals(attrs[2].toLowerCase()))
             {
@@ -41,5 +40,25 @@ public class RideParser
         }
 
         return participants;
+    }
+
+    private void parseDriver(final RawParticipants participants, final String line, final String[] attrs)
+    {
+        if (attrs.length < 4)
+        {
+            participants.addUnclassified(line);
+        }
+        else
+        {
+            try
+            {
+                final int spacesInCar = Integer.valueOf(attrs[3]);
+                participants.addDriver(new RawDriver(attrs[0], attrs[1], spacesInCar));
+            }
+            catch (final NumberFormatException e)
+            {
+                participants.addUnclassified(line);
+            }
+        }
     }
 }

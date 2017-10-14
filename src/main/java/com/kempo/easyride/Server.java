@@ -18,6 +18,7 @@ public class Server {
         staticFileLocation("/public");
         get("/ping", (req, res) -> "pong");
         post("/rides", (req, res) -> {
+            System.out.println("parsing...");
             final RawParticipants participants = parser.parseInitialRequest(req.body());
             System.out.println(participants);
             return participants.toString();

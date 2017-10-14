@@ -19,4 +19,10 @@ public class RawDriver extends Person
         return spaces;
     }
 
+    @Override
+    public String toString()
+    {
+        return super.toString() + ", spaces: " + spaces;
+    }
+
 }
