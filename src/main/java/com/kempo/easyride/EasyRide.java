@@ -18,17 +18,22 @@ public class EasyRide {
     public static void main(String[] args) {
         m = new Manager();
 
-        List<Rider> riders = new ArrayList<Rider>();
-        List<Driver> drivers = new ArrayList<Driver>();
+        /**
+         * for testing purposes
+         */
+        List<Rider> riders = new ArrayList<>();
+        List<Driver> drivers = new ArrayList<>();
         riders.add(new Rider("Tim","University of Washington"));
         riders.add(new Rider("Graham", "San Francisco"));
-        riders.add(new Rider("Aaron", "8659 Inverness Drive NE 98115"));
-
-        drivers.add(new Driver("Rick", "Seattle University", new Car(4)));
-        drivers.add(new Driver("Mark", "Los Angeles", new Car(3)));
+        riders.add(new Rider("Aaron", "Space Needle"));
+        riders.add(new Rider("David", "Space Needle"));
+        riders.add(new Rider("William","San Diego"));
+        riders.add(new Rider("Jack","Los Angeles"));
+        drivers.add(new Driver("Rick", "Seattle University", new Car(3)));
+        drivers.add(new Driver("Mark", "Los Angeles", new Car(1)));
 
         m.readData(drivers, riders);
-        m.assignOccupants(drivers);
+        m.assignOccupants(drivers, riders);
 
         for(Driver d : drivers) {
             System.out.println(d.getName().toUpperCase());
@@ -36,14 +41,5 @@ public class EasyRide {
                 System.out.println(r.getName());
             }
         }
-
-        /** drivers assigned because they are closest to the driver ONLY. no additional distance to destination check implemented
-         * expected output is:
-         * RICK:
-         * Tim
-         * Aaron
-         * MARK:
-         * Graham
-         */
     }
 }
