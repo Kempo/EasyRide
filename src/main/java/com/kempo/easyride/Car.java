@@ -45,10 +45,6 @@ public class Car {
         return occupants;
     }
 
-    public int getSpots() {
-        return spots;
-    }
-
     public boolean isFull() {
         return (spots == 0);
     }
