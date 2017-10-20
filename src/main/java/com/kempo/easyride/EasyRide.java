@@ -1,8 +1,6 @@
 package com.kempo.easyride;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * created with assumptions that:
@@ -26,11 +24,9 @@ public class EasyRide {
         riders.add(new Rider("Tim","University of Washington"));
         riders.add(new Rider("Graham", "San Francisco"));
         riders.add(new Rider("Aaron", "Space Needle"));
-        riders.add(new Rider("David", "Space Needle"));
-        riders.add(new Rider("William","San Diego"));
-        riders.add(new Rider("Jack","Los Angeles"));
-        drivers.add(new Driver("Rick", "Seattle University", new Car(3)));
-        drivers.add(new Driver("Mark", "Los Angeles", new Car(1)));
+
+        drivers.add(new Driver("Rick", "Seattle University", new Car(5)));
+        drivers.add(new Driver("Mark", "Los Angeles", new Car(5)));
 
         m.readData(drivers, riders);
         m.assignOccupants(drivers, riders);
@@ -41,5 +37,6 @@ public class EasyRide {
                 System.out.println(r.getName());
             }
         }
+
     }
 }

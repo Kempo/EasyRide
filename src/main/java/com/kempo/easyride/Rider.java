@@ -1,18 +1,14 @@
 package com.kempo.easyride;
 
-public class Rider {
-    private String name; // name of the rider
-    private String address; // his/her address
-    private Car current; // their current car
+public class Rider extends Person {
+
+    private Car current = null; // their current car
+    private double distance; // distance to a target
 
 
     public Rider(String n, String a) {
-        name = n;
-        address = a;
-    }
-
-    public String getName() {
-        return name;
+        this.name = n;
+        this.address = a;
     }
 
     public Car getCurrentCar() {
@@ -23,5 +19,11 @@ public class Rider {
         current = c;
     }
 
-    public String getAddress() { return address; }
+    public void setDistanceTo(double d) {
+        distance = d;
+    }
+
+    public double getDistanceTo() {
+        return distance;
+    }
 }
