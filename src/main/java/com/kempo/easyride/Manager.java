@@ -13,22 +13,12 @@ public class Manager {
      */
     public void readData(List<Driver> driverList, List<Rider> riderList) {
         for(Driver driver : driverList) {
-            ArrayList<Double> distanceList = new ArrayList<>();
             for(Rider rider : riderList) {
                 double distance = maps.getDistance(driver.getAddress(), rider.getAddress());
-                distanceList.add(distance); // an unorganized list of distances of each rider to the driver
+                rider.setDistanceTo(distance);
+                driver.getPreferences().add(rider); // unorganized list of riders
             }
-            Collections.sort(distanceList); // organize this list of distances based on which distance is closest
-            for(Double dist : distanceList) { // loops through this organized list
-                for(Rider rider : riderList) { // loops through each rider again
-                    double distance = maps.getDistance(driver.getAddress(), rider.getAddress()); // gets the distance between r and d
-                    if(distance == dist) { // if the distance is equal to what's next on the list, add that driver.
-                        if(!driver.getPreferences().contains(rider)) {
-                            driver.getPreferences().add(rider);
-                        }
-                    }
-                }
-            }
+            Collections.sort(driver.getPreferences(), new DistanceComparator()); // organizes the list using the DistanceComparator
         }
     }
 
@@ -38,31 +28,54 @@ public class Manager {
      * @param riderList
      */
     public void assignOccupants(List<Driver> driverList, List<Rider> riderList) {
-        for(Driver currentDriver : driverList) {
-            for(Rider r : currentDriver.getPreferences()) {
-                if((r.getCurrentCar() == null) && !currentDriver.getCar().isFull() && !betterOption(currentDriver, r, driverList)) {
+        for (Driver currentDriver : driverList) {
+            for (Rider r : currentDriver.getPreferences()) {
+                if ((r.getCurrentCar() == null) && !currentDriver.getCar().isFull() && !betterOption(currentDriver, r, driverList)) {
                     currentDriver.getCar().addOccupant(r);
                     r.setCar(currentDriver.getCar());
                 }
             }
         }
 
-        for(Rider r : riderList) {
-            if(r.getCurrentCar() == null) {
-                for(Driver d : driverList) {
-                    if(!d.getCar().isFull()) {
-                        assignOccupants(driverList, riderList); // reiterates the whole process if a rider doesn't have a car and not all drivers are filled up
-                        break;
-                    }
-                }
+        if (ridersLeft(riderList)) { // if there are riders without a car
+            if(driversOpen(driverList)) {
+                assignOccupants(driverList, riderList); // reiterates the whole process if a rider doesn't have a car and not all drivers are filled up
             }
         }
 
-        for(Rider r : riderList) { // in my opinion, all these for loops seem very very redundant and inefficient. I'll try to redo some of this stuff soon
-            if(r.getCurrentCar() == null) {
-                System.out.println(r.getName() + " has no ride.");
+        for (Rider r : riderList) {
+            if (r.getCurrentCar() == null) {
+                System.out.println(r.getName() + " has no ride."); // prints out the remaining riders without a ride
             }
         }
+    }
+
+    /**
+     *
+     * @param riderList
+     * @return true if there are riders without a car and false if all riders have a driver
+     */
+    private boolean ridersLeft(List<Rider> riderList) {
+        for(Rider rider : riderList) {
+            if(rider.getCurrentCar() == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @param driverList
+     * @return true if there are still open cars and false if all cars are full
+     */
+    private boolean driversOpen(List<Driver> driverList) {
+        for(Driver driver : driverList) {
+            if(!driver.getCar().isFull()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

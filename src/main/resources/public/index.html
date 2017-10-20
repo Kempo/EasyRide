@@ -1,5 +1,45 @@
+
 <html>
+<head>
+    <!--<script-->
+    <!--src="https://code.jquery.com/jquery-3.2.1.min.js"-->
+    <!--integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="-->
+    <!--crossorigin="anonymous"></script>-->
+    <script src="./jquery.js"></script>
+    <script type="text/javascript">
+        function sendData() {
+            var fr = new FileReader();
+            fr.onload = function(event) {
+                var result = event.target.result;
+                $.post("/rides", result, function(result, error) {
+                    result = result.replace(/\n/g, "<br>");
+                    $(".result").html(result);
+                });
+            };
+            var rides = $("#rides");
+            var files = rides[0]['files'];
+            var file = files[0];
+           fr.readAsText(file);
+        }
+    </script>
+</head>
 <body>
-Welcome to EasyRide! The finest place to find a ride. We will get you from point A, to point B, very fast, with little hassle.
+<h1>Welcome to EasyRide!</h1>
+<h3>The world's finest place to find a ride to group events. Eugene was here. </h3>
+<br>
+Upload a .tsv file (tab-separated value) with the following format (no headers): name | address | designation
+(either "driver" or
+"rider") | number of spaces (if driver).<br>
+Example:<br>
+billy 33 4th street driver 3<br>
+sandy 355 5th AVE S rider<br>
+andy 41 6th street driver 5<br>
+<br>
+<input id="rides" type="file" accept=".tsv">
+<br>
+<button onclick="sendData()">Submit</button>
+<div class="result">
+
+</div>
 </body>
 </html>
