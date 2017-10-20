@@ -27,7 +27,6 @@ public class MapsAPI {
                 if(line.contains("\"distance\"")) { // if the current line contains "distance"; this is where we parse the lines on Google's response
                     distance = reader.readLine(); // sets our variable to the next line (where the distance in kilometers will be displayed)
                 }
-
             }
 
         }catch(Exception e) {
@@ -37,7 +36,7 @@ public class MapsAPI {
             return parseDouble(distance); // returns the value using our parseDouble method
         }
 
-        return -1;
+        return -1; // if no distance value is found
     }
 
     /**
@@ -46,14 +45,15 @@ public class MapsAPI {
      * @return a specific double (our distance) from a string
      * credits to 'Bohemian'
      */
-    private double parseDouble(String s) {
-        Matcher m = Pattern.compile("(?!=\\d\\.\\d\\.)([\\d.]+)").matcher(s); // utilises regex to find doubles, whole numbers with/without decimal points, and fractions
+    public static double parseDouble(String s) {
+        String text = s.replaceAll("[^\\w\\s]", "");
+        Matcher m = Pattern.compile("(?!=\\d\\.\\d\\.)([\\d.]+)").matcher(text); // utilises regex to find doubles, whole numbers with/without decimal points, and fractions
         if (m.find())
         {
             double d = Double.parseDouble(m.group(1));
             return d; // returns our double value from the string
         }
-        return -1; // default value
+        return -1; // if no double is found
     }
 
 

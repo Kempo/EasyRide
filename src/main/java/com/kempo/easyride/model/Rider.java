@@ -1,21 +1,14 @@
 package com.kempo.easyride.model;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Rider extends Person {
 
-public class Rider {
-    private String name; // name of the rider
-    private String address; // his/her address
-    private List<Driver> preferences = new ArrayList<>(); // the list of drivers that they prefer (ordered by distance?)
-    private Car current; // their current car
+    private Car current = null; // their current car
+    private double distance; // distance to a target
+
 
     public Rider(String n, String a) {
-        name = n;
-        address = a;
-    }
-
-    public List<Driver> getPreferences() {
-        return preferences;
+        this.name = n;
+        this.address = a;
     }
 
     public Car getCurrentCar() {
@@ -24,5 +17,13 @@ public class Rider {
 
     public void setCar(Car c) {
         current = c;
+    }
+
+    public void setDistanceTo(double d) {
+        distance = d;
+    }
+
+    public double getDistanceTo() {
+        return distance;
     }
 }
