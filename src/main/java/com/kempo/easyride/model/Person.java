@@ -1,4 +1,4 @@
-package com.kempo.easyride;
+package com.kempo.easyride.model;
 /**
  * Created by dileng on 10/12/17.
  */
