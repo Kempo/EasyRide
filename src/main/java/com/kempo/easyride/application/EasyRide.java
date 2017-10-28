@@ -1,4 +1,8 @@
-package com.kempo.easyride.model;
+package com.kempo.easyride.application;
+import com.kempo.easyride.model.Car;
+import com.kempo.easyride.model.Driver;
+import com.kempo.easyride.model.Rider;
+
 import java.util.ArrayList;
 import java.util.List;
 

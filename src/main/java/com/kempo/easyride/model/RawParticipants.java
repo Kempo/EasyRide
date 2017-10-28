@@ -9,7 +9,7 @@ import java.util.List;
 public class RawParticipants
 {
     private List<RawDriver> drivers;
-    private List<RawRider> riders;
+    private List<Rider> riders;
     private List<String> unclassifieds;
 
     public RawParticipants()
@@ -19,7 +19,7 @@ public class RawParticipants
         unclassifieds = new ArrayList<>();
     }
 
-    public void addRider(final RawRider rider)
+    public void addRider(final Rider rider)
     {
         riders.add(rider);
     }
@@ -39,7 +39,7 @@ public class RawParticipants
         return drivers;
     }
 
-    public List<RawRider> getRiders()
+    public List<Rider> getRiders()
     {
         return riders;
     }
@@ -54,7 +54,7 @@ public class RawParticipants
     {
         final StringBuilder sb = new StringBuilder();
         sb.append("Riders: \n");
-        for (final RawRider rider : riders)
+        for (final Rider rider : riders)
         {
             sb.append(rider + "\n");
         }

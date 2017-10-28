@@ -1,4 +1,4 @@
-package com.kempo.easyride.model;
+package com.kempo.easyride.application;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;

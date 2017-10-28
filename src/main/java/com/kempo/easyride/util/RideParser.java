@@ -2,7 +2,7 @@ package com.kempo.easyride.util;
 
 import com.kempo.easyride.model.RawDriver;
 import com.kempo.easyride.model.RawParticipants;
-import com.kempo.easyride.model.RawRider;
+import com.kempo.easyride.model.Rider;
 
 /**
  * all this does is classify input into riders/drivers/unparseable. It makes no judgment on whether or not the input
@@ -31,7 +31,7 @@ public class RideParser
             }
             else if (RIDER.equals(attrs[2].toLowerCase()))
             {
-                participants.addRider(new RawRider(attrs[0], attrs[1]));
+                participants.addRider(new Rider(attrs[0], attrs[1]));
             }
             else
             {

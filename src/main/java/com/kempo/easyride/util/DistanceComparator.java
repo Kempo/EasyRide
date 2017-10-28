@@ -1,4 +1,6 @@
-package com.kempo.easyride.model;
+package com.kempo.easyride.util;
+
+import com.kempo.easyride.model.Rider;
 
 import java.util.Comparator;
 
