@@ -9,8 +9,7 @@ public class RawDriver extends Person
 
     public RawDriver(final String name, final String address, final int spaces)
     {
-        this.name = name;
-        this.address = address;
+        super(name, address);
         this.spaces = spaces;
     }
 

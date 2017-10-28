@@ -7,6 +7,7 @@ public class Rider extends Person {
 
 
     public Rider(String n, String a) {
+        super();
         this.name = n;
         this.address = a;
     }
