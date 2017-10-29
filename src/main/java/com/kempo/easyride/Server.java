@@ -1,5 +1,8 @@
 package com.kempo.easyride;
 
+import com.kempo.easyride.application.Orchestrator;
+import com.kempo.easyride.application.RideAssigner;
+import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.model.RawParticipants;
 import com.kempo.easyride.util.RideParser;
 
@@ -11,6 +14,7 @@ import static spark.Spark.staticFileLocation;
 public class Server {
 
     private static RideParser parser = new RideParser();
+    private static Orchestrator orchestrator = new Orchestrator(new RideAssigner());
 
     public static void main(String[] args)
     {
@@ -20,8 +24,9 @@ public class Server {
         post("/rides", (req, res) -> {
             System.out.println("parsing...");
             final RawParticipants participants = parser.parseInitialRequest(req.body());
+            final AssignedRides result = orchestrator.orchestrateRides(participants);
             System.out.println(participants);
-            return participants.toString();
+            return result.toString();
         });
     }
 

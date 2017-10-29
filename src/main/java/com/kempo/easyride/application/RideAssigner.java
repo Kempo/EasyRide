@@ -1,4 +1,5 @@
 package com.kempo.easyride.application;
+import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.util.DistanceComparator;
 import com.kempo.easyride.model.Driver;
 import com.kempo.easyride.model.Rider;
@@ -6,7 +7,7 @@ import com.kempo.easyride.model.Rider;
 import java.util.*;
 
 
-public class Manager {
+public class RideAssigner {
 
     private MapsAPI maps = new MapsAPI();
 
@@ -26,12 +27,22 @@ public class Manager {
         }
     }
 
+
     /**
      * responsible for assigning occupants to each vehicle
      * @param driverList
      * @param riderList
      */
-    public void assignOccupants(List<Driver> driverList, List<Rider> riderList) {
+    public AssignedRides assignOccupants(final List<Driver> drivers, final List<Rider> riders)
+    {
+        final AssignedRides result = new AssignedRides(drivers);
+        assignOccupantsHelper(drivers, riders, result);
+        return result;
+    }
+
+
+    public void assignOccupantsHelper(List<Driver> driverList, List<Rider> riderList,
+       final AssignedRides assignedRides) {
         for (Driver currentDriver : driverList) {
             for (Rider r : currentDriver.getPreferences()) {
                 if ((r.getCurrentCar() == null) && !currentDriver.getCar().isFull() && !betterOption(currentDriver, r, driverList)) {
@@ -49,6 +60,7 @@ public class Manager {
 
         for (Rider r : riderList) {
             if (r.getCurrentCar() == null) {
+                assignedRides.addUnassignedRider(r);
                 System.out.println(r.getName() + " has no ride."); // prints out the remaining riders without a ride
             }
         }

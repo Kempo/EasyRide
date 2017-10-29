@@ -27,4 +27,15 @@ public class Rider extends Person {
     public double getDistanceTo() {
         return distance;
     }
+
+    @Override
+    public String toString()
+    {
+        final StringBuilder sb = new StringBuilder();
+        sb.append(name);
+        sb.append(" (");
+        sb.append(address);
+        sb.append(")");
+        return sb.toString();
+    }
 }

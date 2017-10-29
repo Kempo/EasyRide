@@ -19,4 +19,18 @@ public class Driver extends Person {
 
     public Car getCar() { return car; }
 
+    @Override
+    public String toString()
+    {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("Driver: " + name + "\n");
+        sb.append("Riders: \n");
+        List<Rider> occupants = car.getOccupants();
+        for (final Rider r : occupants)
+        {
+            sb.append(r.toString());
+        }
+        return sb.toString();
+    }
+
 }

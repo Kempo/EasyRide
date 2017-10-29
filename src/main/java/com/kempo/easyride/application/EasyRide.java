@@ -15,10 +15,10 @@ import java.util.List;
  */
 
 public class EasyRide {
-    private static Manager m;
+    private static RideAssigner m;
 
     public static void main(String[] args) {
-        m = new Manager();
+        m = new RideAssigner();
 
         /**
          * for testing purposes
