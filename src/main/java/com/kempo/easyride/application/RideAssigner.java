@@ -30,8 +30,8 @@ public class RideAssigner {
 
     /**
      * responsible for assigning occupants to each vehicle
-     * @param driverList
-     * @param riderList
+     * @param drivers
+     * @param riders
      */
     public AssignedRides assignOccupants(final List<Driver> drivers, final List<Rider> riders)
     {
