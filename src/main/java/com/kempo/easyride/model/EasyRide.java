@@ -37,6 +37,5 @@ public class EasyRide {
                 System.out.println(r.getName());
             }
         }
-
     }
 }

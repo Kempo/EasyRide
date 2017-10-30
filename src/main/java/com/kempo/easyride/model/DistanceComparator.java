@@ -13,7 +13,7 @@ public class DistanceComparator implements Comparator<Rider> {
         if(rider1.getDistanceTo() > rider2.getDistanceTo()) {
             return 1;
         }else {
-            if (rider1.getDistanceTo() <= rider2.getDistanceTo()) {
+            if (rider1.getDistanceTo() < rider2.getDistanceTo()) {
                 return -1;
             }
         }

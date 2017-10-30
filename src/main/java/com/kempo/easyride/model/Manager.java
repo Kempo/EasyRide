@@ -12,6 +12,7 @@ public class Manager {
      * @param riderList
      */
     public void readData(List<Driver> driverList, List<Rider> riderList) {
+
         for(Driver driver : driverList) {
             for(Rider rider : riderList) {
                 double distance = maps.getDistance(driver.getAddress(), rider.getAddress());
