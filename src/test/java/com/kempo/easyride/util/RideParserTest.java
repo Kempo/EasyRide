@@ -59,4 +59,12 @@ public class RideParserTest extends TestCase
         Assert.assertEquals("Bilbo", result.getRiders().get(0).getName());
         Assert.assertEquals("4 main street", result.getRiders().get(0).getAddress());
     }
+
+    public void testMultipleDrivers() {
+        final String input = "Aaron\taddress 1\trider" + "\nTed\taddress 2\tdriver\t7" + "\nConor\taddress 3\tdriver\t3";
+        final RawParticipants result = parser.parseInitialRequest(input);
+        Assert.assertEquals(2, result.getDrivers().size());
+        Assert.assertEquals(0, result.getUnclassifieds().size());
+        Assert.assertEquals(1, result.getRiders().size());
+    }
 }
