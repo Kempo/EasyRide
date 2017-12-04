@@ -36,6 +36,7 @@ public class Rider extends Person {
         sb.append(" (");
         sb.append(address);
         sb.append(")");
+        sb.append("\n");
         return sb.toString();
     }
 }
