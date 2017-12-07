@@ -61,11 +61,11 @@ public class RideParserTest extends TestCase
     }
 
     public void testMultipleDrivers() {
-        final String input = createTestParticipant("Aaron", "address 1", "rider", 0)
-                + "\n" + createTestParticipant("Ted", "address 2", "driver", 4)
-                + "\n" + createTestParticipant("Connor", "address 3", "driver", 5)
-                + "\n" + createTestParticipant("Nick", "address 4", "rider", 0)
-                + "\n" + createTestParticipant("Tod", "address 5", "rider",0);
+        final String input = TestUtility.createTestParticipant("Aaron", "address 1", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Ted", "address 2", "driver", 4)
+                + "\n" + TestUtility.createTestParticipant("Connor", "address 3", "driver", 5)
+                + "\n" + TestUtility.createTestParticipant("Nick", "address 4", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Tod", "address 5", "rider",0);
 
         final RawParticipants result = parser.parseInitialRequest(input);
         Assert.assertEquals(2, result.getDrivers().size());
@@ -76,7 +76,4 @@ public class RideParserTest extends TestCase
         Assert.assertEquals(4, result.getDrivers().get(0).getSpaces());
     }
 
-    private String createTestParticipant(String name, String address, String designation, int spots) {
-        return name + "\t" + address + "\t" + designation + (designation.equals("driver") ? "\t" + spots : "");
-    }
 }
