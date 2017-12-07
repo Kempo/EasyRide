@@ -31,6 +31,8 @@ public class MapsAPI {
         }catch(Exception e) {
             e.printStackTrace();
         }
+
+
         if(!distance.isEmpty() && !distance.contains("[]")) { // if we have found our line containing the distance
             return parseDouble(distance); // returns the value using our parseDouble method
         }

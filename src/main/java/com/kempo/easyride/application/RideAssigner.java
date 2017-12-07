@@ -41,8 +41,7 @@ public class RideAssigner {
     }
 
 
-    public void assignOccupantsHelper(List<Driver> driverList, List<Rider> riderList,
-       final AssignedRides assignedRides) {
+    public void assignOccupantsHelper(List<Driver> driverList, List<Rider> riderList, final AssignedRides assignedRides) {
         for (Driver currentDriver : driverList) {
             for (Rider r : currentDriver.getPreferences()) {
                 if ((r.getCurrentCar() == null) && !currentDriver.getCar().isFull() && !betterOption(currentDriver, r, driverList)) {
