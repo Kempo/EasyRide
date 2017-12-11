@@ -13,15 +13,12 @@ public class OrchestratorTest extends TestCase {
             + "\n" + TestUtility.createTestParticipant("Ted", "Seattle University", "driver", 6)
             + "\n" + TestUtility.createTestParticipant("Connor", "New York", "driver", 6)
             + "\n" + TestUtility.createTestParticipant("Nick", "Boston", "rider", 0)
-            + "\n" + TestUtility.createTestParticipant("Tod", "San Francisco", "rider",0)
-            + "\n" + TestUtility.createTestParticipant("person","dlhahldawd9u0aw90udu902","rider",0);
+            + "\n" + TestUtility.createTestParticipant("Tod", "San Francisco", "rider",0);
 
 
     public void testOrchestratorWithTextInput() {
         final RawParticipants participants = parser.parseInitialRequest(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
-        System.out.println(participants.toString());
-        System.out.println();
         System.out.println(result.toString());
     }
 }
