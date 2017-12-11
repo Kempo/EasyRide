@@ -60,11 +60,11 @@ public class MapsAPI {
 
 
     private String setOrigin(String s) { //example 'University of Washington' to 'University_Of_Washington'
-        return s.replaceAll(" ","_");
+        return s.replaceAll(" ","%20");
     }
 
     private String setDestination(String s) {
-        return s.replaceAll(" ", "_");
+        return s.replaceAll(" ", "%20");
     }
 
 }

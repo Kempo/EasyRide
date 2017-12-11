@@ -47,7 +47,7 @@ public class RideParser
     }
 
     private boolean isLocationValid(String address) {
-        String formatted = address.replaceAll(" ", "_");
+        String formatted = address.replaceAll(" ", "%20");
         String key = "AIzaSyDeYYFr4IqU9nAvjIzM5NRvWduEkSUEaro";
         String link = "https://maps.googleapis.com/maps/api/geocode/json?address=" + formatted + "&key=" + key;
         try {
