@@ -23,13 +23,15 @@ public class Driver extends Person {
     public String toString()
     {
         final StringBuilder sb = new StringBuilder();
-        sb.append("Driver: " + name + "\n");
-        sb.append("Riders: \n");
+        sb.append("DRIVER: " + name + "\n");
+        sb.append("\n");
+        sb.append("RIDERS: \n");
         List<Rider> occupants = car.getOccupants();
         for (final Rider r : occupants)
         {
             sb.append(r.toString());
         }
+        sb.append("\n");
         return sb.toString();
     }
 }

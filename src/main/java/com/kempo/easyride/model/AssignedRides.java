@@ -30,17 +30,15 @@ public class AssignedRides {
     public String toString()
     {
         final StringBuilder sb = new StringBuilder();
-        sb.append("Drivers and occupants: \n");
         for (final Driver d : drivers)
         {
             sb.append(d.toString());
         }
+        sb.append("\n");
         sb.append("\nThe following riders are still unassigned: \n");
         for (final Rider r : unassignedRiders) {
             sb.append(r.toString());
         }
-
-        sb.append("\nhappy traveling!");
         return sb.toString();
     }
 }
