@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <script src="./jquery.js"></script>
@@ -17,24 +16,33 @@
             var file = files[0];
            fr.readAsText(file);
         }
+        
+        
+        
     </script>
+    <title> EasyRide </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+    
+    
 <body>
-<h1>Welcome to EasyRide!</h1>
-<h3>The world's finest place to find a ride to group events.</h3>
+<h1>EasyRide</h1>
+<h3>Carpooling done right.</h3>
 <br>
 Upload a .tsv file (tab-separated value) with the following format (no headers): name | address | designation
 (either "driver" or
 "rider") | number of spaces (if driver).<br>
+<br>
 Example:<br>
 billy 33 4th street driver 3<br>
 sandy 355 5th AVE S rider<br>
 andy 41 6th street driver 5<br>
 <br>
-test 1 2 3  github test <br>
 <br>
 <input id="rides" type="file" accept=".tsv">
 <br>
+    
+
 <button onclick="sendData()">Submit</button>
 <div class="result">
 
