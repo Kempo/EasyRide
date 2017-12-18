@@ -14,11 +14,21 @@
             var rides = $("#rides");
             var files = rides[0]['files'];
             var file = files[0];
-           fr.readAsText(file);
+            fr.readAsText(file);
         }
         
-        
-        
+        // mimics the original button click but with a different button
+        $('#buttonSelect').click(function () {
+            $("input[type='file']").trigger('click');
+        })
+
+        $("input[type='file']").change(function () {
+            $('#val').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        })
+
+        $('#buttonSubmit').click(function () {
+            sendData();
+        })
     </script>
     <title> EasyRide </title>
     <link rel="stylesheet" href="styles.css">
@@ -39,11 +49,20 @@ sandy 355 5th AVE S rider<br>
 andy 41 6th street driver 5<br>
 <br>
 <br>
+    <!-- Write your comments here
 <input id="rides" type="file" accept=".tsv">
 <br>
     
 
 <button onclick="sendData()">Submit</button>
+    -->
+    <div id='fileinput'>
+    <input type='file' id='rides' accept='.tsv'> 
+    <span id='val'></span>
+    <span id='buttonSelect'>Select File</span>
+    <span id='buttonSubmit'>Submit</span>
+    </div>
+    
 <div class="result">
 
 </div>
