@@ -13,6 +13,9 @@ h1 {
 }
 
 #fileinput {
+    vertical-align: middle;
+    display: inline-block; /* inline with block elements */
+    right: 100px; /* to account for the two buttons on its right */
     width: 200px;
     height: 25px;
     background-color: white;
@@ -23,6 +26,8 @@ h1 {
 
 input[type='file'] {
     opacity: 0; 
+    width: 200px;
+    height:25px;
     /*visibility: hidden; /* sets it to hidden */
 }
 #val {
@@ -39,7 +44,7 @@ input[type='file'] {
     display: block; /* displays it as an element such as <p> */
     width: 90px;
     background-color: #88d7f7;
-    height:25px;
+    height:px;
     color: black;
     position: absolute;
     right:-100px;
