@@ -8,6 +8,18 @@ h1 {
     font-size: 8vh;
 }
 
+#instructions {
+    padding-top: 3vh;
+    font-size: 2vh;
+}
+
+#instructions h1 {
+    font-size: 2vh;
+}
+
+#exampleInput {
+    font-size: 2vh;
+}
 #title {
     box-shadow: 0px 0px 5px;
 }
@@ -30,11 +42,12 @@ input[type='file'] {
     height:25px;
     /*visibility: hidden; /* sets it to hidden */
 }
+
 #val {
     position: absolute;
     top: 0;
     left: 0;
-    font-size:13px;
+    font-size:2.5vh;
     line-height: 25px;
     text-indent: 10px;
     pointer-events: none;
@@ -49,7 +62,7 @@ input[type='file'] {
     position: absolute;
     right:-100px;
     top: 0;
-    font-size: 11px;
+    font-size: 2vh;
     line-height:25px; /* moves down text from top of button to middle ish */
     text-align: center;
     /* if you want some fancy hover animations
@@ -68,7 +81,7 @@ input[type='file'] {
     position: absolute;
     right:-200px;
     top: 0;
-    font-size: 11px;
+    font-size: 2vh;
     line-height:25px; /* moves down text from top of button to middle ish */
     text-align: center;
     /* if you want some fancy hover animations

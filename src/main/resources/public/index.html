@@ -36,17 +36,22 @@
     <div id="title"> 
         <h1> EasyRide </h1>
     </div>
-    <br>
-    Upload a .tsv file (tab-separated value) with the following format (no headers): name | address | designation
-    (either "driver" or
-    "rider") | number of spaces (if driver).<br>
-    <br>
-    Example:<br>
-    billy 33 4th street driver 3<br>
-    sandy 355 5th AVE S rider<br>
-    andy 41 6th street driver 5<br>
-    <br>
-<br>
+    
+    <div id="instructions">
+        <h1>Upload a .tsv file (tab-separated value) with the following format:</h1>
+        <p>  
+        name | address | designation (either "driver" or "rider") | number of spaces (if driver). 
+        </p>
+    </div>
+    
+    <div id="exampleInput">
+        <p>
+            <b>Example Input:</b> <br>
+            billy   33  4th street  driver  3<br>
+            sandy   355 5th AVE S   rider<br>
+            andy    41  6th street  driver  5<br>
+        </p>
+    </div>
     <!-- previous stuff for note
 <input id="rides" type="file" accept=".tsv">
 <br>

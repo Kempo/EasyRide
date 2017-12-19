@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles.css" afterPath="$PROJECT_DIR$/src/main/resources/public/styles.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -605,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513717363022</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="repositioned buttons and textbox">
+      <created>1513717868718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1513717868718</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -700,7 +708,8 @@
     <MESSAGE value="added styles.css to format webpage" />
     <MESSAGE value="attempted a ui change with the original input buttons. hopefully everything checks out, but we should definitely double-check if it correctly gets file contents after this commit." />
     <MESSAGE value="fixed the selectFile and Submit buttons along with the display on textbox." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the selectFile and Submit buttons along with the display on textbox." />
+    <MESSAGE value="repositioned buttons and textbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="repositioned buttons and textbox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
