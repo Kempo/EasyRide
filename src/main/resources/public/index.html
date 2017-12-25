@@ -3,13 +3,19 @@
     <script src="./jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("input[type='file']").change(function () {
+            $("#rides").change(function () {
                 $('#val').text(this.value.replace(/C:\\fakepath\\/i, ''));
+                var fr = new FileReader();
+                fr.onload = function () {
+                    $("#contents").val(this.result);
+                };
+                fr.readAsText(this.files[0]);
+                
             });
         });
 
         function selectFile() {
-            $("input[type='file']").trigger('click');
+            $("#rides").trigger('click');
         }
         function sendData() {
             var fr = new FileReader();
@@ -66,10 +72,9 @@
     <span id='buttonSubmit' onclick="sendData();">Submit</span>
     </div>
     
-    
-    <div class="input"> 
+    <div>
+    <textarea id="contents" rows="20" cols="70"></textarea>
     </div>
-    
     
     <div class="result">
     </div>
