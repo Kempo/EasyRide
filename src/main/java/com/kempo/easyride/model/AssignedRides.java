@@ -35,9 +35,12 @@ public class AssignedRides {
             sb.append(d.toString());
         }
         sb.append("\n");
-        sb.append("\nThe following riders are still unassigned: \n");
-        for (final Rider r : unassignedRiders) {
-            sb.append(r.toString());
+
+        if(getUnassignedRiders().size() > 0) {
+            sb.append("\nThe following riders are still unassigned: \n");
+            for (final Rider r : unassignedRiders) {
+                sb.append(r.toString());
+            }
         }
         return sb.toString();
     }

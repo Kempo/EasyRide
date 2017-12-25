@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" />
@@ -663,7 +662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513718776978</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changed recursion to a while loop in algorithm">
+      <created>1514183634820</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514183634820</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -760,7 +766,8 @@
     <MESSAGE value="fixed the selectFile and Submit buttons along with the display on textbox." />
     <MESSAGE value="repositioned buttons and textbox" />
     <MESSAGE value="reorganized html/css code" />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganized html/css code" />
+    <MESSAGE value="changed recursion to a while loop in algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed recursion to a while loop in algorithm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -23,8 +23,7 @@ public class Driver extends Person {
     public String toString()
     {
         final StringBuilder sb = new StringBuilder();
-        sb.append("DRIVER: " + name + "\n");
-        sb.append("\n");
+        sb.append("<b>DRIVER:</b> " + name + " (" + address + ") " + "\n");
         sb.append("RIDERS: \n");
         List<Rider> occupants = car.getOccupants();
         for (final Rider r : occupants)
