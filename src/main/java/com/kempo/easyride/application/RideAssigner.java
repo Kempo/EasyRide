@@ -51,16 +51,21 @@ public class RideAssigner {
             }
         }
 
+        while(ridersLeft(riderList) && driversOpen(driverList)) {
+            assignOccupants(driverList, riderList);
+        }
+
+        /*
         if (ridersLeft(riderList)) { // if there are riders without a car
             if(driversOpen(driverList)) {
                 assignOccupants(driverList, riderList); // reiterates the whole process if a rider doesn't have a car and not all drivers are filled up
             }
         }
+        */
 
         for (Rider r : riderList) {
             if (r.getCurrentCar() == null) {
                 assignedRides.addUnassignedRider(r);
-                System.out.println(r.getName() + " has no ride."); // prints out the remaining riders without a ride
             }
         }
     }
