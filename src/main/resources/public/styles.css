@@ -56,7 +56,7 @@ h1 {
     height: 25px;
     background-color: white;
     box-shadow: 1px 2px 3px #ededed;
-    border: 1px solid #d8d8d8;
+    border: .1px solid #d8d8d8;
     position: relative;
     margin-bottom: 40px;
 }
@@ -78,14 +78,16 @@ input[type='file'] {
     text-indent: 10px;
     pointer-events: none;
     width: 200px;
-    text-overflow: ellipsis;
+    text-overflow: clip;
+    display: block;
+    overflow: hidden;
 }
 #buttonSelect {
     cursor: pointer; /* so your cursor becomes a pointer when hovering */
     display: block; /* displays it as an element such as <p> */
     width: 45px;
     background-color: white;
-    height: 25px;
+    height: 24px;
     color: black;
     position: absolute;
     right:-50px;
@@ -95,7 +97,7 @@ input[type='file'] {
     text-align: center;
     border: #CCC;
     border-style: solid;
-    border-width: 1px;
+    border-width: .1px;
     box-shadow: 1px 2px 3px #ededed;
     /* if you want some fancy hover animations
     -webkit-transition: 100ms all;
@@ -108,7 +110,7 @@ input[type='file'] {
     display: block; /* displays it as an element such as <p> */
     width: 90px;
     background-color: white;
-    height:25px;
+    height:24px;
     color: black;
     position: absolute;
     right:-150px;
@@ -118,7 +120,7 @@ input[type='file'] {
     text-align: center;
     border: #CCC;
     border-style: solid;
-    border-width: 1px;
+    border-width: .1px;
     box-shadow: 1px 2px 3px #ededed;
     /* if you want some fancy hover animations
     -webkit-transition: 100ms all;
