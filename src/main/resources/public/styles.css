@@ -13,6 +13,26 @@ h1 {
     font-size: 2vh;
 }
 
+#result {
+    height: 300px;
+    overflow: auto; /* allows for scrolling */
+    margin-left: 50vh;
+    margin-right: 50vh;
+    border-style: solid;
+    border-color: #CCC;
+    border-width: 1px;
+}
+
+#displayContents {
+    height: 300px;
+    overflow: auto;
+    margin-left: 50vh;
+    margin-right: 50vh;
+    border-style: solid;
+    border-color: #CCC;
+    border-width: 1px;
+}
+
 #instructions h1 {
     font-size: 2vh;
 }
@@ -44,9 +64,6 @@ input[type='file'] {
     /*visibility: hidden; /* sets it to hidden */
 }
 
-textarea {
-    margin-bottom: 40px;
-}
 
 #val {
     position: absolute;

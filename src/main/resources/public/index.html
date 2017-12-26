@@ -7,7 +7,7 @@
                 $('#val').text(this.value.replace(/C:\\fakepath\\/i, ''));
                 var fr = new FileReader();
                 fr.onload = function () {
-                    $("#contents").val(this.result);
+                    $("#displayContents").html(this.result);
                 };
                 fr.readAsText(this.files[0]);
                 
@@ -23,7 +23,7 @@
                 var result = event.target.result;
                 $.post("/rides", result, function(result, error) {
                     result = result.replace(/\n/g, "<br>");
-                    $(".result").html(result);
+                    $("#result").html(result);
                 });
             };
             var rides = $("#rides");
@@ -72,11 +72,10 @@
     <span id='buttonSubmit' onclick="sendData();">Submit</span>
     </div>
     
-    <div>
-    <textarea id="contents" rows="20" cols="70"></textarea>
+    <div id="displayContents">
     </div>
     
-    <div class="result">
+    <div id="result">
     </div>
     
 </body>
