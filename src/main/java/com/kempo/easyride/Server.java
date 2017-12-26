@@ -6,6 +6,8 @@ import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.model.RawParticipants;
 import com.kempo.easyride.util.RideParser;
 
+import java.nio.charset.StandardCharsets;
+
 import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
@@ -23,14 +25,15 @@ public class Server {
         get("/ping", (req, res) -> "pong");
         post("/rides", (req, res) -> {
             System.out.println("parsing...");
-            final RawParticipants participants = parser.parseInitialRequest(req.body());
+            String request = new String(req.bodyAsBytes(), StandardCharsets.UTF_8);
+            final RawParticipants participants = parser.parseInitialRequest(request);
             final AssignedRides result = orchestrator.orchestrateRides(participants);
             System.out.println(participants);
             return result.toString();
         });
     }
 
-    static int getHerokuAssignedPort() {
+    private static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
