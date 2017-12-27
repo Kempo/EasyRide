@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles.css" afterPath="$PROJECT_DIR$/src/main/resources/public/styles.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,8 +54,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="70" column="4" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+            <state relative-caret-position="481">
+              <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -763,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514331476307</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="button and output redesign">
+      <created>1514337796885</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1514337796885</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -870,7 +876,8 @@
     <MESSAGE value="server test pt 2" />
     <MESSAGE value="button style test" />
     <MESSAGE value="button style test pt 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="button style test pt 2" />
+    <MESSAGE value="button and output redesign" />
+    <option name="LAST_COMMIT_MESSAGE" value="button and output redesign" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1123,8 +1130,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="70" column="4" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+        <state relative-caret-position="481">
+          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
           <folding />
         </state>
       </provider>
