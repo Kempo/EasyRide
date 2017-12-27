@@ -50,21 +50,22 @@ h1 {
 
 #fileinput {
     vertical-align: middle;
-    display: inline-block; /* inline with block elements */
-    right: 100px; /* to account for the two buttons on its right */
-    width: 200px;
-    height: 25px;
+    display: inline-block;
+    right: 50px;
+    width: 400px;
+    height: 30px;
     background-color: white;
     box-shadow: 1px 2px 3px #ededed;
-    border: .1px solid #d8d8d8;
+    border: 1px solid #d8d8d8;
     position: relative;
     margin-bottom: 40px;
+    border-radius: 5px;
 }
 
 input[type='file'] {
-    opacity: 0; 
-    width: 200px;
-    height:25px;
+    opacity: 0;
+    width: 400px;
+    height: 30px;
     /*visibility: hidden; /* sets it to hidden */
 }
 
@@ -73,66 +74,67 @@ input[type='file'] {
     position: absolute;
     top: 0;
     left: 0;
-    font-size:2.5vh;
-    line-height: 25px;
-    text-indent: 10px;
+    font-size: 3vh;
+    text-indent: -70px;
     pointer-events: none;
-    width: 200px;
+    width: 400px;
     text-overflow: clip;
     display: block;
     overflow: hidden;
+    line-height: 30px;
+    border-radius: 5px;
 }
 #buttonSelect {
-    cursor: pointer; /* so your cursor becomes a pointer when hovering */
-    display: block; /* displays it as an element such as <p> */
+    cursor: pointer;
+    display: block;
     width: 45px;
     background-color: white;
-    height: 24px;
+    height: 30px;
     color: black;
     position: absolute;
-    right:-50px;
+    right: -52.5px;
     top: 0;
-    font-size: 2vh;
-    line-height:25px; /* moves down text from top of button to middle ish */
+    font-size: 2.5vh;
+    line-height: 25px;
     text-align: center;
+    border-radius: 5px;
     border: #CCC;
     border-style: solid;
-    border-width: .1px;
+    border-width: 1px;
     box-shadow: 1px 2px 3px #ededed;
-    /* if you want some fancy hover animations
     -webkit-transition: 100ms all;
     -moz-transition: 100ms all;
     transition: 100ms all;
-    */
+    
 }
 #buttonSubmit {
-  cursor: pointer; /* so your cursor becomes a pointer when hovering */
-    display: block; /* displays it as an element such as <p> */
+    cursor: pointer;
+    display: block;
     width: 90px;
     background-color: white;
-    height:24px;
+    height: 30px;
     color: black;
     position: absolute;
-    right:-150px;
+    right: -150px;
     top: 0;
-    font-size: 2vh;
-    line-height:25px; /* moves down text from top of button to middle ish */
+    font-size: 2.5vh;
+    line-height: 30px;
     text-align: center;
     border: #CCC;
     border-style: solid;
-    border-width: .1px;
+    border-width: 1px;
     box-shadow: 1px 2px 3px #ededed;
-    /* if you want some fancy hover animations
+    border-radius: 5px;
     -webkit-transition: 100ms all;
     -moz-transition: 100ms all;
     transition: 100ms all;
-    */
+    
 }
 
 /* perhaps not the best way to handle buttons */
 #buttonSubmit:hover {
-    background-color: #09adef;
+    background-color: #CCC;
 }
 #buttonSelect:hover {
-    background-color: #09adef;
+    background-color: #CCC;
 }
