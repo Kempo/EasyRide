@@ -28,7 +28,7 @@ public class Driver extends Person {
         List<Rider> occupants = car.getOccupants();
         for (final Rider r : occupants)
         {
-            sb.append(r.toString());
+            sb.append(r.toString() + "\n");
         }
         sb.append("\n");
         return sb.toString();
