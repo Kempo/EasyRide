@@ -3,14 +3,15 @@ package com.kempo.easyride.util;
 import com.kempo.easyride.model.RawDriver;
 import com.kempo.easyride.model.RawParticipants;
 import com.kempo.easyride.model.Rider;
+import com.kempo.easyride.model.Unclassified;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
 /**
- * all this does is classify input into riders/drivers/unparseable. It makes no judgment on whether or not the input
- * is valid other than that.
+ * classifies input into riders/drivers/unparseable.
+ * added isLocationValid check -aaron
  */
 public class RideParser
 {
@@ -27,7 +28,7 @@ public class RideParser
             String[] attrs = line.split("\t");
             if (attrs.length < 3 || !isLocationValid(attrs[1]))
             {
-                participants.addUnclassified(line);
+                participants.addUnclassified(new Unclassified(line, "length: " + attrs.length + " location: '" + attrs[1] + "'"));
             }
             else if (DRIVER.equals(attrs[2].toLowerCase()))
             {
@@ -39,7 +40,7 @@ public class RideParser
             }
             else
             {
-                participants.addUnclassified(line);
+                participants.addUnclassified(new Unclassified(line, "no type designation: '" + attrs[2] + "'"));
             }
         }
 
@@ -69,7 +70,7 @@ public class RideParser
     {
         if (attrs.length < 4)
         {
-            participants.addUnclassified(line);
+            participants.addUnclassified(new Unclassified(line, "length: " + attrs.length));
         }
         else
         {
@@ -80,7 +81,7 @@ public class RideParser
             }
             catch (final NumberFormatException e)
             {
-                participants.addUnclassified(line);
+                participants.addUnclassified(new Unclassified(line, "number format exception: '" + attrs[3] + "'"));
             }
         }
     }

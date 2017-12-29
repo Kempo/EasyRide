@@ -10,7 +10,7 @@ public class RawParticipants
 {
     private List<RawDriver> drivers;
     private List<Rider> riders;
-    private List<String> unclassifieds;
+    private List<Unclassified> unclassifieds;
 
     public RawParticipants()
     {
@@ -29,10 +29,7 @@ public class RawParticipants
         drivers.add(driver);
     }
 
-    public void addUnclassified(final String unclassified)
-    {
-        unclassifieds.add(unclassified);
-    }
+    public void addUnclassified(final Unclassified unclassified) { unclassifieds.add(unclassified); }
 
     public List<RawDriver> getDrivers()
     {
@@ -44,7 +41,7 @@ public class RawParticipants
         return riders;
     }
 
-    public List<String> getUnclassifieds()
+    public List<Unclassified> getUnclassifieds()
     {
         return unclassifieds;
     }
@@ -66,9 +63,10 @@ public class RawParticipants
         if (unclassifieds.size() > 0)
         {
             sb.append("We weren't able to process these lines:\n");
-            for (final String line : unclassifieds)
+            for (final Unclassified u : unclassifieds)
             {
-                sb.append(line);
+                sb.append("line: '" + u.getLine() + "'" + "\n");
+                sb.append("reason: " + u.getReason());
                 sb.append("\n");
             }
         }

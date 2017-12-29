@@ -32,11 +32,8 @@ public class Rider extends Person {
     public String toString()
     {
         final StringBuilder sb = new StringBuilder();
-        sb.append(name);
-        sb.append(" (");
-        sb.append(address);
-        sb.append(")");
-        sb.append("\n");
+        sb.append(name + " (" + address + ")");
+
         return sb.toString();
     }
 }

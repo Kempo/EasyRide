@@ -21,7 +21,7 @@ public class RideParserTest extends TestCase
         Assert.assertEquals("4 amin street", result.getDrivers().get(0).getAddress());
         Assert.assertEquals(2, result.getDrivers().get(0).getSpaces());
         Assert.assertEquals(1, result.getUnclassifieds().size());
-        Assert.assertEquals("Bilbo Baggins\t4 main street\thobbit", result.getUnclassifieds().get(0));
+        Assert.assertEquals("Bilbo Baggins\t4 main street\thobbit", result.getUnclassifieds().get(0).getLine());
     }
 
     public void testDriverWhenNoSpacesListedIsUnclassified()
@@ -29,7 +29,7 @@ public class RideParserTest extends TestCase
         final String input = "Bilbo\t4 main street\tdriver";
         final RawParticipants result = parser.parseInitialRequest(input);
         Assert.assertEquals(1, result.getUnclassifieds().size());
-        Assert.assertEquals(input, result.getUnclassifieds().get(0));
+        Assert.assertEquals(input, result.getUnclassifieds().get(0).getLine());
     }
 
     public void testDriverWhenSpacesNotANumberIsUnclassified()
@@ -37,7 +37,7 @@ public class RideParserTest extends TestCase
         final String input = "Bilbo\t4 main street\tdriver\tnan";
         final RawParticipants result = parser.parseInitialRequest(input);
         Assert.assertEquals(1, result.getUnclassifieds().size());
-        Assert.assertEquals(input, result.getUnclassifieds().get(0));
+        Assert.assertEquals(input, result.getUnclassifieds().get(0).getLine());
     }
 
     public void testDriverInputHappyPath()

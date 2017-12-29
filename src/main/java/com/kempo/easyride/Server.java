@@ -26,7 +26,7 @@ public class Server {
         post("/rides", (req, res) -> {
             System.out.println("parsing...");
             String request = new String(req.bodyAsBytes(), StandardCharsets.UTF_8);
-            System.out.println("request: " + request);
+            System.out.println("request: \n" + request);
             final RawParticipants participants = parser.parseInitialRequest(request);
             final AssignedRides result = orchestrator.orchestrateRides(participants);
             System.out.println(participants);
