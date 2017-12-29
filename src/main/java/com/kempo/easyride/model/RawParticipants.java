@@ -62,11 +62,11 @@ public class RawParticipants
         }
         if (unclassifieds.size() > 0)
         {
-            sb.append("We weren't able to process these lines:\n");
+            sb.append("Unprocessed lines:\n");
             for (final Unclassified u : unclassifieds)
             {
-                sb.append("line: '" + u.getLine() + "'" + "\n");
-                sb.append("reason: " + u.getReason());
+                sb.append("'" + u.getLine() + "'" + "\n");
+                sb.append("reason= " + u.getReason());
                 sb.append("\n");
             }
         }

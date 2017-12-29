@@ -81,7 +81,7 @@ public class RideParser
             }
             catch (final NumberFormatException e)
             {
-                participants.addUnclassified(new Unclassified(line, "number format exception: '" + attrs[3] + "'"));
+                participants.addUnclassified(new Unclassified(line, "incorrect spot designation: '" + attrs[3] + "'"));
             }
         }
     }

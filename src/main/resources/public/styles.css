@@ -16,12 +16,13 @@ h1 {
 #result {
     height: 200px;
     overflow: auto; /* allows for scrolling */
-    margin-left: 50vh;
-    margin-right: 50vh;
+    margin-left: 40vh;
+    margin-right: 40vh;
     border-style: solid;
     border-color: #CCC;
     border-width: 1px;
     text-align: left;
+    min-width: 400px;
 }
 
 #displayContents {
