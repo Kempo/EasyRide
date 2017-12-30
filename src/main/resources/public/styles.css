@@ -15,14 +15,13 @@ h1 {
 
 #result {
     height: 200px;
-    overflow: auto; /* allows for scrolling */
-    margin-left: 40vh;
-    margin-right: 40vh;
+    overflow: auto;
     border-style: solid;
     border-color: #CCC;
     border-width: 1px;
     text-align: left;
-    min-width: 400px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 #displayContents {
@@ -76,7 +75,6 @@ input[type='file'] {
     top: 0;
     left: 0;
     font-size: 3vh;
-    text-indent: -70px;
     pointer-events: none;
     width: 400px;
     text-overflow: clip;
@@ -84,6 +82,8 @@ input[type='file'] {
     overflow: hidden;
     line-height: 30px;
     border-radius: 5px;
+    text-align: left;
+    text-indent: 10px;
 }
 #buttonSelect {
     cursor: pointer;
