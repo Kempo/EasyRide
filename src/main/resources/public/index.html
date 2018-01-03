@@ -18,6 +18,8 @@
             $("#rides").trigger('click');
         }
         function sendData() {
+            document.getElementById("loadingImage").style.visibility = "visible";
+
             var fr = new FileReader();
             fr.onload = function(event) {
                 var result = event.target.result;
@@ -30,6 +32,8 @@
             var files = rides[0]['files'];
             var file = files[0];
             fr.readAsText(file, 'ASCII');
+
+            document.getElementById("loadingImage").style.visibility = "hidden";
         }
         
     </script>
@@ -76,6 +80,6 @@
     
     <div id="result">
     </div>
-    
+    <img src="misc\loading.gif" width="100px" height="100px">
 </body>
 </html>
