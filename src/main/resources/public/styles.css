@@ -13,6 +13,10 @@ h1 {
     font-size: 2vh;
 }
 
+#loadingImage {
+  visibility: hidden;
+}
+
 #result {
     height: 200px;
     overflow: auto;
@@ -107,7 +111,7 @@ input[type='file'] {
     -webkit-transition: 100ms all;
     -moz-transition: 100ms all;
     transition: 100ms all;
-    
+
 }
 #buttonSubmit {
     cursor: pointer;
@@ -130,7 +134,7 @@ input[type='file'] {
     -webkit-transition: 100ms all;
     -moz-transition: 100ms all;
     transition: 100ms all;
-    
+
 }
 
 /* perhaps not the best way to handle buttons */
