@@ -3,18 +3,20 @@
     <script src="./jquery.js"></script>
     <script type="text/javascript">
         
-        /* REMOVED, but still works.
+
         $(document).ready(function(){
             $("#rides").change(function () {
                 $('#val').text(this.value.replace(/C:\\fakepath\\/i, ''));
+                /* REMOVED
                 var fr = new FileReader();
                 fr.onload = function () {
                     $("#displayContents").html(this.result);
                 };
                 fr.readAsText(this.files[0]);
+                */
             });
         });
-        */
+
 
         function selectFile() {
             $("#rides").trigger('click');

@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/MapsAPI.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/MapsAPI.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles.css" afterPath="$PROJECT_DIR$/src/main/resources/public/styles.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +34,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -49,8 +44,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+            <state relative-caret-position="340">
+              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -744,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514584094553</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fixed alignment on loading gif. made textbox rounded">
+      <created>1515208712258</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1515208712258</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -856,7 +858,8 @@
     <MESSAGE value="added specifications for unclassifieds (along with the line, we now also know a probable reason)." />
     <MESSAGE value="test 1: attempt at removing CRLF line terminators which are part of the .tsv files generated from Google Sheets. I've learned that once you can remove those CRLF line terminators, then EasyRide will be able to properly read/parse the .tsv. CRLF Line terminators are from window's text files and I believe they're symbolized through /r/n while on Unix systems, \n is used. This is my first attempt at our biggest bug." />
     <MESSAGE value="tidying up console output, edited some alignment on website, and tweaked some code.&#10;update: my test did work and now EasyRide can process .tsv files generated from google sheets!" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidying up console output, edited some alignment on website, and tweaked some code.&#10;update: my test did work and now EasyRide can process .tsv files generated from google sheets!" />
+    <MESSAGE value="fixed alignment on loading gif. made textbox rounded" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed alignment on loading gif. made textbox rounded" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -970,6 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1104,16 +1108,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+        <state relative-caret-position="340">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
