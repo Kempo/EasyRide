@@ -32,7 +32,6 @@ public class Server {
             final AssignedRides result = orchestrator.orchestrateRides(participants);
             System.out.println(participants);
             return result.toString();
-
         });
     }
 

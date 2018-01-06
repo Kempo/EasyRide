@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 
 public class MapsAPI {
     private final String KEY = "AIzaSyDjkGSDw_dX7iJhvb5mHu8rotwB0WfJgjk"; // Google Distance Matrix API key
+    private final String DELIMITER = "%20";
     /**
      *
      * @param o
@@ -59,12 +60,12 @@ public class MapsAPI {
     }
 
 
-    private String setOrigin(String s) { //example 'University of Washington' to 'University_Of_Washington'
-        return s.replaceAll(" ","%20");
+    private String setOrigin(String s) {
+        return s.replaceAll(" ",DELIMITER);
     }
 
     private String setDestination(String s) {
-        return s.replaceAll(" ", "%20");
+        return s.replaceAll(" ", DELIMITER);
     }
 
 }

@@ -21,6 +21,7 @@ public class RideAssigner {
             for(Rider rider : riderList) {
                 double distance = maps.getDistance(driver.getAddress(), rider.getAddress());
                 rider.setDistanceTo(distance);
+
                 driver.getPreferences().add(rider); // unorganized list of riders
             }
             Collections.sort(driver.getPreferences(), new DistanceComparator()); // organizes the list using the DistanceComparator

@@ -4,7 +4,7 @@ public class Rider extends Person {
 
     private Car current = null; // their current car
     private double distance; // distance to a target
-
+    private boolean convenience;
 
     public Rider(String n, String a) {
         super();
@@ -27,6 +27,11 @@ public class Rider extends Person {
     public double getDistanceTo() {
         return distance;
     }
+
+    public boolean isConvenientTo() { return convenience; }
+
+    public void setConvenience(boolean c) { convenience = c; }
+
 
     @Override
     public String toString()
