@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AssignedRides {
-    final List<Driver> drivers;
-    final List<Rider> unassignedRiders;
-
+    private final List<Driver> drivers;
+    private final List<Rider> unassignedRiders;
+    private String unparseable;
     public AssignedRides(final List<Driver> drivers)
     {
         this.drivers = drivers;
@@ -22,8 +22,14 @@ public class AssignedRides {
         return drivers;
     }
 
-    public List<Rider> getUnassignedRiders() {
-        return unassignedRiders;
+    public List<Rider> getUnassignedRiders() { return unassignedRiders; }
+
+    public String getUnparseable() {
+        return unparseable;
+    }
+
+    public void setUnparseable(String u) {
+        unparseable = u;
     }
 
     @Override
@@ -34,14 +40,22 @@ public class AssignedRides {
         {
             sb.append(d.toString());
         }
-        sb.append("\n");
-        sb.append("\n");
+        sb.append(getUnassignedOrUnparseable());
+        return sb.toString();
+    }
+
+    public String getUnassignedOrUnparseable() {
+        final StringBuilder sb  = new StringBuilder();
         if(getUnassignedRiders().size() > 0) {
-            sb.append("Unassigned riders: \n");
+            sb.append("<b>Unassigned riders:</b> \n");
             for (final Rider r : unassignedRiders) {
                 sb.append(r.toString() + "\n");
             }
         }
+        if(!getUnparseable().isEmpty()) {
+            sb.append(getUnparseable());
+        }
         return sb.toString();
     }
+
 }

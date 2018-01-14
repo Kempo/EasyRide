@@ -30,6 +30,7 @@ public class Orchestrator {
         System.out.println("about to assign occupants: " );
         AssignedRides assignedRides = rideAssigner.assignOccupants(drivers, riders);
         System.out.println("documents assigned!");
+        assignedRides.setUnparseable(rawParticipants.getUnclassifiedOutput());
         return assignedRides;
     }
 }

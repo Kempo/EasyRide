@@ -60,9 +60,15 @@ public class RawParticipants
         {
             sb.append(driver + "\n");
         }
+
+        return sb.toString();
+    }
+
+    public String getUnclassifiedOutput() {
+        final StringBuilder sb = new StringBuilder();
         if (unclassifieds.size() > 0)
         {
-            sb.append("Unprocessed lines:\n");
+            sb.append("<b>Unprocessed lines:</b>\n");
             for (final Unclassified u : unclassifieds)
             {
                 sb.append("'" + u.getLine() + "'" + "\n");
