@@ -71,8 +71,8 @@ public class RawParticipants
             sb.append("<b>Unprocessed lines:</b>\n");
             for (final Unclassified u : unclassifieds)
             {
-                sb.append("'" + u.getLine() + "'" + "\n");
-                sb.append("reason= " + u.getReason());
+                sb.append("\"" + u.getLine() + "\"" + "\n");
+                sb.append("reason=" + u.getReason());
                 sb.append("\n");
             }
         }

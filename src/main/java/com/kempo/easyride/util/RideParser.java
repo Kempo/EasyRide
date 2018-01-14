@@ -26,9 +26,12 @@ public class RideParser
         for (String line : lines)
         {
             String[] attrs = line.split("\t");
-            if (attrs.length < 3 || !isLocationValid(attrs[1]))
+            if (attrs.length < 3)
             {
-                participants.addUnclassified(new Unclassified(line, "length: " + attrs.length + " location: '" + attrs[1] + "'"));
+                participants.addUnclassified(new Unclassified(line, "not appropriate format. length: " + attrs.length));
+            }else if(!isLocationValid(attrs[1]))
+            {
+                participants.addUnclassified(new Unclassified(line, "invalid location: '" + attrs[1] + "'"));
             }
             else if (DRIVER.equals(attrs[2].toLowerCase()))
             {

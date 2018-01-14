@@ -10,10 +10,13 @@ public class OrchestratorTest extends TestCase {
     private RideParser parser = new RideParser();
     private static Orchestrator orchestrator = new Orchestrator(new RideAssigner());
     private String request = TestUtility.createTestParticipant("Aaron", "Space Needle", "rider", 0)
-            + "\n" + TestUtility.createTestParticipant("Ted", "Seattle University", "driver", 6)
-            + "\n" + TestUtility.createTestParticipant("Connor", "New York", "driver", 6)
+            + "\n" + TestUtility.createTestParticipant("Ted", "Seattle University", "driver", 2)
+            + "\n" + TestUtility.createTestParticipant("Connor", "New York", "driver", 2)
             + "\n" + TestUtility.createTestParticipant("Nick", "Boston", "rider", 0)
-            + "\n" + TestUtility.createTestParticipant("Tod", "San Francisco", "rider",0);
+            + "\n" + TestUtility.createTestParticipant("Tod", "San Francisco", "rider",0)
+            + "\n" + "hello test     hi     tes  test   whoo    test1"
+            + "\n" + TestUtility.createTestParticipant("Bob", "Seattle University", "rider", 0)
+            + "\n" + TestUtility.createTestParticipant("Lamar", "Seattle University", "rider", 0);
 
 
     public void testOrchestratorWithTextInput() {

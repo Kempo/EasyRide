@@ -40,7 +40,9 @@ public class AssignedRides {
         {
             sb.append(d.toString());
         }
-        sb.append(getUnassignedOrUnparseable());
+        if(!getUnassignedOrUnparseable().isEmpty()) {
+            sb.append(getUnassignedOrUnparseable());
+        }
         return sb.toString();
     }
 

@@ -19,15 +19,24 @@ public class RideAssigner {
     public void readData(List<Driver> driverList, List<Rider> riderList) {
         for(Driver driver : driverList) {
             for(Rider rider : riderList) {
+
                 double distance = maps.getDistance(driver.getAddress(), rider.getAddress());
                 rider.setDistanceTo(distance);
-
                 driver.getPreferences().add(rider); // unorganized list of riders
             }
             Collections.sort(driver.getPreferences(), new DistanceComparator()); // organizes the list using the DistanceComparator
         }
     }
 
+    /**
+     * to make the distance process avoid using MapsAPI as much as possible (wip)
+     * @param address
+     * @param address1
+     * @return
+     */
+    public boolean isAlmostDuplicate(String address, String address1) {
+        return false; // by default, assume the addresses are NOT the same
+    }
 
     /**
      * responsible for assigning occupants to each vehicle
