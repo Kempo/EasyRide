@@ -7,7 +7,7 @@ import com.kempo.easyride.application.RideAssigner;
 import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.model.RawParticipants;
 import com.kempo.easyride.util.RideParser;
-import com.kempo.easyride.util.SheetsAPI;
+import com.kempo.easyride.google.SheetsAPI;
 
 import java.nio.charset.StandardCharsets;
 

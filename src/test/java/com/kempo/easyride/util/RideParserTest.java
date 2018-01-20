@@ -4,6 +4,8 @@ import com.kempo.easyride.model.RawParticipants;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
+import java.util.*;
+
 /**
  * Created by dileng on 10/12/17.
  */
@@ -76,4 +78,21 @@ public class RideParserTest extends TestCase
         Assert.assertEquals(4, result.getDrivers().get(0).getSpaces());
     }
 
+
+    public void testSheetsAPI() {
+        List<List<Object>> vals = new ArrayList<List<Object>>();
+        List row1 = new ArrayList();
+
+        row1.add("aaron");
+        row1.add("new york");
+        row1.add("driver");
+        row1.add("5");
+        vals.add(row1);
+
+        final RawParticipants result = parser.parseInitialRequestThroughSheetsWithList(vals);
+        Assert.assertEquals(1, result.getDrivers().size());
+        Assert.assertEquals("aaron", result.getDrivers().get(0).getName());
+        Assert.assertEquals(5, result.getDrivers().get(0).getSpaces());
+        Assert.assertEquals("new york", result.getDrivers().get(0).getAddress());
+    }
 }
