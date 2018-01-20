@@ -40,15 +40,17 @@
             fr.readAsText(file, 'ASCII');
         }
 
+/*
         function read() {
             toggleLoading();
+            var result = "heopojopjppjopjo";
             $.post("/sheets", function(result) {
                 result = result.replace(/\n/g, "<br>");
                 $("#result").html(result);
                 toggleLoading();
             });
         }
-
+*/
       function toggleLoading() {
         var status = document.getElementById("loadingImage").style.visibility;
         if(status == "" || status == "hidden") {
@@ -112,12 +114,13 @@
     </div>
 
 
-    <form action="/sheets" method="POST" id="sheetsSubmission"> 
+    <form action="/sheets" method="POST" id="sheetsSubmission" target="output"> 
     Sheet ID: <input type="text" name="sheetID"><br>
     Range: <input type="text" name="dataRange"><br>
-    <input type="submit" value="Submit" onclick="read();" >
+    <input type="submit" value="Submit">
     </form>
 
+    <iframe name="output"></iframe>
 
 </body>
 </html>
