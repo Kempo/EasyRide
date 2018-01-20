@@ -21,7 +21,7 @@ public class OrchestratorTest extends TestCase {
 
 
     public void testOrchestratorWithTextInput() {
-        final RawParticipants participants = parser.parseInitialRequest(request);
+        final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
         Assert.assertEquals(2, result.getDrivers().size());
         Assert.assertEquals(1, result.getUnassignedRiders().size());

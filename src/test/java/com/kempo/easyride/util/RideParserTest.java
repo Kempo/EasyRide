@@ -15,7 +15,7 @@ public class RideParserTest extends TestCase
     {
         final String input = "Bilbo Baggins\t4 main street\thobbit" +
                 "\nGandalf\t4 amin street\tdriver\t2";
-        final RawParticipants result = parser.parseInitialRequest(input);
+        final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(1, result.getDrivers().size());
         Assert.assertEquals("Gandalf", result.getDrivers().get(0).getName());
         Assert.assertEquals("4 amin street", result.getDrivers().get(0).getAddress());
@@ -27,7 +27,7 @@ public class RideParserTest extends TestCase
     public void testDriverWhenNoSpacesListedIsUnclassified()
     {
         final String input = "Bilbo\t4 main street\tdriver";
-        final RawParticipants result = parser.parseInitialRequest(input);
+        final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(1, result.getUnclassifieds().size());
         Assert.assertEquals(input, result.getUnclassifieds().get(0).getLine());
     }
@@ -35,7 +35,7 @@ public class RideParserTest extends TestCase
     public void testDriverWhenSpacesNotANumberIsUnclassified()
     {
         final String input = "Bilbo\t4 main street\tdriver\tnan";
-        final RawParticipants result = parser.parseInitialRequest(input);
+        final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(1, result.getUnclassifieds().size());
         Assert.assertEquals(input, result.getUnclassifieds().get(0).getLine());
     }
@@ -43,7 +43,7 @@ public class RideParserTest extends TestCase
     public void testDriverInputHappyPath()
     {
         final String input = "Bilbo\t4 main street\tdriver\t5";
-        final RawParticipants result = parser.parseInitialRequest(input);
+        final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(0, result.getUnclassifieds().size());
         Assert.assertEquals(1, result.getDrivers().size());
         Assert.assertEquals(5, result.getDrivers().get(0).getSpaces());
@@ -52,7 +52,7 @@ public class RideParserTest extends TestCase
     public void testRider()
     {
         final String input = "Bilbo\t4 main street\trider";
-        final RawParticipants result = parser.parseInitialRequest(input);
+        final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(0, result.getUnclassifieds().size());
         Assert.assertEquals(0, result.getDrivers().size());
         Assert.assertEquals(1, result.getRiders().size());
@@ -67,7 +67,7 @@ public class RideParserTest extends TestCase
                 + "\n" + TestUtility.createTestParticipant("Nick", "address 4", "rider", 0)
                 + "\n" + TestUtility.createTestParticipant("Tod", "address 5", "rider",0);
 
-        final RawParticipants result = parser.parseInitialRequest(input);
+        final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(2, result.getDrivers().size());
         Assert.assertEquals(0, result.getUnclassifieds().size());
         Assert.assertEquals(3, result.getRiders().size());
