@@ -49,9 +49,9 @@ public class AssignedRides {
     public String getUnassignedOrUnparseable() {
         final StringBuilder sb  = new StringBuilder();
         if(getUnassignedRiders().size() > 0) {
-            sb.append("<b>Unassigned riders:</b> \n");
+            sb.append("<b>Unassigned riders:</b> <br>");
             for (final Rider r : unassignedRiders) {
-                sb.append(r.toString() + "\n");
+                sb.append(r.toString() + "<br>");
             }
         }
         if(!getUnparseable().isEmpty()) {

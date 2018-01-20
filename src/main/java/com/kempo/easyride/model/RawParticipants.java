@@ -68,12 +68,12 @@ public class RawParticipants
         final StringBuilder sb = new StringBuilder();
         if (unclassifieds.size() > 0)
         {
-            sb.append("<b>Unprocessed lines:</b>\n");
+            sb.append("<b>Unprocessed lines:</b> <br>");
             for (final Unclassified u : unclassifieds)
             {
-                sb.append("\"" + u.getLine() + "\"" + "\n");
+                sb.append("\"" + u.getLine() + "\"" + "<br>");
                 sb.append("reason=" + u.getReason());
-                sb.append("\n");
+                sb.append("<br>");
             }
         }
         return sb.toString();

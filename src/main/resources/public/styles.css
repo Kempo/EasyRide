@@ -20,6 +20,17 @@ h1 {
     margin-top: -125px;
     z-index: 10;
 }
+
+#outputframe {
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #CCC;
+    margin: 0 auto;
+    text-align: left;
+    width: 700px;
+}
+
 #sheetsSubmission {
     padding-top: 20px;
 }
