@@ -1,6 +1,7 @@
 package com.kempo.easyride;
 
 
+import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.ValueRange;
 import com.kempo.easyride.application.Orchestrator;
 import com.kempo.easyride.application.RideAssigner;
@@ -33,10 +34,15 @@ public class Server {
         post("/sheets", (req, res) -> {
             String sheetsID = req.queryParams("sheetID");
             String dataRange = req.queryParams("dataRange");
-
-            ValueRange values = SheetsAPI.getSheetsService().spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
+            System.out.println("sheetID: " + sheetsID);
+            System.out.println("dataRange: " + dataRange);
+            Sheets service = SheetsAPI.getSheetsService();
+            System.out.println("google sheets service initialized: " + service.getApplicationName());
+            ValueRange values = service.spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
+            System.out.println("parsing...");
             final RawParticipants participants = parser.parseInitialRequestThroughSheets(values);
             final AssignedRides result = orchestrator.orchestrateRides(participants);
+            System.out.println("request complete.");
             return result.toString();
         });
 

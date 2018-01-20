@@ -33,13 +33,16 @@ public class SheetsAPI {
             HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
         } catch (Throwable t) {
             t.printStackTrace();
+            System.out.println("error with HTTP_TRANSPORT");
             System.exit(1);
         }
 
         Credential credential = null;
+        System.out.println("building sheets...");
         return new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, credential)
                 .setApplicationName(APPLICATION_NAME)
                 .build();
+
     }
 
 
