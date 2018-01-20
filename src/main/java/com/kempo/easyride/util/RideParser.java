@@ -1,13 +1,16 @@
 package com.kempo.easyride.util;
 
+import com.google.api.services.sheets.v4.model.ValueRange;
 import com.kempo.easyride.model.RawDriver;
 import com.kempo.easyride.model.RawParticipants;
 import com.kempo.easyride.model.Rider;
 import com.kempo.easyride.model.Unclassified;
+import sun.awt.SunHints;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.List;
 
 /**
  * classifies input into riders/drivers/unparseable.
@@ -19,9 +22,9 @@ public class RideParser
     private static final String DRIVER = "driver";
     private static final String RIDER = "rider";
 
-    public RawParticipants parseInitialRequest(final String rawCsv)
+    public RawParticipants parseInitialRequestThroughTSV(final String rawTsv)
     {
-        final String[] lines = rawCsv.split("\n");
+        final String[] lines = rawTsv.split("\n");
         final RawParticipants participants = new RawParticipants();
         for (String line : lines)
         {
@@ -35,7 +38,7 @@ public class RideParser
             }
             else if (DRIVER.equals(attrs[2].toLowerCase()))
             {
-                parseDriver(participants, line, attrs);
+                parseDriverThroughTSV(participants, line, attrs);
             }
             else if (RIDER.equals(attrs[2].toLowerCase()))
             {
@@ -47,6 +50,34 @@ public class RideParser
             }
         }
 
+        return participants;
+    }
+
+    public RawParticipants parseInitialRequestThroughSheets(final ValueRange result) {
+        final RawParticipants participants = new RawParticipants();
+        List<List<Object>> values = result.getValues();
+        if(values != null && values.size() > 0) {
+            for (List row : values) {
+                if(row.size() <= 4) {
+                    if(!isLocationValid(row.get(1).toString())) {
+                        participants.addUnclassified(new Unclassified(row.toString(), "invalid location: '" + row.get(1).toString() + "'"));
+                    }
+                    else if(DRIVER.equalsIgnoreCase(row.get(2).toString()))
+                    {
+                        participants.addDriver(new RawDriver(row.get(0).toString(), row.get(1).toString(), Integer.parseInt(row.get(2).toString()))); // add catch for errors
+                    }
+                    else if(RIDER.equalsIgnoreCase(row.get(2).toString()))
+                    {
+                        participants.addRider(new Rider(row.get(0).toString(), row.get(1).toString()));
+                    }
+                    else {
+                        participants.addUnclassified(new Unclassified(row.toString(), "no type designation: '" + row.get(2).toString() + "'"));
+                    }
+                }else{
+                    participants.addUnclassified(new Unclassified(row.toString(), "invalid row length: " + row.size()));
+                }
+            }
+        }
         return participants;
     }
 
@@ -69,7 +100,7 @@ public class RideParser
         return true;
     }
 
-    private void parseDriver(final RawParticipants participants, final String line, final String[] attrs)
+    private void parseDriverThroughTSV(final RawParticipants participants, final String line, final String[] attrs)
     {
         if (attrs.length < 4)
         {

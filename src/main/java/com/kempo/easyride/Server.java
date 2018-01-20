@@ -1,10 +1,13 @@
 package com.kempo.easyride;
 
+
+import com.google.api.services.sheets.v4.model.ValueRange;
 import com.kempo.easyride.application.Orchestrator;
 import com.kempo.easyride.application.RideAssigner;
 import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.model.RawParticipants;
 import com.kempo.easyride.util.RideParser;
+import com.kempo.easyride.util.SheetsAPI;
 
 import java.nio.charset.StandardCharsets;
 
@@ -30,9 +33,11 @@ public class Server {
         post("/sheets", (req, res) -> {
             String sheetsID = req.queryParams("sheetID");
             String dataRange = req.queryParams("dataRange");
-            System.out.println("ID: " + sheetsID + "\nRange:" + dataRange);
-            String result = ("ID: " + sheetsID + "\nRange:" + dataRange);
-            return result;
+
+            ValueRange values = SheetsAPI.getSheetsService().spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
+            final RawParticipants participants = parser.parseInitialRequestThroughSheets(values);
+            final AssignedRides result = orchestrator.orchestrateRides(participants);
+            return result.toString();
         });
 
         post("/rides", (req, res) -> {
@@ -40,7 +45,7 @@ public class Server {
             String request = new String(req.bodyAsBytes(), StandardCharsets.UTF_8);
             request = request.replaceAll("\r\n","\n"); // to remove CRLF line terminators
             System.out.println("request: \n" + request);
-            final RawParticipants participants = parser.parseInitialRequest(request);
+            final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
             final AssignedRides result = orchestrator.orchestrateRides(participants);
             System.out.println(participants);
             return result.toString();
@@ -54,4 +59,5 @@ public class Server {
         }
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
+
 }
