@@ -4,6 +4,7 @@ import com.kempo.easyride.application.Orchestrator;
 import com.kempo.easyride.application.RideAssigner;
 import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.model.RawParticipants;
+import junit.framework.Assert;
 import junit.framework.TestCase;
 
 public class OrchestratorTest extends TestCase {
@@ -22,6 +23,8 @@ public class OrchestratorTest extends TestCase {
     public void testOrchestratorWithTextInput() {
         final RawParticipants participants = parser.parseInitialRequest(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
-        System.out.println(result.toString());
+        Assert.assertEquals(2, result.getDrivers().size());
+        Assert.assertEquals(1, result.getUnassignedRiders().size());
+        Assert.assertEquals(true, (result.getUnparseable().length() > 0));
     }
 }

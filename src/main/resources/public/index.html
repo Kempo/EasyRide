@@ -21,11 +21,13 @@
         function selectFile() {
             $("#rides").trigger('click');
         }
+
         function sendData() {
             toggleLoading();
             var fr = new FileReader();
             fr.onload = function(event) {
                 var result = event.target.result;
+
                 $.post("/rides", result, function(result, error) {
                     result = result.replace(/\n/g, "<br>");
                     $("#result").html(result);
@@ -99,6 +101,13 @@
     <div id="loadingImage">
     <img src="misc\loading.gif" width="50px" height="50px">
     </div>
+
+
+    <form action="/sheets" method="POST" id="sheetsSubmission"> 
+    Sheet ID: <input type="text" name="sheetID"><br>
+    Range: <input type="text" name="dataRange"><br>
+    <input type="submit" value="Submit">
+    </form>
 
 
 </body>

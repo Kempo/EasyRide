@@ -22,7 +22,17 @@ public class Server {
     {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
-        get("/ping", (req, res) -> "pong");
+        get("/ping", (req, res) -> {
+            System.out.println("hello!");
+            return "pong";
+        });
+        post("/sheets", (req, res) -> {
+            String sheetsID = req.queryParams("sheetsID");
+            String dataRange = req.queryParams("dataRange");
+            System.out.println("ID: " + sheetsID + "\nRange:" + dataRange);
+            return "recieved and outputted";
+        });
+
         post("/rides", (req, res) -> {
             System.out.println("parsing...");
             String request = new String(req.bodyAsBytes(), StandardCharsets.UTF_8);

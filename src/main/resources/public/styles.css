@@ -20,7 +20,9 @@ h1 {
     margin-top: -125px;
     z-index: 10;
 }
-
+#sheetsSubmission {
+    padding-top: 100px;
+}
 #result {
     height: 200px;
     overflow: auto;
