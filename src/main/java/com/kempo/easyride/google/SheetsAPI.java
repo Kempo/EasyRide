@@ -13,7 +13,7 @@ public class SheetsAPI {
 
     private static final String APPLICATION_NAME = "EasyRide";
 
-    public static final String API_KEY = "17jczuEenPqXwJtCma3km1IW452no54ECNI_1DfCv9_4";
+    public static final String API_KEY = "AIzaSyDIz3ZhxGMumRcLKPokHmQ6sJM8gTqraPg";
 
     /** Global instance of the JSON factory. */
     private static final JsonFactory JSON_FACTORY =
