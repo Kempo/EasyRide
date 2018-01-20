@@ -40,6 +40,15 @@
             fr.readAsText(file, 'ASCII');
         }
 
+        function read() {
+            toggleLoading();
+            $.post("/sheets", function(result) {
+                result = result.replace(/\n/g, "<br>");
+                $("#result").html(result);
+                toggleLoading();
+            });
+        }
+
       function toggleLoading() {
         var status = document.getElementById("loadingImage").style.visibility;
         if(status == "" || status == "hidden") {
@@ -106,7 +115,7 @@
     <form action="/sheets" method="POST" id="sheetsSubmission"> 
     Sheet ID: <input type="text" name="sheetID"><br>
     Range: <input type="text" name="dataRange"><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick="read();" >
     </form>
 
 

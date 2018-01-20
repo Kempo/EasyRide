@@ -26,11 +26,13 @@ public class Server {
             System.out.println("hello!");
             return "pong";
         });
+
         post("/sheets", (req, res) -> {
-            String sheetsID = req.queryParams("sheetsID");
+            String sheetsID = req.queryParams("sheetID");
             String dataRange = req.queryParams("dataRange");
             System.out.println("ID: " + sheetsID + "\nRange:" + dataRange);
-            return "recieved and outputted";
+            String result = ("ID: " + sheetsID + "\nRange:" + dataRange);
+            return result;
         });
 
         post("/rides", (req, res) -> {
