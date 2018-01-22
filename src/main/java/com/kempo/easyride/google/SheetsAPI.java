@@ -53,7 +53,7 @@ public class SheetsAPI {
     public static String getIDFromURL(String url) {
         String sheetID = "";
         try {
-            if (url.contains("http://")) {
+            if (url != null && url.contains("http://")) {
                 url = url.replaceAll("http://", "");
             }
 
