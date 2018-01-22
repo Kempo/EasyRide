@@ -32,11 +32,11 @@ public class Server {
         });
 
         post("/sheets", (req, res) -> {
-            String sheetsID = req.queryParams("SheetID");
+            String url = req.queryParams("sheetURL");
             String dataRange = req.queryParams("dataRange");
-            //String sheetsID = SheetsAPI.getIDFromURL(url);
+            String sheetsID = SheetsAPI.getIDFromURL(url);
 
-            //System.out.println("sheetURL: " + url);
+            System.out.println("sheetURL: " + url);
             System.out.println("sheetID: " + sheetsID);
             System.out.println("dataRange: " + dataRange);
             Sheets service = SheetsAPI.getSheetsService();
