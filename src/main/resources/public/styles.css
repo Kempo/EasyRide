@@ -42,7 +42,7 @@ h1 {
     border-color: #CCC;
     border-width: 1px;
     text-align: left;
-    max-width: 700px;
+    width: 700px; /* max-width if it's a div */
     margin: 0 auto;
     border-radius: 4px;
     background: white;
