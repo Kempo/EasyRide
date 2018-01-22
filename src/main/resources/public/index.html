@@ -30,7 +30,8 @@
 
                 $.post("/rides", result, function(result, error) {
                     result = result.replace(/\n/g, "<br>");
-                    $("#result").html(result);
+                    //$("#result").html(result);
+                    $("#result").contents().find("div").html(result);
                     toggleLoading();
                 });
             };
@@ -106,8 +107,8 @@
     </div>
     -->
 
-    <div id="result">
-    </div>
+    <iframe name="output" id="result">
+    </iframe>
 
     <div id="loadingImage">
     <img src="misc\loading.gif" width="50px" height="50px">
@@ -115,12 +116,14 @@
 
 
     <form action="/sheets" method="POST" id="sheetsSubmission" target="output"> 
-    Sheet ID: <input type="text" name="sheetID"><br>
+    Sheet URL: <input type="text" name="sheetURL"><br>
     Range: <input type="text" name="dataRange"><br>
     <input type="submit" value="Submit">
     </form>
 
+    <!--
     <iframe name="output" id="outputframe"></iframe>
+    -->
 
 </body>
 </html>

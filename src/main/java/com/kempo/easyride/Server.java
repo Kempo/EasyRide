@@ -32,11 +32,15 @@ public class Server {
         });
 
         post("/sheets", (req, res) -> {
-            String sheetsID = req.queryParams("sheetID");
+            String URL = req.queryParams("SheetURL");
             String dataRange = req.queryParams("dataRange");
+            String sheetsID = SheetsAPI.getIDFromURL(URL);
+
+            System.out.println("sheetURL: " + URL);
             System.out.println("sheetID: " + sheetsID);
             System.out.println("dataRange: " + dataRange);
             Sheets service = SheetsAPI.getSheetsService();
+
             System.out.println("google sheets service initialized: " + service.getApplicationName());
             ValueRange values = service.spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
             System.out.println("parsing...");

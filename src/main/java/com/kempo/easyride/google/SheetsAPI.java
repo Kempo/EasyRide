@@ -45,5 +45,33 @@ public class SheetsAPI {
 
     }
 
+    /**
+     * Parses out the Google Sheets ID from a URL
+     * @param url
+     * @return Google Sheets ID
+     */
+    public static String getIDFromURL(String url) {
+        String sheetID = "";
+        try {
+            if (url.contains("http://")) {
+                url = url.replaceAll("http://", "");
+            }
+
+            String[] tokens = url.split("/");
+            int i = 0;
+            for (String s : tokens) {
+                if (s.equals("d")) { // signifier that the next token will be the ID
+                    sheetID = tokens[i + 1];
+                }
+                i += 1;
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+            sheetID = "no ID found";
+            return sheetID;
+        }
+        return sheetID;
+    }
+
 
 }
