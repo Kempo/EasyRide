@@ -18,6 +18,7 @@
 
             $("#submitSheets").click(function() {
                 toggleLoading();
+                alert($("sheetsSubmission").serialize());
                 $.post("/sheets", $("sheetsSubmission").serialize(), function(data, error) {
                     data = data.replace(/\n/g, "<br>");
                     $("#result").contents().find("body").html(data);
