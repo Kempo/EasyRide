@@ -19,9 +19,6 @@
             $("#submitSheets").click(function() {
                 toggleLoading();
                 var str = $("#sheetsSubmission").serialize();
-                alert(str);
-                $("#submissionURL").html(str);
-
                 $.post("/sheets", str, function(data, error) {
                     data = data.replace(/\n/g, "<br>");
                     $("#result").contents().find("body").html(data);
@@ -116,6 +113,14 @@
     <span id='buttonSubmit' onclick="sendData();">Submit</span>
     </div>
 
+    <div id="sheetsinput">
+        <form id="sheetsSubmission"> 
+        Sheet URL: <input type="text" name="sheetURL"><br>
+        Range: <input type="text" name="dataRange"><br>
+        <input type="button" value="Submit" id="submitSheets">
+        </form>
+    </div>
+
     <!--
 <div id="displayContents">
     </div>
@@ -128,20 +133,6 @@
     <img src="misc\loading.gif" width="50px" height="50px">
     </div>
 
-
-    <form id="sheetsSubmission"> 
-    Sheet URL: <input type="text" name="sheetURL"><br>
-    Range: <input type="text" name="dataRange"><br>
-    <!--
-    <input type="submit" value="Submit">
-    -->
-    <input type="button" value="Submit" id="submitSheets">
-    </form>
-
-
-    <p id="submissionURL">
-        submission url here
-    </p>
     <!--
     <iframe name="output" id="outputframe"></iframe>
     -->
