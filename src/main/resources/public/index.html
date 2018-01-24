@@ -18,7 +18,9 @@
 
             $("#submitSheets").click(function() {
                 toggleLoading();
-                alert($("sheetsSubmission").serialize());
+                var str = $("sheetsSubmission").serialize();
+                alert(str);
+                $("submissionURL").html(str);
                 $.post("/sheets", $("sheetsSubmission").serialize(), function(data, error) {
                     data = data.replace(/\n/g, "<br>");
                     $("#result").contents().find("body").html(data);
@@ -137,6 +139,10 @@
     <input type="button" value="Submit" id="submitSheets">
     </form>
 
+
+    <p id="submissionURL">
+        submission url here
+    </p>
     <!--
     <iframe name="output" id="outputframe"></iframe>
     -->
