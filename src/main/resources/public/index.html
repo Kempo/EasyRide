@@ -18,10 +18,10 @@
 
             $("#submitSheets").click(function() {
                 toggleLoading();
-                var str = $("sheetsSubmission").serialize();
-                $("sheetsSubmission").find("input").attr("disabled","disabled");
+                var str = $("#sheetsSubmission").serialize();
                 alert(str);
-                $("submissionURL").html(str);
+                $("#submissionURL").html(str);
+
                 $.post("/sheets", str, function(data, error) {
                     data = data.replace(/\n/g, "<br>");
                     $("#result").contents().find("body").html(data);
@@ -129,7 +129,7 @@
     </div>
 
 
-    <form id="sheetsSubmission" name="sheetsSubmission"> 
+    <form id="sheetsSubmission"> 
     Sheet URL: <input type="text" name="sheetURL"><br>
     Range: <input type="text" name="dataRange"><br>
     <!--
