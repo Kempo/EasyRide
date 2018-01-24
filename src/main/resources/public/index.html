@@ -31,7 +31,7 @@
                 $.post("/rides", result, function(result, error) {
                     result = result.replace(/\n/g, "<br>");
                     //$("#result").html(result);
-                    $("#result").contents().find("div").html(result);
+                    $("#result").contents().find("body").html(result);
                     toggleLoading();
                 });
             };
@@ -44,7 +44,7 @@
 /*
         function read() {
             toggleLoading();
-            var result = "heopojopjppjopjo";
+            var result = "test";
             $.post("/sheets", function(result) {
                 result = result.replace(/\n/g, "<br>");
                 $("#result").html(result);
