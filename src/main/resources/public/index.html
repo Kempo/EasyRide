@@ -15,7 +15,19 @@
                 fr.readAsText(this.files[0]);
                 */
             });
+
+            $("#submitSheets").click(function() {
+                toggleLoading();
+                $.post("/sheets", $("sheetsSubmission").serialize(), function(data, error) {
+                    data = data.replace(/\n/g, "<br>");
+                    $("#result").contents().find("body").html(data);
+                    toggleLoading();
+                });
+            }); 
+
+
         });
+
 
 
         function selectFile() {
@@ -118,7 +130,10 @@
     <form action="/sheets" method="POST" id="sheetsSubmission" target="output"> 
     Sheet URL: <input type="text" name="sheetURL"><br>
     Range: <input type="text" name="dataRange"><br>
+    <!--
     <input type="submit" value="Submit">
+    -->
+    <input type="button" value="Submit" id="submitSheets">
     </form>
 
     <!--
