@@ -41,9 +41,17 @@ input {
     border-radius: 5px;
 }
 
-#sheetsSubmission {
-    padding-top: 20px;
+#submitSheets:hover {
+    background-color: #CCC;
 }
+
+
+#submitSheets {
+    -webkit-transition: 100ms all;
+    -moz-transition: 100ms all;
+    transition: 100ms all;
+}
+
 #result {
     height: 200px;
     overflow: auto;
