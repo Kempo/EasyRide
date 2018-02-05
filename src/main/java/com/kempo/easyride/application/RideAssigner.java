@@ -10,7 +10,7 @@ import java.util.*;
 
 public class RideAssigner {
 
-    private MapsAPI maps = new MapsAPI();
+    private final MapsAPI maps = new MapsAPI();
 
     /**
      * responsible for loading all preferences for each driver
@@ -27,13 +27,20 @@ public class RideAssigner {
             }
             Collections.sort(driver.getPreferences(), new DistanceComparator()); // organizes the list using the DistanceComparator
         }
+
+
+        for(Driver d : driverList) { // for logging purposes to identify preference list
+            System.out.println(d.getName().toUpperCase());
+            for(Rider r : riderList) {
+                System.out.println(r.getName());
+            }
+        }
     }
 
     /**
-     * to make the distance process avoid using MapsAPI as much as possible (wip)
      * @param address
      * @param address1
-     * @return
+     * @return whether addresses are duplicate
      */
     public boolean isAlmostDuplicate(String address, String address1) {
         return false; // by default, assume the addresses are NOT the same
@@ -66,13 +73,6 @@ public class RideAssigner {
             assignOccupants(driverList, riderList);
         }
 
-        /*
-        if (ridersLeft(riderList)) { // if there are riders without a car
-            if(driversOpen(driverList)) {
-                assignOccupants(driverList, riderList); // reiterates the whole process if a rider doesn't have a car and not all drivers are filled up
-            }
-        }
-        */
 
         for (Rider r : riderList) {
             if (r.getCurrentCar() == null) {
