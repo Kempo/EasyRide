@@ -119,9 +119,11 @@ public class RideAssigner {
     private boolean betterOption(Driver driver, Rider rider, List<Driver> driverList) {
         int currentPref = driver.getPreferences().indexOf(rider); // current index(rank) in relation to our specified driver
         for(Driver otherDriver : driverList) { // loops through all the drivers
-            int otherPref = otherDriver.getPreferences().indexOf(rider);
-            if(otherPref < currentPref && !otherDriver.getCar().isFull()) { // if another driver has ranked this rider higher(lower in a literal sense) than our driver's current rank
-                return true; // return true that there is a better option so don't add the rider to this specified driver
+            if(!otherDriver.getName().equals(driver.getName())) { // no need to loop through the same driver again
+                int otherPref = otherDriver.getPreferences().indexOf(rider);
+                if (otherPref < currentPref && !otherDriver.getCar().isFull()) { // if another driver has ranked this rider higher(lower in a literal sense) than our driver's current rank
+                    return true; // return true that there is a better option so don't add the rider to this specified driver
+                }
             }
         }
         return false; // or return false if all other drivers have this rider ranked lower. This driver is the best option for them

@@ -13,13 +13,11 @@ public class SheetsAPI {
 
     private static final String APPLICATION_NAME = "EasyRide";
 
-    public static final String API_KEY = "AIzaSyDIz3ZhxGMumRcLKPokHmQ6sJM8gTqraPg";
+    public static final String API_KEY = System.getenv("SHEETS_KEY");
 
-    /** Global instance of the JSON factory. */
     private static final JsonFactory JSON_FACTORY =
             JacksonFactory.getDefaultInstance();
 
-    /** Global instance of the HTTP transport. */
     private static HttpTransport HTTP_TRANSPORT;
 
 
@@ -48,7 +46,7 @@ public class SheetsAPI {
     /**
      * Parses out the Google Sheets ID from a URL
      * @param url
-     * @return Google Sheets ID
+     * @return ID
      */
     public static String getIDFromURL(String url) {
         String sheetID = "";

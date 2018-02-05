@@ -5,7 +5,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 public class LocationAPI {
-    private static final String API_KEY = "AIzaSyDeYYFr4IqU9nAvjIzM5NRvWduEkSUEaro";
+    private static final String API_KEY = System.getenv("LOCATION_KEY");
+
     private static final String DELIMITER = "%20";
 
     public static boolean isLocationValid(String address) {

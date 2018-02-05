@@ -7,8 +7,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MapsAPI {
-    private final String KEY = "AIzaSyDjkGSDw_dX7iJhvb5mHu8rotwB0WfJgjk"; // Google Distance Matrix API key
+    private final String KEY = System.getenv("MAPS_KEY"); // Google Distance Matrix API key
+
     private final String DELIMITER = "%20";
+
+
     /**
      *
      * @param o
