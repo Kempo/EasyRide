@@ -31,7 +31,7 @@ public class RideAssigner {
 
         for(Driver d : driverList) { // for logging purposes to identify preference list
             System.out.println(d.getName().toUpperCase());
-            for(Rider r : riderList) {
+            for(Rider r : d.getPreferences()) {
                 System.out.println(r.getName());
             }
         }
