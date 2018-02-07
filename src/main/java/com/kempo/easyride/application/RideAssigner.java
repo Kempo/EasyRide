@@ -22,10 +22,14 @@ public class RideAssigner {
             for(Rider rider : riderList) {
 
                 double distance = maps.getDistance(driver.getAddress(), rider.getAddress());
-                rider.setDistanceTo(distance);
-                driver.getPreferences().add(rider); // unorganized list of riders
+                if(distance >= 0) { // if it is a valid distance, then it'll be added to the preference list.
+                    rider.setDistanceTo(distance);
+                    driver.getPreferences().add(rider); // unorganized list of riders
+                }else{
+                    System.out.println("error with rider " + rider.getName() + " and driver " + driver.getName()); // if the distance wasn't valid then it shouldn't be used in the assigning process
+                }
             }
-            Collections.sort(driver.getPreferences(), new DistanceComparator()); // organizes the list using the DistanceComparator
+            Collections.sort(driver.getPreferences(), new DistanceComparator()); // organizes the list of each driver using the DistanceComparator
         }
 
 
@@ -35,15 +39,6 @@ public class RideAssigner {
                 System.out.println(r.getName());
             }
         }
-    }
-
-    /**
-     * @param address
-     * @param address1
-     * @return whether addresses are duplicate
-     */
-    public boolean isAlmostDuplicate(String address, String address1) {
-        return false; // by default, assume the addresses are NOT the same
     }
 
     /**
