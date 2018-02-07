@@ -14,10 +14,16 @@ public class MiscTest extends TestCase {
         Assert.assertEquals("sheetsID", ID);
     }
 
-    public void testDistanceAPI() {
+    public void testLongDistanceWithAPI() {
         String origin = "New York";
         String destination = "Seattle";
         double dist = maps.getDistance(origin, destination);
         Assert.assertEquals(2852.0, dist);
+    }
+    public void testShortDistancWithAPI() {
+        String origin = "3040 NE 45th St, Seattle, WA 98105";
+        String destination = "3042 NE 45th St, Seattle, WA 98105";
+        double dist = MapsAPI.getDistance(origin, destination);
+        Assert.assertEquals(true, (dist < .5)); // distances between the places should be less than half a mile
     }
 }
