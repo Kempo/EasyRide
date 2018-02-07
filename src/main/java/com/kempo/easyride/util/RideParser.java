@@ -7,6 +7,7 @@ import com.kempo.easyride.model.RawParticipants;
 import com.kempo.easyride.model.Rider;
 import com.kempo.easyride.model.Unclassified;
 
+import javax.xml.stream.Location;
 import java.util.List;
 
 /**
@@ -26,24 +27,20 @@ public class RideParser
         for (String line : lines)
         {
             String[] attrs = line.split("\t");
-            if (attrs.length < 3)
-            {
+            if(attrs.length < 3) {
                 participants.addUnclassified(new Unclassified(line, "not appropriate format. length: " + attrs.length));
-            }else if(!LocationAPI.isLocationValid(attrs[1]))
-            {
-                participants.addUnclassified(new Unclassified(line, "invalid location: '" + attrs[1] + "'"));
-            }
-            else if (DRIVER.equals(attrs[2].toLowerCase()))
-            {
-                parseDriverThroughTSV(participants, line, attrs);
-            }
-            else if (RIDER.equals(attrs[2].toLowerCase()))
-            {
-                participants.addRider(new Rider(attrs[0], attrs[1]));
-            }
-            else
-            {
-                participants.addUnclassified(new Unclassified(line, "no type designation: '" + attrs[2] + "'"));
+            }else {
+                String address = LocationAPI.getFormattedAddress(attrs[1]); // the reformatted address that will specify more details if not given
+                if (address == null) // if the location is not valid
+                {
+                    participants.addUnclassified(new Unclassified(line, "invalid location: '" + attrs[1] + "'"));
+                } else if (DRIVER.equals(attrs[2].toLowerCase())) {
+                    parseDriverThroughTSV(participants, line, attrs, address);
+                } else if (RIDER.equals(attrs[2].toLowerCase())) {
+                    participants.addRider(new Rider(attrs[0], address));  // adds the rider with the new formatted address
+                } else {
+                    participants.addUnclassified(new Unclassified(line, "no type designation: '" + attrs[2] + "'"));
+                }
             }
         }
 
@@ -57,14 +54,15 @@ public class RideParser
         if(values != null && values.size() > 0) {
             for (List row : values) {
                 if(row.size() <= 4) {
-                    if(!LocationAPI.isLocationValid(row.get(1).toString())) {
+                    String address = LocationAPI.getFormattedAddress(row.get(1).toString());
+                    if(address == null) {
                         participants.addUnclassified(new Unclassified(row.toString(), "invalid location: '" + row.get(1).toString() + "'"));
                     }
                     else if(DRIVER.equalsIgnoreCase(row.get(2).toString()))
                     {
                         try {
                             final int spots = Integer.parseInt(row.get(3).toString());
-                            participants.addDriver(new RawDriver(row.get(0).toString(), row.get(1).toString(), spots)); // add catch for errors
+                            participants.addDriver(new RawDriver(row.get(0).toString(), address, spots)); // add catch for errors
                         }catch(NumberFormatException e) {
                             participants.addUnclassified(new Unclassified(row.toString(), "incorrect spot designation"));
                             e.printStackTrace();
@@ -72,7 +70,7 @@ public class RideParser
                     }
                     else if(RIDER.equalsIgnoreCase(row.get(2).toString()))
                     {
-                        participants.addRider(new Rider(row.get(0).toString(), row.get(1).toString()));
+                        participants.addRider(new Rider(row.get(0).toString(), address));
                     }
                     else {
                         participants.addUnclassified(new Unclassified(row.toString(), "no type designation: '" + row.get(2).toString() + "'"));
@@ -90,14 +88,15 @@ public class RideParser
         if(values != null && values.size() > 0) {
             for (List row : values) {
                 if(row.size() <= 4) {
-                    if(!LocationAPI.isLocationValid(row.get(1).toString())) {
+                    String address = LocationAPI.getFormattedAddress(row.get(1).toString());
+                    if(address == null) {
                         participants.addUnclassified(new Unclassified(row.toString(), "invalid location: '" + row.get(1).toString() + "'"));
                     }
                     else if(DRIVER.equalsIgnoreCase(row.get(2).toString()))
                     {
                         try {
                             final int spots = Integer.parseInt(row.get(3).toString());
-                            participants.addDriver(new RawDriver(row.get(0).toString(), row.get(1).toString(), spots)); // add catch for errors
+                            participants.addDriver(new RawDriver(row.get(0).toString(), address, spots)); // add catch for errors
                         }catch(NumberFormatException e) {
                             participants.addUnclassified(new Unclassified(row.toString(), "incorrect spot designation"));
                             e.printStackTrace();
@@ -105,7 +104,7 @@ public class RideParser
                     }
                     else if(RIDER.equalsIgnoreCase(row.get(2).toString()))
                     {
-                        participants.addRider(new Rider(row.get(0).toString(), row.get(1).toString()));
+                        participants.addRider(new Rider(row.get(0).toString(), address));
                     }
                     else {
                         participants.addUnclassified(new Unclassified(row.toString(), "no type designation: '" + row.get(2).toString() + "'"));
@@ -118,7 +117,7 @@ public class RideParser
         return participants;
     }
 
-    private void parseDriverThroughTSV(final RawParticipants participants, final String line, final String[] attrs)
+    private void parseDriverThroughTSV(final RawParticipants participants, final String line, final String[] attrs, final String addr)
     {
         if (attrs.length < 4)
         {
@@ -129,7 +128,7 @@ public class RideParser
             try
             {
                 final int spacesInCar = Integer.valueOf(attrs[3]);
-                participants.addDriver(new RawDriver(attrs[0], attrs[1], spacesInCar));
+                participants.addDriver(new RawDriver(attrs[0], addr, spacesInCar));
             }
             catch (final NumberFormatException e)
             {
