@@ -26,5 +26,7 @@ public class OrchestratorTest extends TestCase {
         Assert.assertEquals(2, result.getDrivers().size());
         Assert.assertEquals(1, result.getUnassignedRiders().size());
         Assert.assertEquals(true, (result.getUnparseable().length() > 0));
+        Assert.assertEquals("Lamar", result.getDrivers().get(0).getCar().getOccupants().get(0).getName());
+        Assert.assertEquals("Connor", result.getDrivers().get(1).getName());
     }
 }
