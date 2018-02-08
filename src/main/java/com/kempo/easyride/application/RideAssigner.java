@@ -10,8 +10,6 @@ import java.util.*;
 
 public class RideAssigner {
 
-    private final MapsAPI maps = new MapsAPI();
-
     /**
      * responsible for loading all preferences for each driver
      * @param driverList
@@ -21,7 +19,7 @@ public class RideAssigner {
         for(Driver driver : driverList) {
             for(Rider rider : riderList) {
 
-                double distance = maps.getDistance(driver.getAddress(), rider.getAddress());
+                double distance = MapsAPI.getDistance(driver.getAddress(), rider.getAddress());
                 if(distance >= 0) { // if it is a valid distance, then it'll be added to the preference list.
                     rider.setDistanceTo(distance);
                     driver.getPreferences().add(rider); // unorganized list of riders
