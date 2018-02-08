@@ -1,5 +1,6 @@
 package com.kempo.easyride.util;
 
+import com.kempo.easyride.google.LocationAPI;
 import com.kempo.easyride.model.RawParticipants;
 import junit.framework.Assert;
 import junit.framework.TestCase;
@@ -16,11 +17,11 @@ public class RideParserTest extends TestCase
     public void testEntryUnparsedWhenCannotParseLabelColumn()
     {
         final String input = "Bilbo Baggins\tNew York\thobbit" +
-                "\nGandalf\tNew York\tdriver\t2";
+                "\nGandalf\tSeattle, Washington\tdriver\t2";
         final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(1, result.getDrivers().size());
         Assert.assertEquals("Gandalf", result.getDrivers().get(0).getName());
-        Assert.assertEquals("New York, NY, USA", result.getDrivers().get(0).getAddress());
+        Assert.assertEquals("Seattle, WA, USA", result.getDrivers().get(0).getAddress());
         Assert.assertEquals(2, result.getDrivers().get(0).getSpaces());
         Assert.assertEquals(1, result.getUnclassifieds().size());
         Assert.assertEquals("Bilbo Baggins\tNew York\thobbit", result.getUnclassifieds().get(0).getLine());
@@ -62,7 +63,13 @@ public class RideParserTest extends TestCase
         Assert.assertEquals("Bothell, WA, USA", result.getRiders().get(0).getAddress());
     }
 
+    /**
+     * tests multiple drivers with different addresses nationwide. Technically, these addresses will be appended with 'washington'
+     * since they don't specify the default state. although the tests run fine, it should be noted that 'washington' will be appended
+     * during the process. look at LocationAPI.java
+     */
     public void testMultipleDrivers() {
+
         final String input = TestUtility.createTestParticipant("Aaron", "Brooklyn, New York", "rider", 0)
                 + "\n" + TestUtility.createTestParticipant("Ted", "New York University", "driver", 4)
                 + "\n" + TestUtility.createTestParticipant("Connor", "Boston University", "driver", 5)
@@ -84,7 +91,7 @@ public class RideParserTest extends TestCase
         List row1 = new ArrayList();
 
         row1.add("aaron");
-        row1.add("new york");
+        row1.add("seattle, washington");
         row1.add("driver");
         row1.add("5");
         vals.add(row1);
@@ -93,6 +100,6 @@ public class RideParserTest extends TestCase
         Assert.assertEquals(1, result.getDrivers().size());
         Assert.assertEquals("aaron", result.getDrivers().get(0).getName());
         Assert.assertEquals(5, result.getDrivers().get(0).getSpaces());
-        Assert.assertEquals("New York, NY, USA", result.getDrivers().get(0).getAddress());
+        Assert.assertEquals("Seattle, WA, USA", result.getDrivers().get(0).getAddress());
     }
 }
