@@ -37,7 +37,7 @@ public class RideParserTest extends TestCase
 
     public void testDriverWhenSpacesNotANumberIsUnclassified()
     {
-        final String input = "Bilbo\tSan Jose\tdriver\tnan";
+        final String input = "Bilbo\tRedmond, Washington\tdriver\tnan";
         final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(1, result.getUnclassifieds().size());
         Assert.assertEquals(input, result.getUnclassifieds().get(0).getLine());
@@ -45,11 +45,12 @@ public class RideParserTest extends TestCase
 
     public void testDriverInputHappyPath()
     {
-        final String input = "Bilbo\tSan Jose\tdriver\t5";
+        final String input = "Bilbo\tYakima, Washington\tdriver\t5";
         final RawParticipants result = parser.parseInitialRequestThroughTSV(input);
         Assert.assertEquals(0, result.getUnclassifieds().size());
         Assert.assertEquals(1, result.getDrivers().size());
         Assert.assertEquals(5, result.getDrivers().get(0).getSpaces());
+        Assert.assertEquals(true, result.getDrivers().get(0).getAddress().contains("Yakima"));
     }
 
     public void testRider()
