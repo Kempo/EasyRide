@@ -25,7 +25,7 @@ public class Orchestrator {
         final List<Driver> drivers = rawDrivers.stream().map(RawDriverToDriver.INSTANCE).collect(Collectors.toList());
         final List<Rider> riders = rawParticipants.getRiders();
 
-        rideAssigner.readData(drivers, riders);
+        rideAssigner.loadPreferences(drivers, riders);
 
         System.out.println("about to assign occupants: " );
         AssignedRides assignedRides = rideAssigner.assignOccupants(drivers, riders);
