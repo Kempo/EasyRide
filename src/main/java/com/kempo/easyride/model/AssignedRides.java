@@ -60,4 +60,13 @@ public class AssignedRides {
         return sb.toString();
     }
 
+    public void printAssignedRidesToConsole() {
+        System.out.println("ASSIGNMENTS:");
+        for(Driver d : getDrivers()) {
+            System.out.println(d.getName().toUpperCase());
+            for(Rider r : d.getCar().getOccupants()) {
+                System.out.println(r.getName());
+            }
+        }
+    }
 }

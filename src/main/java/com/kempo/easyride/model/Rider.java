@@ -1,10 +1,13 @@
 package com.kempo.easyride.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Rider extends Person {
 
     private Car current = null; // their current car
     private double distance; // distance to a target
-    private boolean convenience;
+    private final List<Driver> preferences = new ArrayList<Driver>();
 
     public Rider(String n, String a) {
         super();
@@ -28,10 +31,9 @@ public class Rider extends Person {
         return distance;
     }
 
-    public boolean isConvenientTo() { return convenience; }
-
-    public void setConvenience(boolean c) { convenience = c; }
-
+    public List<Driver> getRiderPreferences() {
+        return preferences;
+    }
 
     @Override
     public String toString()

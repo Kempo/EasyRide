@@ -13,31 +13,27 @@ public class Car {
         occupants = new ArrayList<>();
     }
 
-    private void decreaseSpots() {
+    private boolean decreaseSpots() {
         if(spots > 0) {
             spots -= 1;
+            return true;
         }else{
             System.out.print("Car is full!");
+            return false;
         }
     }
 
-    private void increaseSpots() {
-        if(spots < total) {
-            spots += 1;
-        }
+    public int getOpenSpots() {
+        return spots;
     }
 
     public void addOccupant(Rider r) {
         if(!occupants.contains(r)) {
-            occupants.add(r);
-            decreaseSpots();
-        }
-    }
-
-    public void removeOccupant(Rider r) {
-        if(occupants.contains(r)) {
-            occupants.remove(r);
-            increaseSpots();
+            if(decreaseSpots()) {
+                occupants.add(r);
+            }else{
+                System.out.println("Could not add rider " + r.getName());
+            }
         }
     }
 
