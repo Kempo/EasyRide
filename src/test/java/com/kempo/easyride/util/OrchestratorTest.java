@@ -3,30 +3,49 @@ package com.kempo.easyride.util;
 import com.kempo.easyride.application.Orchestrator;
 import com.kempo.easyride.application.RideAssigner;
 import com.kempo.easyride.model.AssignedRides;
+import com.kempo.easyride.model.Driver;
 import com.kempo.easyride.model.RawParticipants;
+import com.kempo.easyride.model.Rider;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
 public class OrchestratorTest extends TestCase {
     private RideParser parser = new RideParser();
     private static Orchestrator orchestrator = new Orchestrator(new RideAssigner());
-    private String request = TestUtility.createTestParticipant("Aaron", "Space Needle", "rider", 0)
-            + "\n" + TestUtility.createTestParticipant("Ted", "Seattle University", "driver", 2)
-            + "\n" + TestUtility.createTestParticipant("Connor", "New York", "driver", 2)
-            + "\n" + TestUtility.createTestParticipant("Nick", "Boston", "rider", 0)
-            + "\n" + TestUtility.createTestParticipant("Tod", "San Francisco", "rider",0)
-            + "\n" + "hello test     hi     tes  test   whoo    test1"
-            + "\n" + TestUtility.createTestParticipant("Bob", "Seattle University", "rider", 0)
-            + "\n" + TestUtility.createTestParticipant("Lamar", "Seattle University", "rider", 0);
 
-
-    public void testOrchestratorWithTextInput() {
+    public void testWithTextInputAndDriversWithLimitedSpots() {
+        String request = "hello test this is a test"
+                + "\n" + TestUtility.createTestParticipant("Tim", "Tacoma WA", "driver", 1) // driver
+                + "\n" + TestUtility.createTestParticipant("Eric", "Seattle WA", "driver", 5) // driver
+                + "\n" + TestUtility.createTestParticipant("Eugene", "Seattle, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Nathan", "Tacoma, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Matthew", "Olympia, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Lamar", "Olympia, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Tom", "Seattle University", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Rick", "Olympia, WA", "driver", 1); // driver
         final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
-        Assert.assertEquals(2, result.getDrivers().size());
-        Assert.assertEquals(1, result.getUnassignedRiders().size());
-        Assert.assertEquals(true, (result.getUnparseable().length() > 0));
-        Assert.assertEquals("Lamar", result.getDrivers().get(0).getCar().getOccupants().get(0).getName());
-        Assert.assertEquals("Connor", result.getDrivers().get(1).getName());
+
+        Assert.assertEquals(1, result.getDrivers().get(0).getCar().getOccupants().size());
+        Assert.assertEquals(3, result.getDrivers().get(1).getCar().getOccupants().size());
+    }
+
+    public void testWithTextInputAndTopPreferences() {
+        String request =
+                TestUtility.createTestParticipant("Tim", "Tacoma WA", "driver", 5) // driver
+                + "\n" + TestUtility.createTestParticipant("Eric", "Seattle WA", "driver", 5) // driver
+                + "\n" + TestUtility.createTestParticipant("Eugene", "Seattle, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Nathan", "Tacoma, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Matthew", "Olympia, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Lamar", "Olympia, WA", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Tom", "Seattle University", "rider", 0)
+                + "\n" + TestUtility.createTestParticipant("Rick", "Olympia, WA", "driver", 5); // driver
+
+        final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
+        final AssignedRides result = orchestrator.orchestrateRides(participants);
+
+        Assert.assertEquals(true, result.getDrivers().get(0).getCar().getOccupants().get(0).getName().equals("Nathan"));
+        Assert.assertEquals(1, result.getDrivers().get(0).getCar().getOccupants().size());
+        Assert.assertEquals(2, result.getDrivers().get(1).getCar().getOccupants().size());
     }
 }
