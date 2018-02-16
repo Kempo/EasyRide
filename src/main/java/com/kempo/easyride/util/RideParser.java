@@ -12,7 +12,6 @@ import java.util.List;
 
 /**
  * classifies input into riders/drivers/unparseable.
- * added isLocationValid check -aaron
  */
 public class RideParser
 {

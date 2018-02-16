@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="quick test pt 1">
+    <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="quick test pt 2 for serialize()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/DistanceComparator.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RiderComparator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,54 +30,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="547">
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java">
+      <file leaf-file-name="RiderAssignerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RiderAssignerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="52" column="36" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+            <state relative-caret-position="129">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/public/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MiscTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SheetsAPI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/SheetsAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -120,31 +89,36 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Car.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/EasyRide.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/TestUtility.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/MapsAPI.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Unclassified.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/SheetsAPI.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/LocationAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RideParserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/RawParticipants.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/styles.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/SheetsAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/styles.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/SheetsAPI.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RideParserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/DistanceComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RiderComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/DriverComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RiderAssignerTest.java" />
       </list>
     </option>
   </component>
@@ -183,11 +157,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="203" />
-    <option name="y" value="88" />
-    <option name="width" value="1599" />
-    <option name="height" value="906" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="218" />
+    <option name="y" value="158" />
+    <option name="width" value="1642" />
+    <option name="height" value="1004" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,7 +179,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -392,8 +366,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,18 +376,19 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/untitled" />
+    <property name="last_opened_file_path" value="$USER_HOME$/SpellCheck" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/aaron/EasyRide/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.kempo.easyride" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\workspace\EasyRide\src\main\java\com\kempo\easyride" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kempo.easyride" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -428,7 +403,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MiscTest">
+  <component name="RunManager" selected="JUnit.RiderAssignerTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -468,31 +443,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-    </configuration>
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.kempo.easyride.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="EasyRide" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.kempo.easyride" />
-      <option name="MAIN_CLASS_NAME" value="com.kempo.easyride.AppTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="MiscTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -556,6 +506,31 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.kempo.easyride.util" />
       <option name="MAIN_CLASS_NAME" value="com.kempo.easyride.util.RideParserTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RiderAssignerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.kempo.easyride.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EasyRide" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.kempo.easyride.util" />
+      <option name="MAIN_CLASS_NAME" value="com.kempo.easyride.util.RiderAssignerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -657,16 +632,16 @@
       <item index="1" class="java.lang.String" itemvalue="Application.Server" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.RideParserTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.OrchestratorTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AppTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.MiscTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MiscTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RiderAssignerTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MiscTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RiderAssignerTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.RideParserTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Server" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.OrchestratorTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AppTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.OrchestratorTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MiscTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
@@ -700,90 +675,6 @@
       <workItem from="1508265348827" duration="1768000" />
       <workItem from="1508267156735" duration="1486000" />
       <workItem from="1508347708448" duration="1153000" />
-    </task>
-    <task id="LOCAL-00001" summary="test commit on linux">
-      <created>1513626358777</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1513626358777</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added styles.css to format webpage">
-      <created>1513632664586</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1513632664586</updated>
-    </task>
-    <task id="LOCAL-00003" summary="attempted a ui change with the original input buttons. hopefully everything checks out, but we should definitely double-check if it correctly gets file contents after this commit.">
-      <created>1513641162406</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1513641162406</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fixed the selectFile and Submit buttons along with the display on textbox.">
-      <created>1513717363022</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1513717363022</updated>
-    </task>
-    <task id="LOCAL-00005" summary="repositioned buttons and textbox">
-      <created>1513717868718</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1513717868718</updated>
-    </task>
-    <task id="LOCAL-00006" summary="reorganized html/css code">
-      <created>1513718776978</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1513718776978</updated>
-    </task>
-    <task id="LOCAL-00007" summary="changed recursion to a while loop in algorithm">
-      <created>1514183634820</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1514183634820</updated>
-    </task>
-    <task id="LOCAL-00008" summary="tweaked output format">
-      <created>1514183722217</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1514183722217</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added margin-bottom for better visual of output; set encoding of file reader to 'ASCII' as a test to see if it will take in google sheets' outputted TSV files.">
-      <created>1514183816678</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1514183816678</updated>
-    </task>
-    <task id="LOCAL-00010" summary="testing output box">
-      <created>1514245730013</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1514245730013</updated>
-    </task>
-    <task id="LOCAL-00011" summary="testing output boxes pt. 2">
-      <created>1514262331643</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1514262331643</updated>
-    </task>
-    <task id="LOCAL-00012" summary="testing output boxes pt. 3">
-      <created>1514264429030</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1514264429030</updated>
     </task>
     <task id="LOCAL-00013" summary="server test w/ specified encoding">
       <created>1514326199280</created>
@@ -995,39 +886,172 @@
       <option name="project" value="LOCAL" />
       <updated>1516771230470</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="quick test pt 2 for serialize()">
+      <created>1516771760850</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1516771760850</updated>
+    </task>
+    <task id="LOCAL-00044" summary="quick test pt 3 for serialize()">
+      <created>1516819850453</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1516819850453</updated>
+    </task>
+    <task id="LOCAL-00045" summary="quick test pt 4 for serialize()">
+      <created>1516821209704</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1516821209704</updated>
+    </task>
+    <task id="LOCAL-00046" summary="quick ui adjustment. serialize() works now and google sheets integration finished for now.">
+      <created>1516822567580</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1516822567580</updated>
+    </task>
+    <task id="LOCAL-00047" summary="quick ui change">
+      <created>1516909469887</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1516909469887</updated>
+    </task>
+    <task id="LOCAL-00048" summary="added additional server logging so I can identify future problems via heroku console.">
+      <created>1517796741170</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1517796741171</updated>
+    </task>
+    <task id="LOCAL-00049" summary="quick background-color change for button.">
+      <created>1517796785839</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1517796785839</updated>
+    </task>
+    <task id="LOCAL-00050" summary="removed a redundancy in the algorithm. added config vars via heroku">
+      <created>1517860555791</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1517860555792</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fixed simple error in logging">
+      <created>1517862699357</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1517862699357</updated>
+    </task>
+    <task id="LOCAL-00052" summary="added correct JSON parsing capabilities">
+      <created>1518038063563</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1518038063564</updated>
+    </task>
+    <task id="LOCAL-00053" summary="adjusted RideParser to accomodate the new formatted addresses">
+      <created>1518038153332</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1518038153332</updated>
+    </task>
+    <task id="LOCAL-00054" summary="tweaked to help console logging in order to identify errors.">
+      <created>1518038209208</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1518038209208</updated>
+    </task>
+    <task id="LOCAL-00055" summary="edited UnitTests to accomodate reformatted addresses and to test API capabilities">
+      <created>1518038255086</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1518038255086</updated>
+    </task>
+    <task id="LOCAL-00056" summary="added a more expansive test coverage for distance API testing">
+      <created>1518038840890</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1518038840892</updated>
+    </task>
+    <task id="LOCAL-00057" summary="added DEFAULT_STATE analysis to the LocationAPI so addresses given can be placed into their appropriate state, which will by default be Washington.">
+      <created>1518119341563</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1518119341564</updated>
+    </task>
+    <task id="LOCAL-00058" summary="edited some UnitTest specifications to make sure they run fine with the new LocationAPI checks">
+      <created>1518119380978</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1518119380978</updated>
+    </task>
+    <task id="LOCAL-00059" summary="quick edit in RideAssigner to utilise static methods in API classes.">
+      <created>1518119416556</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1518119416557</updated>
+    </task>
+    <task id="LOCAL-00060" summary="quick change for a test">
+      <created>1518119587388</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1518119587389</updated>
+    </task>
+    <task id="LOCAL-00061" summary="remade algorithm to utilise preference lists generated by riders than drivers.">
+      <created>1518811387814</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1518811387818</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MiscTest - 2018.01.22 at 11h 46m 55s.xml">
+    <history-entry file="MiscTest - 2018.02.16 at 11h 59m 57s.xml">
       <configuration name="MiscTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RideParserTest - 2017.12.28 at 21h 39m 41s.xml">
+    <history-entry file="OrchestratorTest - 2018.02.16 at 11h 14m 53s.xml">
+      <configuration name="OrchestratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrchestratorTest - 2018.02.16 at 11h 16m 32s.xml">
+      <configuration name="OrchestratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrchestratorTest - 2018.02.16 at 11h 40m 43s.xml">
+      <configuration name="OrchestratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrchestratorTest - 2018.02.16 at 11h 42m 08s.xml">
+      <configuration name="OrchestratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrchestratorTest - 2018.02.16 at 11h 51m 56s.xml">
+      <configuration name="OrchestratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrchestratorTest - 2018.02.16 at 11h 55m 37s.xml">
+      <configuration name="OrchestratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrchestratorTest - 2018.02.16 at 12h 00m 14s.xml">
+      <configuration name="OrchestratorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RideParserTest - 2018.02.16 at 12h 00m 30s.xml">
       <configuration name="RideParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RideParserTest - 2017.12.28 at 21h 40m 07s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RideParserTest - 2018.01.05 at 17h 02m 02s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RideParserTest - 2018.01.14 at 22h 39m 49s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RideParserTest - 2018.01.14 at 22h 40m 09s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RideParserTest - 2018.01.20 at 10h 40m 33s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RideParserTest - 2018.01.20 at 10h 43m 53s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RideParserTest - 2018.01.20 at 10h 44m 16s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RideParserTest - 2018.01.20 at 10h 44m 51s.xml">
-      <configuration name="RideParserTest" configurationId="JUnit" />
+    <history-entry file="RiderAssignerTest - 2018.02.16 at 12h 00m 43s.xml">
+      <configuration name="RiderAssignerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -1043,23 +1067,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="203" y="88" width="1599" height="906" extended-state="0" />
+    <frame x="-3" y="31" width="1926" height="1003" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.49676377" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22908624" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22879465" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.50323623" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16423948" sideWeight="0.49348232" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09762203" sideWeight="0.8017799" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43638393" sideWeight="0.8017799" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.49676377" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.49676377" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30069053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="476" y="258" width="282" height="663" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18802084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="476" y="258" width="282" height="663" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1073,7 +1097,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16423948" sideWeight="0.5065177" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1086,32 +1110,32 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="button realignment" />
-    <MESSAGE value="added specifications for unclassifieds (along with the line, we now also know a probable reason)." />
-    <MESSAGE value="test 1: attempt at removing CRLF line terminators which are part of the .tsv files generated from Google Sheets. I've learned that once you can remove those CRLF line terminators, then EasyRide will be able to properly read/parse the .tsv. CRLF Line terminators are from window's text files and I believe they're symbolized through /r/n while on Unix systems, \n is used. This is my first attempt at our biggest bug." />
-    <MESSAGE value="tidying up console output, edited some alignment on website, and tweaked some code.&#10;update: my test did work and now EasyRide can process .tsv files generated from google sheets!" />
-    <MESSAGE value="fixed alignment on loading gif. made textbox rounded" />
-    <MESSAGE value="accidentally removed input in textbox. fixed!" />
-    <MESSAGE value="included unprocessed lines in output" />
-    <MESSAGE value="fixed error in parsing text; began another method to simplify the distance-finding process. wip" />
-    <MESSAGE value="server /post test. not sure what to expect. trial 1" />
-    <MESSAGE value="server /post test trial 2. got basic receive data correct. now to correctly test outputting it into a div or something" />
-    <MESSAGE value="server /post and receive trial 3 test" />
-    <MESSAGE value="server /post and receive trial 4 test" />
-    <MESSAGE value="fixed unit test errors" />
-    <MESSAGE value="first test of proper google sheets integration" />
-    <MESSAGE value="added more server logging" />
-    <MESSAGE value="fixed api key" />
-    <MESSAGE value="little ui fix. will do more later" />
-    <MESSAGE value="input=sheet URL, instead of ID now. Also testing to see if our original div can be an iframe so it can be used through both TSV and Sheets." />
-    <MESSAGE value="added a MiscTest to test out other utilities" />
     <MESSAGE value="fixed alignment with iframe" />
     <MESSAGE value="reverted back to sheetsID to test out feature" />
     <MESSAGE value="quick test pt 1" />
     <MESSAGE value="test to display output in iframe w/ tsv method pt. 1" />
     <MESSAGE value="new post method test" />
     <MESSAGE value="added alert to see what serialize() did" />
-    <option name="LAST_COMMIT_MESSAGE" value="added alert to see what serialize() did" />
+    <MESSAGE value="quick test pt 2 for serialize()" />
+    <MESSAGE value="quick test pt 3 for serialize()" />
+    <MESSAGE value="quick test pt 4 for serialize()" />
+    <MESSAGE value="quick ui adjustment. serialize() works now and google sheets integration finished for now." />
+    <MESSAGE value="quick ui change" />
+    <MESSAGE value="added additional server logging so I can identify future problems via heroku console." />
+    <MESSAGE value="quick background-color change for button." />
+    <MESSAGE value="removed a redundancy in the algorithm. added config vars via heroku" />
+    <MESSAGE value="fixed simple error in logging" />
+    <MESSAGE value="added correct JSON parsing capabilities" />
+    <MESSAGE value="adjusted RideParser to accomodate the new formatted addresses" />
+    <MESSAGE value="tweaked to help console logging in order to identify errors." />
+    <MESSAGE value="edited UnitTests to accomodate reformatted addresses and to test API capabilities" />
+    <MESSAGE value="added a more expansive test coverage for distance API testing" />
+    <MESSAGE value="added DEFAULT_STATE analysis to the LocationAPI so addresses given can be placed into their appropriate state, which will by default be Washington." />
+    <MESSAGE value="edited some UnitTest specifications to make sure they run fine with the new LocationAPI checks" />
+    <MESSAGE value="quick edit in RideAssigner to utilise static methods in API classes." />
+    <MESSAGE value="quick change for a test" />
+    <MESSAGE value="remade algorithm to utilise preference lists generated by riders than drivers." />
+    <option name="LAST_COMMIT_MESSAGE" value="remade algorithm to utilise preference lists generated by riders than drivers." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1124,8 +1148,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/Manager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/EasyRide.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/Car.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/Manager.java" />
     <entry file="file://$PROJECT_DIR$/src/URL.java" />
@@ -1169,27 +1191,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/brackets.desktop" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1200,14 +1201,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/misc/loading.gif">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/DistanceComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/jquery.js">
@@ -1221,38 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RawDriverToDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1260,147 +1221,226 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/RawDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="88" column="21" lean-forward="false" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="90" column="37" lean-forward="false" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="49" column="54" lean-forward="true" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/RawParticipants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="81" lean-forward="false" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+        <state relative-caret-position="779">
+          <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/TestUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RideParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/RawParticipants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="58" column="38" lean-forward="false" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RawDriverToDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#288#296#0" expanded="false" />
+            <element signature="e#722#723#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/SheetsAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="52" column="36" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        <state relative-caret-position="17">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RiderComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/DriverComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="81" lean-forward="false" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RideParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RiderAssignerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

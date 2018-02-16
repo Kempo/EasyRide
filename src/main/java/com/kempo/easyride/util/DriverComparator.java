@@ -1,27 +1,28 @@
 package com.kempo.easyride.util;
 
-import com.kempo.easyride.model.Rider;
+
+import com.kempo.easyride.model.Driver;
 
 import java.util.Comparator;
 
-public class DistanceComparator implements Comparator<Rider> {
-
+public class DriverComparator implements Comparator<Driver> {
 
     // 1 = greater than
     // -1 = less than
     @Override
-    public int compare(Rider rider1, Rider rider2) {
+    public int compare(Driver driver1, Driver driver2) {
 
-        if(rider1.getDistanceTo() > rider2.getDistanceTo()) {
+        if(driver1.getDistanceTo() > driver2.getDistanceTo()) {
             return 1;
         }else {
-            if (rider1.getDistanceTo() <= rider2.getDistanceTo()) {
+            if (driver1.getDistanceTo() <= driver2.getDistanceTo()) {
                 return -1;
             }
         }
 
         return 0; // if the two objects are equal
     }
+
 
     @Override
     public boolean equals(Object obj) {
