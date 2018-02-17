@@ -107,7 +107,7 @@ public class RideAssigner {
                             System.out.println(r.getName() + " has higher pick than " + currentRider.getName() + " to " + currentDriver.getName() + " " + currentPref + " to " + otherPref);
                             return false; // return false since the other rider should get the seat
                         }
-                        if ((otherPref == currentPref) && !(currentDriver.getCar().getOpenSpots() >= 2) && !r.getAddress().equals(currentRider.getAddress()) && (r.getCurrentCar() == null)) { // if the preference are equal
+                        if ((otherPref == currentPref) && (currentDriver.getCar().getOpenSpots() < 2) && !r.getAddress().equals(currentRider.getAddress()) && (r.getCurrentCar() == null)) { // if the preference are equal
                             double curDist = MapsAPI.getDistance(currentRider.getAddress(), d.getAddress());
                             double otherDist = MapsAPI.getDistance(r.getAddress(), d.getAddress());
                             return (curDist < otherDist);
