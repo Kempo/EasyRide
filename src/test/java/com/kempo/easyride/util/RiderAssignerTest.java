@@ -1,6 +1,5 @@
 package com.kempo.easyride.util;
 
-import com.kempo.easyride.application.EasyRide;
 import com.kempo.easyride.application.RideAssigner;
 import com.kempo.easyride.model.Car;
 import com.kempo.easyride.model.Driver;
@@ -15,10 +14,8 @@ import java.util.List;
 public class RiderAssignerTest extends TestCase {
     public RideAssigner rideAssigner = new RideAssigner();
 
-    /**
-     * to be worked on
-     */
-    public void testPreferencesList() {
+
+    public void testBasicPreferencesList() {
         List<Driver> driverList = new ArrayList<>();
         List<Rider> riderList = new ArrayList<>();
         Driver[] drivers = {new Driver("Tim", "Tacoma, WA", new Car(5) ), new Driver("Eric", "Seattle, WA", new Car(5)), new Driver("Rick", "Olympia, WA", new Car(5))};

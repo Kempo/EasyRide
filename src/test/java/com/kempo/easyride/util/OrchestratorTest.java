@@ -26,8 +26,10 @@ public class OrchestratorTest extends TestCase {
         final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
 
+        Assert.assertEquals(1, participants.getUnclassifieds().size());
         Assert.assertEquals(1, result.getDrivers().get(0).getCar().getOccupants().size());
         Assert.assertEquals(3, result.getDrivers().get(1).getCar().getOccupants().size());
+        Assert.assertEquals(1, result.getDrivers().get(2).getCar().getOccupants().size());
     }
 
     public void testWithTextInputAndTopPreferences() {
@@ -43,9 +45,9 @@ public class OrchestratorTest extends TestCase {
 
         final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
-
         Assert.assertEquals(true, result.getDrivers().get(0).getCar().getOccupants().get(0).getName().equals("Nathan"));
         Assert.assertEquals(1, result.getDrivers().get(0).getCar().getOccupants().size());
         Assert.assertEquals(2, result.getDrivers().get(1).getCar().getOccupants().size());
+        Assert.assertEquals(2, result.getDrivers().get(2).getCar().getOccupants().size());
     }
 }
