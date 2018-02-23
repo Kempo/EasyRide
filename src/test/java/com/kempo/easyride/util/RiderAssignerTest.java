@@ -18,13 +18,19 @@ public class RiderAssignerTest extends TestCase {
     public void testBasicPreferencesList() {
         List<Driver> driverList = new ArrayList<>();
         List<Rider> riderList = new ArrayList<>();
-        Driver[] drivers = {new Driver("Tim", "Tacoma, WA", new Car(5) ), new Driver("Eric", "Seattle, WA", new Car(5)), new Driver("Rick", "Olympia, WA", new Car(5))};
-        Rider[] riders = {new Rider("Eugene", "Seattle, WA"), new Rider("Nathan", "Tacoma, WA"), new Rider("Matthew", "Olympia, WA"), new Rider("Tom", "Seattle University")};
+        Driver[] drivers = {
+                new Driver("Tim", "Tacoma, WA", new Car(5) ),
+                new Driver("Eric", "Seattle, WA", new Car(5)),
+                new Driver("Rick", "Olympia, WA", new Car(5))};
+        Rider[] riders = {
+                new Rider("Eugene", "Seattle, WA"),
+                new Rider("Nathan", "Tacoma, WA"),
+                new Rider("Matthew", "Olympia, WA"),
+                new Rider("Tom", "Seattle University")};
         driverList.addAll(Arrays.asList(drivers));
         riderList.addAll(Arrays.asList(riders));
 
         rideAssigner.loadPreferences(driverList, riderList);
-
         Assert.assertEquals("Tim", riderList.get(riderList.indexOf(riders[1])).getRiderPreferences().get(0).getName());
         Assert.assertEquals("Rick", riderList.get(riderList.indexOf(riders[2])).getRiderPreferences().get(0).getName());
     }
