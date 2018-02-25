@@ -11,18 +11,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class RiderAssignerTest extends TestCase {
+public class PreferencesTest extends TestCase {
     public RideAssigner rideAssigner = new RideAssigner();
 
 
     public void testBasicPreferencesList() {
         List<Driver> driverList = new ArrayList<>();
         List<Rider> riderList = new ArrayList<>();
-        Driver[] drivers = {
+        final Driver[] drivers = {
                 new Driver("Tim", "Tacoma, WA", new Car(5) ),
                 new Driver("Eric", "Seattle, WA", new Car(5)),
                 new Driver("Rick", "Olympia, WA", new Car(5))};
-        Rider[] riders = {
+        final Rider[] riders = {
                 new Rider("Eugene", "Seattle, WA"),
                 new Rider("Nathan", "Tacoma, WA"),
                 new Rider("Matthew", "Olympia, WA"),
@@ -33,5 +33,7 @@ public class RiderAssignerTest extends TestCase {
         rideAssigner.loadPreferences(driverList, riderList);
         Assert.assertEquals("Tim", riderList.get(riderList.indexOf(riders[1])).getRiderPreferences().get(0).getName());
         Assert.assertEquals("Rick", riderList.get(riderList.indexOf(riders[2])).getRiderPreferences().get(0).getName());
+        Assert.assertEquals("Eugene", driverList.get(driverList.indexOf(drivers[1])).getDriverPreferences().get(0).getName());
+        Assert.assertEquals("Matthew", driverList.get(driverList.indexOf(drivers[2])).getDriverPreferences().get(0).getName());
     }
 }

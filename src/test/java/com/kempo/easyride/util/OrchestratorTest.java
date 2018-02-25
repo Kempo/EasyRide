@@ -11,7 +11,7 @@ import junit.framework.TestCase;
 
 public class OrchestratorTest extends TestCase {
     private RideParser parser = new RideParser();
-    private static Orchestrator orchestrator = new Orchestrator(new RideAssigner());
+    private Orchestrator orchestrator = new Orchestrator(new RideAssigner());
 
 
     public void testWithSheetsData() {
