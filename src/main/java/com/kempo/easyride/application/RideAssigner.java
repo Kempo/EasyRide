@@ -3,6 +3,7 @@ import com.kempo.easyride.google.MapsAPI;
 import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.model.Person;
 import com.kempo.easyride.util.DriverComparator;
+import com.kempo.easyride.util.PersonComparator;
 import com.kempo.easyride.util.RiderComparator;
 import com.kempo.easyride.model.Driver;
 import com.kempo.easyride.model.Rider;
@@ -14,7 +15,7 @@ public class RideAssigner {
 
 
     /**
-     * responsible for loading all preferences for each driver and now rider
+     * responsible for loading all preferences for each driver and rider
      * @param driverList
      * @param riderList
      */
@@ -24,35 +25,25 @@ public class RideAssigner {
         for(Driver driver : driverList) {
             for(Rider rider : riderList) {
                 double distance = MapsAPI.getDistance(driver.getAddress(), rider.getAddress());
-                if(distance < 0) {
-                    System.err.println("invalid distance! " + rider.getAddress() + " " + driver.getAddress());
-                }else {
-                    rider.setDistanceTo(distance);
-                    driver.getDriverPreferences().add(rider);
-                }
+                rider.setDistanceTo(distance);
+                driver.getDriverPreferences().add(rider);
             }
-            Collections.sort(driver.getDriverPreferences(), new RiderComparator());
+            Collections.sort(driver.getDriverPreferences(), new PersonComparator());
         }
 
         // loading rider preferences
         for(Rider rider : riderList) {
             for(Driver driver : driverList) {
                 double distance = MapsAPI.getDistance(rider.getAddress(),driver.getAddress());
-
-                if(distance < 0) {
-                    System.err.println("invalid distance! " + rider.getAddress() + " " + driver.getAddress());
-                }else {
-                    driver.setDistanceTo(distance);
-                    rider.getRiderPreferences().add(driver);
-                }
+                driver.setDistanceTo(distance);
+                rider.getRiderPreferences().add(driver);
             }
-            Collections.sort(rider.getRiderPreferences(), new DriverComparator());
+            Collections.sort(rider.getRiderPreferences(), new PersonComparator());
         }
 
 
         System.out.println("PREFERENCES:");
         logPreferences(riderList, driverList);
-        System.out.println("PREFERENCE END");
 
     }
 
@@ -85,27 +76,22 @@ public class RideAssigner {
         return result;
     }
 
-
-    /**
-     *
-     * @param riderList
-     * @param driverList
-     * @param assignedRides
-     */
     public void assignOccupantsHelper(List<Rider> riderList, List<Driver> driverList, final AssignedRides assignedRides) {
         for (Rider rider : riderList) {
-            if (rider.getCurrentCar() == null) {
+            if (rider.getCurrentCar() == null) { // if the rider needs a ride
                 System.out.println("rider " + rider.getName());
-                int currentPref = 0;
+                int currentRiderPref = 0; // rider's preference of the select driver
                 for (Driver driver : rider.getRiderPreferences()) {
-                    Driver realDriver = driverList.get(driverList.indexOf(driver));
-                    if(realDriver.getCar() != null && !realDriver.getCar().isFull() && highestPreference(riderList, driverList, rider, currentPref, realDriver)) {
-                        realDriver.getCar().addOccupant(rider);
-                        rider.setCar(realDriver.getCar());
-                        break;
+                    Driver realDriver = driverList.get(driverList.indexOf(driver)); // gets the actual driver from the official driver list
+                    int currentDriverPref = realDriver.getDriverPreferences().indexOf(rider); // the select driver's preference of the rider
+                    if(realDriver.getCar() != null && !realDriver.getCar().isFull()) { // if the driver's car is available to be filled
+                        if(highestPreference(riderList, driverList, rider, realDriver,currentDriverPref)) {
+                            realDriver.getCar().addOccupant(rider); // add the occupants and set car for the rider
+                            rider.setCar(realDriver.getCar());
+                            break; // breaks off from addressing the other driver's in the preference list since the rider has been assigned and continues to the next rider
+                        }
                     }
-                    System.out.println("moving on from" + driver.getName());
-                    currentPref += 1; // as it rotates through each driver
+                    currentRiderPref += 1; // as it rotates through each driver
                 }
             }
         }
@@ -117,27 +103,56 @@ public class RideAssigner {
         }
     }
 
+    private boolean highestPreference(List<Rider> riderList, List<Driver> driverList, Rider currentRider, Driver currentDriver, int curDriverPref) {
+        int end = curDriverPref;
+        int stopIndex = currentDriver.getCar().getOpenSpots() - 1;
+
+        if (end != 0) {
+            for (int i = 0; i < (end - 1); i++) {
+                Rider r = currentDriver.getDriverPreferences().get(i); // gets all the riders before our currentRider on the driver's preference list
+                if(r.getCurrentCar() != null || !strongestRiderPreference(r, currentDriver, riderList)) {
+                    stopIndex += 1;
+                }
+                else {
+                    if (r.getCurrentCar() == null && strongestRiderPreference(r, currentDriver, riderList) && end > stopIndex  &&  currentDriver.getCar().getOpenSpots() < 2) {
+                        return false;
+                    }
+                }
+            }
+
+            if(end <= stopIndex) {
+                return true; //strongestDriverPreference(currentDriver, currentRider, driverList);
+            }else if (end > stopIndex) {
+                    return false;
+            }
+        }
+
+        return strongestDriverPreference(currentDriver, currentRider, driverList);
+    }
+
     /**
      *
-     * @param riderList
-     * @param driverList
      * @param currentRider
-     * @param currentPref
      * @param currentDriver
-     * @return true if this rider prefers a certain driver the most meaning they should be assigned together.
+     * @param riderList
+     * @return true if this rider has the strongest preference for "currentDriver" or false if another rider has a stronger preference for the driver
      */
-    public boolean highestPreference(List<Rider> riderList, List<Driver> driverList, Rider currentRider, int currentPref, Driver currentDriver) {
+    private boolean strongestRiderPreference(Rider currentRider, Driver currentDriver, List<Rider> riderList) {
+        int currentPref = currentRider.getRiderPreferences().indexOf(currentDriver);
         for (Rider r : riderList) {
-            if (!isIdentical(r, currentRider)) {
+            if (!isIdentical(r, currentRider) && r.getCurrentCar() == null) {
                 int otherPref = 0;
                 for (Driver d : r.getRiderPreferences()) {
                     if (isIdentical(d, currentDriver)) {// if this is the right driver to be analyzed
-                        if ((otherPref < currentPref) && !currentDriver.getCar().isFull() && r.getCurrentCar() == null && (currentDriver.getCar().getOpenSpots() < (2))) {
-                            // if there is a rider out there with a higher preference, and if the current driver's car isn't full, and if the rider doesn't have a car, and if the current  driver can't take the two of them
-                            System.out.println("rider " + r.getName() + " has higher pick than " + currentRider.getName() + " to " + currentDriver.getName() + " | " + currentPref + " to " + otherPref);
+                        if ((otherPref < currentPref) && !currentDriver.getCar().isFull()) {
                             return false; // return false since the other rider should get the seat
                         }
-                        if ((otherPref == currentPref) && (currentDriver.getCar().getOpenSpots() < 2) && !r.getAddress().equals(currentRider.getAddress()) && (r.getCurrentCar() == null)) { // if the preference are equal
+
+                        if ((otherPref == currentPref) && (r.getCurrentCar() == null)) { // if the preference are equal
+                            if(r.getAddress().equals(currentRider.getAddress())) {
+                                return true;
+                            }
+
                             double curDist = MapsAPI.getDistance(currentRider.getAddress(), d.getAddress());
                             double otherDist = MapsAPI.getDistance(r.getAddress(), d.getAddress());
                             return (curDist < otherDist);
@@ -147,21 +162,39 @@ public class RideAssigner {
                 }
             }
         }
+        return true;
+    }
 
-        int curDriverPref = currentDriver.getDriverPreferences().indexOf(currentRider);
-        for(Driver d : driverList) {
+    /**
+     *
+     * @param currentDriver
+     * @param currentRider
+     * @param driverList
+     * @return true if this driver prefers "currentRider" the most or false if another driver has a stronger preference for the rider
+     */
+    private boolean strongestDriverPreference(Driver currentDriver, Rider currentRider, List<Driver> driverList) {
+        int currentPref = currentDriver.getDriverPreferences().indexOf(currentRider);
+        for(Driver d : driverList) { // loops through all over drivers that isn't our current one and checks whether they prefer this rider more than our current one
             if(!isIdentical(d, currentDriver) && !d.getCar().isFull()) {
-               int otherPref = d.getDriverPreferences().indexOf(currentRider); // simplified version of above. remembered this from previous commits
-               if((otherPref < curDriverPref) && (currentRider.getCurrentCar() == null)) {
-                   System.out.println("driver " + d.getName() + " has higher pick than " + currentDriver.getName() + " to " + currentRider.getName() + " | " + curDriverPref + " to " + otherPref);
-                   return false;
-               }
+                int otherPref = 0;
+                for(Rider r : d.getDriverPreferences()) {
+                    if(r.getCurrentCar() == null && isIdentical(r, currentRider)) {
+                        if ((otherPref < currentPref)) {
+                            return false;
+                        }
 
-               if(otherPref == curDriverPref) {
-                    double curDist = MapsAPI.getDistance(currentDriver.getAddress(), currentRider.getAddress());
-                    double otherDist = MapsAPI.getDistance(d.getAddress(), currentRider.getAddress());
-                    return (curDist < otherDist);
-               }
+                        // expand on this. if both drivers have same preference, we disregard that fact that our comparing driver may not even pick this rider at all
+                        // due to his preferences before this rider. ex. Ray Li with John Lung and Dillon
+                        if ((otherPref == currentPref) && (d.getCar().getOpenSpots() - 1) < otherPref) { // to change/expand on later...
+                            System.out.println("driver " + d.getName() + " and " + currentDriver.getName() + " both prefer " + currentRider.getName() + " at " + currentPref);
+                            double curDist = MapsAPI.getDistance(currentDriver.getAddress(), currentRider.getAddress());
+                            double otherDist = MapsAPI.getDistance(d.getAddress(), currentRider.getAddress());
+                            return (curDist < otherDist);
+                        }
+
+                    }
+                    otherPref += 1;
+                }
             }
         }
         return true;
