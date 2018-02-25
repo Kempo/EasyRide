@@ -67,7 +67,7 @@ public class LocationAPI {
         return false;
     }
 
-    public static void addDefaultStates(String[] abbreviations) {
+    public static void addDefaultState(String[] abbreviations) {
         STATE_LIST.addAll(Arrays.asList(abbreviations));
     }
 }
