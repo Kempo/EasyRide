@@ -8,6 +8,8 @@ public class Person
 
     protected String address;
 
+    protected double distance;
+
     public Person(String name, String address) {
         this.name = name;
         this.address = address;
@@ -27,6 +29,11 @@ public class Person
         return address;
     }
 
+    public void setDistanceTo(double d) { distance = d; }
+
+    public double getDistanceTo() {
+        return distance;
+    }
     @Override
     public String toString()
     {

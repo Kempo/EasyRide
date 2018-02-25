@@ -6,7 +6,6 @@ import java.util.List;
 public class Driver extends Person {
     private Car car; // the car that he has, which contains the # of spots left and current occupants
     private List<Rider> preferences = new ArrayList<>(); // the list of riders that they prefer (ordered by distance)
-    private double distance;
 
     public Driver(String n, String a, Car c) {
         this.address = a;
@@ -20,13 +19,6 @@ public class Driver extends Person {
 
     public Car getCar() { return car; }
 
-    public double getDistanceTo() {
-        return distance;
-    }
-
-    public void setDistanceTo(double d) {
-        distance = d;
-    }
 
     @Override
     public String toString()

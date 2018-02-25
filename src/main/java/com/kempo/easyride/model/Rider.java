@@ -6,7 +6,6 @@ import java.util.List;
 public class Rider extends Person {
 
     private Car current = null; // their current car
-    private double distance; // distance to a target
     private final List<Driver> preferences = new ArrayList<Driver>();
 
     public Rider(String n, String a) {
@@ -21,14 +20,6 @@ public class Rider extends Person {
 
     public void setCar(Car c) {
         current = c;
-    }
-
-    public void setDistanceTo(double d) {
-        distance = d;
-    }
-
-    public double getDistanceTo() {
-        return distance;
     }
 
     public List<Driver> getRiderPreferences() {
