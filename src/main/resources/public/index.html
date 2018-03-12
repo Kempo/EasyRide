@@ -1,81 +1,7 @@
 <html>
 <head>
-    <script src="./jquery.js"></script>
-    <script type="text/javascript">
-        
-
-        $(document).ready(function(){
-            $("#rides").change(function () {
-                $('#val').text(this.value.replace(/C:\\fakepath\\/i, ''));
-                /* REMOVED
-                var fr = new FileReader();
-                fr.onload = function () {
-                    $("#displayContents").html(this.result);
-                };
-                fr.readAsText(this.files[0]);
-                */
-            });
-
-            $("#submitSheets").click(function() {
-                toggleLoading();
-                var str = $("#sheetsSubmission").serialize();
-                $.post("/sheets", str, function(data, error) {
-                    data = data.replace(/\n/g, "<br>");
-                    $("#result").contents().find("body").html(data);
-                    toggleLoading();
-                });
-            }); 
-        });
-
-
-
-        function selectFile() {
-            $("#rides").trigger('click');
-        }
-
-        function sendData() {
-            toggleLoading();
-            var fr = new FileReader();
-            fr.onload = function(event) {
-                var result = event.target.result;
-
-                $.post("/rides", result, function(result, error) {
-                    result = result.replace(/\n/g, "<br>");
-                    //$("#result").html(result);
-                    $("#result").contents().find("body").html(result);
-                    toggleLoading();
-                });
-            };
-            var rides = $("#rides");
-            var files = rides[0]['files'];
-            var file = files[0];
-            fr.readAsText(file, 'ASCII');
-        }
-
-/*
-        function read() {
-            toggleLoading();
-            var result = "test";
-            $.post("/sheets", function(result) {
-                result = result.replace(/\n/g, "<br>");
-                $("#result").html(result);
-                toggleLoading();
-            });
-        }
-*/
-      function toggleLoading() {
-        var status = document.getElementById("loadingImage").style.visibility;
-        if(status == "" || status == "hidden") {
-            document.getElementById("result").style.background = "#f7f7f7";
-            document.getElementById("loadingImage").style.visibility = "visible";
-
-        } else if (status == "visible") {
-            document.getElementById("result").style.background = "white";
-            document.getElementById("loadingImage").style.visibility = "hidden";
-        }
-      }
-
-    </script>
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script type="text/javascript" src="./client.js"></script>
     <title> EasyRide </title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -98,13 +24,7 @@
         <pre>billy   33  4th street  driver  3<br>sandy   355 5th AVE S   rider    <br>andy    41  6th street  driver  5<br>
         </pre>
     </div>
-    <!-- previous stuff for note
-<input id="rides" type="file" accept=".tsv">
-<br>
 
-
-<button onclick="sendData()">Submit</button>
-    -->
 
     <div id='fileinput'>
     <input type='file' id='rides' accept='.tsv'>
@@ -121,10 +41,6 @@
         </form>
     </div>
 
-    <!--
-<div id="displayContents">
-    </div>
-    -->
     <div>
     <iframe name="output" id="result"></iframe>
     </div>
@@ -133,9 +49,6 @@
     <img src="misc\loading.gif" width="50px" height="50px">
     </div>
 
-    <!--
-    <iframe name="output" id="outputframe"></iframe>
-    -->
 
 </body>
 </html>
