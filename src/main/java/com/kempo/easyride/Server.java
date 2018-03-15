@@ -32,8 +32,8 @@ public class Server {
         });
 
         post("/sheets", (req, res) -> {
-            String url = req.queryParams("sheetURL");
-            String dataRange = req.queryParams("dataRange");
+            String url = req.queryParams("sheetsURL");
+            String dataRange = req.queryParams("sheetsRange");
             String sheetsID = SheetsAPI.getIDFromURL(url);
 
             System.out.println("sheetURL: " + url);
