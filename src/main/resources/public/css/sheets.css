@@ -1,0 +1,31 @@
+@media screen and (max-width: 420px) {
+	.middle {
+		display: block;
+	}
+	.textbox {
+		width: 95%;
+	}
+	#submitSheets {
+		margin-left: 35%;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (min-width: 420px) {
+	.middle {
+		display: table-cell;
+	}
+}
+
+#sheetsForm {
+    text-align: left;
+    font-size: 3vh;
+    margin: 0;
+}
+
+#submitSheets {
+	font-size: 3vh;
+	-webkit-transition: 600ms all;
+	-moz-transition: 600ms all;
+	transition: 600ms all;
+}

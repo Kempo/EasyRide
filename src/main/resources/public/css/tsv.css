@@ -1,0 +1,87 @@
+@media screen and (max-width: 420px) {
+	#uploadDiv {
+		text-align: center;
+	}
+
+	.middle {
+		display: block;
+	}
+
+	#filesName {
+		margin-bottom: 20px;
+	}
+}
+@media screen and (min-width: 420px) {
+	#uploadDiv {
+		text-align: left;
+	}
+
+	.middle {
+		display: table-cell;
+	}
+
+	#filesName {
+		margin-bottom: 0px;
+	}
+
+}
+
+
+.middle {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#upload {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+
+#filesName {
+    width: 70%;
+}
+
+#filesName:hover {
+	cursor: default;
+}
+
+#submitButton {
+	display: inline-block;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVGhD7dVBqsJAEIThrD2Kl/JqXsqjuE2sDv9GYoFB45TQHwy+ZyqTIvTg1Fo7zjzPl1r8+19U/Kx1Z535+j8sy3JS6Zs+V/x94nI+lb2uzZ9duZxNb/tC4Y26RixTzbrWnb4bda0yxLOo39PcO2TyzoNKvZp7J+s86K3auXfqHm4fq2Zay869U/fUvWwzhnq8NfcO9447D3r4nrl3xpwHvb3dc+/UXmz7GzW7Wrvn3qm9ak+2P5ae99HcO+x5/HnQQ74x98743weKWMRy0dMiloueFrFc9LSI5aKnRSwXPS1iuehpEctFT4tYLnpaxHLR0yKWi54WsVz0tIjloqdFLBc9LWK56GkRy0VPi1hr7SictVjU9MjFoqZHLhY1PXKxqNlaW03TA1ZowEJc4XH5AAAAAElFTkSuQmCC");
+	background-repeat: no-repeat;
+	background-position: center left;
+	height: 50px;
+	font-size: 3vh;
+	text-indent: 40px;
+	-webkit-transition: 600ms all;
+    -moz-transition: 600ms all;
+    transition: 600ms all;
+}
+
+#uploadButton {
+	display: inline-block;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFZSURBVGhD7dgxLgVhFIbhqXRKHRoKS7ADUaqtwgoUanpb4NLp9XpbIBLCvUqGbzKvRnJm/jsJ/1ecJ/kTxTnXexIUmpRSSum3tm039GZ6869Cmj1mvS7in+laisURipjRM0n1IxSwoGWyqkfQUI2On+td68sdkpbTf0x9OuJFb52scuxb0AGXZJVj14IOeCOrHLs2yCrHng2yyrEXYswXnSHGfNFpRb/Mj3qn+nKFzFi/4qk7gswYs5Z0wAOZMWZdvZIZY9DVLZkxBi3pR+iEzBizlnTAHpkxZu0o/kNvlcwY83YUf0fiMObt6IAzEocxb0cHHJA4jHkriu+skTiMHSuKvydvHDtWdMA5eePYsaIDDskbx46bTfLG6dpJ/1b8K+op+/v/QzsX/Wp9iu/sk1ZGC1t6T3xGNWr41Dsiazla3Na70nvn8/6NvudC70Zvl5yUUkop0DTfCnuKl+8FKzkAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
+    background-position: center left;
+    line-height: 45px;
+    text-indent: 45px;
+
+	-webkit-transition: 600ms all;
+    -moz-transition: 600ms all;
+    transition: 600ms all;
+
+    height: 44px;
+    color: white;
+    font-size: 3vh;
+    padding: 0;
+}
+
+#uploadForm {
+	font-size: 3vh;
+}

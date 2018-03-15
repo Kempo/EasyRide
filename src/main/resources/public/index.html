@@ -1,54 +1,28 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <script type="text/javascript" src="./jquery.js"></script>
-    <script type="text/javascript" src="./client.js"></script>
     <title> EasyRide </title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
 </head>
 
-
 <body>
-    <div id="title">
-        <h1> EasyRide </h1>
+<div class="container">
+    <div class="middle">
+        <div class="content">
+            <div id="title">
+                <h> Welcome to EasyRide </h>
+                <p id="desc"> Taking the hassle out of organizing group activities. </p>
+            </div>
+            <div id="selectionForm">
+                <ul id="tabs">
+                    <li class="item" id="borderline"><a href="tsv.html" class="link"> TSV </a></li>
+                    <li class="item"><a href="sheets.html" class="link"> Sheets </a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <div id="instructions">
-        <h1>Upload a .tsv file (tab-separated value) with the following format:</h1>
-        <p>
-        name | address | designation (either "driver" or "rider") | number of spaces (if driver).
-        </p>
-    </div>
-
-    <div id="exampleInput">
-        <b>Example Input:</b>
-        <pre>billy   33  4th street  driver  3<br>sandy   355 5th AVE S   rider    <br>andy    41  6th street  driver  5<br>
-        </pre>
-    </div>
-
-
-    <div id='fileinput'>
-    <input type='file' id='rides' accept='.tsv'>
-    <span id='val'></span>
-    <span id='buttonSelect' onclick="selectFile();">...</span>
-    <span id='buttonSubmit' onclick="sendData();">Submit</span>
-    </div>
-
-    <div id="sheetsinput">
-        <form id="sheetsSubmission"> 
-        Sheet URL: <input type="text" name="sheetURL">
-        Range: <input type="text" name="dataRange">
-        <input type="button" value="Submit" id="submitSheets">
-        </form>
-    </div>
-
-    <div>
-    <iframe name="output" id="result"></iframe>
-    </div>
-
-    <div id="loadingImage">
-    <img src="misc\loading.gif" width="50px" height="50px">
-    </div>
-
-
+</div>
 </body>
+
 </html>

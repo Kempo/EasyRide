@@ -1,0 +1,47 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head> 
+	<title> EasyRide </title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/sheets.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	<script type="text/javascript" src="js/sheets.js"></script>
+
+    <script type="text/javascript"> 
+    	window.onload = function() {
+  			$("body").removeClass("preload");
+		}
+    </script>
+
+</head>
+
+
+<body class="preload"> 
+<div class="container">
+	<div class="middle">
+		<div class="content">
+			<div class="header">
+				<a href="index.html"> EasyRide </a>
+			</div>
+
+
+			<hr class="horizontal-line">
+
+			<div>
+				<form id="SheetsForm">
+					URL: <input type="text" name="sheetsURL" class="textbox">
+					Range: <input type="text" name="sheetsRange" class="textbox">
+					<input type="button" value="Submit" class="button" id="submitSheets">
+				</form>
+			</div>
+
+			<iframe name="output" class="output"></iframe>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
