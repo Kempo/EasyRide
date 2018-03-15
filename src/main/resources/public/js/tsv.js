@@ -14,7 +14,7 @@
                         $.post("/rides", result, function(result, error) {
                             result = result.replace(/\n/g, "<br>");
                             //$("#result").html(result);
-                            $("#output").contents().find("body").html(result);
+                            $(".output").contents().find("body").html(result);
                             //toggleLoading();
                         });
                     };

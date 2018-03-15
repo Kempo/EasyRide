@@ -5,7 +5,7 @@
                             var str = $("#SheetsForm").serialize();
                             $.post("/sheets", str, function(data, error) {
                                 data = data.replace(/\n/g, "<br>");
-                                $("#output").contents().find("body").html(data);
+                                $(".output").contents().find("body").html(data);
                                 //toggleLoading();
                             });
              });
