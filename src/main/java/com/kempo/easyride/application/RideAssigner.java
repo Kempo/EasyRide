@@ -2,9 +2,7 @@ package com.kempo.easyride.application;
 import com.kempo.easyride.google.MapsAPI;
 import com.kempo.easyride.model.AssignedRides;
 import com.kempo.easyride.model.Person;
-import com.kempo.easyride.util.DriverComparator;
 import com.kempo.easyride.util.PersonComparator;
-import com.kempo.easyride.util.RiderComparator;
 import com.kempo.easyride.model.Driver;
 import com.kempo.easyride.model.Rider;
 
