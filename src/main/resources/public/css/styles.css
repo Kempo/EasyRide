@@ -26,7 +26,7 @@
 	}
 }
 
-@media screen and (min-width: 1650px) and (min-height: 1000px){
+@media screen and (min-width: 1650px) {
     #title {
         font-size: 10vh;
         text-align: left;
@@ -41,6 +41,7 @@
         margin: 0 auto;
         text-align: center;
     }
+
     .textbox {
     	height: 50px;
     }
