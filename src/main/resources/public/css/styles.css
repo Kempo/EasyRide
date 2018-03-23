@@ -26,7 +26,14 @@
 	}
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 1650px) and (min-height: 1000px){
+    #title {
+        font-size: 10vh;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 1649px) {
 	.content {
     -webkit-box-shadow: 5px 5px 115px -30px rgba(0,0,0,1);
 	-moz-box-shadow: 5px 5px 115px -30px rgba(0,0,0,1);
@@ -55,6 +62,7 @@
 	}
 
 }
+
 
 
 .container {
