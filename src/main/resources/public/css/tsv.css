@@ -9,6 +9,7 @@
 
 	#filesName {
 		margin-bottom: 20px;
+		width: 70%;
 	}
 }
 @media screen and (min-width: 420px) {
@@ -22,6 +23,7 @@
 
 	#filesName {
 		margin-bottom: 0px;
+		width: 60%;
 	}
 
 }
@@ -41,12 +43,6 @@
 	z-index: -1;
 }
 
-
-
-#filesName {
-    width: 60%;
-}
-
 #filesName:hover {
 	cursor: default;
 }
@@ -62,6 +58,8 @@
 	-webkit-transition: 600ms all;
     -moz-transition: 600ms all;
     transition: 600ms all;
+    vertical-align: top;
+    line-height: 40px;
 }
 
 #uploadButton {
@@ -71,17 +69,16 @@
     background-position: center left;
     line-height: 45px;
     text-indent: 45px;
-
 	-webkit-transition: 600ms all;
     -moz-transition: 600ms all;
     transition: 600ms all;
-
     height: 44px;
     color: white;
     font-size: 3vh;
     padding: 0;
+    vertical-align: top;
 }
 
 #uploadForm {
-	font-size: 3vh;
+	font-size: 4vh;
 }
