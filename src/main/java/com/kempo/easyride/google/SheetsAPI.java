@@ -36,7 +36,6 @@ public class SheetsAPI {
         }
 
         Credential credential = null;
-        System.out.println("building sheets...");
         return new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, credential)
                 .setApplicationName(APPLICATION_NAME)
                 .build();
@@ -70,6 +69,7 @@ public class SheetsAPI {
         }
         return sheetID;
     }
+
 
 
 }

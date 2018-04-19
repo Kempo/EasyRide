@@ -126,7 +126,6 @@ public class RideAssigner {
                             }
                             */
 
-
                     }
                     else {
                         if (r.getCurrentCar() == null

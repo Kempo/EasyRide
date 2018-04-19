@@ -36,34 +36,12 @@ public class Server {
             String url = req.queryParams("sheetsURL");
             String dataRange = req.queryParams("sheetsRange");
             return ServerHelper.getDataThroughSheets(SheetsAPI.getIDFromURL(url), dataRange, parser, orchestrator);
-
-            /*
-            System.out.println("sheetURL: " + url);
-            System.out.println("sheetID: " + sheetsID);
-            System.out.println("dataRange: " + dataRange);
-            Sheets service = SheetsAPI.getSheetsService();
-
-            System.out.println("google sheets service initialized: " + service.getApplicationName());
-            ValueRange values = service.spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
-            System.out.println("parsing...");
-            final RawParticipants participants = parser.parseInitialRequestThroughSheets(values);
-            final AssignedRides result = orchestrator.orchestrateRides(participants);
-            System.out.println("request complete.");
-            return result.toString();
-            */
         });
 
         post("/rides", (req, res) -> {
             String request = new String(req.bodyAsBytes(), StandardCharsets.UTF_8);
             request = request.replaceAll("\r\n","\n"); // to remove CRLF line terminators
             return ServerHelper.getDataThroughTSV(request, parser, orchestrator);
-
-            /*
-            System.out.println("request: \n" + request);
-            final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
-            final AssignedRides result = orchestrator.orchestrateRides(participants);
-            System.out.println(participants);
-            */
         });
     }
 

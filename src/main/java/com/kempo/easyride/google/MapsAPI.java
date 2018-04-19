@@ -14,47 +14,6 @@ public class MapsAPI {
 
     private static final String DELIMITER = "%20";
 
-
-    /**
-     * deprecated. very poor way of handling JSON parsing once again
-     * @param o
-     * @param d
-     * @return distance in kilometers
-
-    public double getDistance(String o, String d) {
-        String link = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" + setOrigin(o) + "&destinations=" + setDestination(d) + "&key=" + KEY;
-        String distance = "";
-        try {
-            URL url = new URL(link);
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream())); // creates a BufferedReader that can read our URL
-
-            String line;
-            while((line = reader.readLine()) != null) {
-                System.out.println(line);
-                if(line.contains("\"distance\"")) { // if the current line contains "distance"; this is where we parse the lines on Google's response
-                    distance = reader.readLine(); // sets our variable to the next line (where the distance in kilometers will be displayed)
-                }
-            }
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
-
-        if(distance.isEmpty() || distance.contains("[]")) { // if our string is empty or if it contains [] then it's invalid and should'nt be parsed
-            System.out.println("invalid distance string= '" + distance + "'");
-            return -1;
-        }
-
-        double dist = parseDouble(distance); // parses the distance string
-
-        if(dist < 0) { // if it is less than 0, meaning an unsuccessful and invalid parse
-            System.out.println("unsuccessful parse");
-        }
-
-        return dist;
-    }
-    */
-
     /**
      * @param o
      * @param d

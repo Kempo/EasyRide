@@ -1,5 +1,6 @@
 package com.kempo.easyride.google;
 
+import com.kempo.easyride.util.Keywords;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -15,18 +16,16 @@ public class LocationAPI {
 
     private static final String DELIMITER = "%20";
 
-    private static final String[] DEFAULT_STATE = {"WASHINGTON", "washington", "wa", "WA"};
-
     private static final ArrayList<String> STATE_LIST = new ArrayList<>();
 
     static {
-        STATE_LIST.addAll(Arrays.asList(DEFAULT_STATE));
+        STATE_LIST.addAll(Arrays.asList(Keywords.DEFAULT_STATE)); // adds all the keywords to the list when the class is loaded in memory
     }
 
     public static String getFormattedAddress(String unformatted) {
         StringBuilder address = new StringBuilder(unformatted);
         if(!isStateDeclared(unformatted)) {
-            address.append(" " + DEFAULT_STATE[0]);
+            address.append(" " + Keywords.DEFAULT_STATE[0]);
         }
         final String formatted = address.toString().replaceAll(" ", DELIMITER);
 
@@ -60,7 +59,7 @@ public class LocationAPI {
 
     private static boolean isStateDeclared(String address) {
         for(String state : STATE_LIST) {
-            if (address.contains(state)) {
+            if (address.toLowerCase().contains(state)) {
                 return true;
             }
         }

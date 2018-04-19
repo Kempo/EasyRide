@@ -19,6 +19,33 @@ public class RideParser
     private static final String DRIVER = "driver";
     private static final String RIDER = "rider";
 
+    public RawParticipants parseInitialRequestThroughCrawler(Crawler crawler) {
+        final RawParticipants participants = new RawParticipants();
+        final List<List<Object>> values = crawler.getValueRange().getValues();
+        if(values != null && values.size() > 0) {
+            for(int start = crawler.getStartingRow() + 1; start < values.size(); start++) {
+                List row = values.get(start);
+                String address = LocationAPI.getFormattedAddress(row.get(crawler.getAddressColumn()).toString());
+
+                if(address == null) {
+                    participants.addUnclassified(new Unclassified(row.toString(), "invalid location"));
+                }else {
+
+                    if (row.get(crawler.getDesignationColumn()).toString().contains(RIDER)) { // need to fix identification
+                        participants.addRider(new Rider(row.get(crawler.getNameColumn()).toString(), row.get(crawler.getAddressColumn()).toString()));
+                    } else if (row.get(crawler.getDesignationColumn()).toString().contains(DRIVER)) { // need to fix identification
+                        participants.addDriver(new RawDriver(row.get(crawler.getNameColumn()).toString(), row.get(crawler.getAddressColumn()).toString(), (int) row.get(crawler.getSpotsColumn())));
+                    }
+
+                }
+
+            }
+        }
+
+        return participants;
+    }
+
+
     public RawParticipants parseInitialRequestThroughTSV(final String rawTsv)
     {
         final String[] lines = rawTsv.split("\n");

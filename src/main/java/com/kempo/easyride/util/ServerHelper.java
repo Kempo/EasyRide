@@ -10,17 +10,27 @@ import com.kempo.easyride.model.RawParticipants;
 
 public class ServerHelper {
 
-    public static String getDataThroughSheets(final String sheetsID, final String dataRange, final RideParser parser, final Orchestrator orchestrator) throws Exception {
-        Sheets service = SheetsAPI.getSheetsService();
-        ValueRange values = service.spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
-        System.out.println("SERVICE: " + service.getApplicationName() + " STATUS: PARSING...");
-        final RawParticipants participants = parser.parseInitialRequestThroughSheets(values);
-        final AssignedRides result = orchestrator.orchestrateRides(participants);
-        System.out.println("REQUEST COMPLETE.");
-        return result.toString();
+    public static final String getDataThroughSheets(final String sheetsID, final String dataRange, final RideParser parser, final Orchestrator orchestrator) throws Exception {
+        final Sheets service = SheetsAPI.getSheetsService();
+        final ValueRange values = service.spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
+        String output;
+        if(dataRange.isEmpty() || values == null) {
+            final Crawler crawler = new Crawler(service, sheetsID);
+            final RawParticipants participants = parser.parseInitialRequestThroughCrawler(crawler);
+            final AssignedRides result = orchestrator.orchestrateRides(participants);
+            output = result.toString();
+            System.out.println("REQUEST COMPLETE");
+        }else{
+            final RawParticipants participants = parser.parseInitialRequestThroughSheets(values);
+            final AssignedRides result = orchestrator.orchestrateRides(participants);
+            output = result.toString();
+            System.out.println("REQUEST COMPLETE.");
+        }
+
+        return output;
     }
 
-    public static String getDataThroughTSV(final String request, final RideParser parser, final Orchestrator orchestrator) {
+    public static final String getDataThroughTSV(final String request, final RideParser parser, final Orchestrator orchestrator) {
         final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
         System.out.println("REQUEST COMPLETE.");
