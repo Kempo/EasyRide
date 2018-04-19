@@ -24,8 +24,13 @@
 	.header {
 		text-align: center;
 	}
+
+	.header a {
+		font-size: 60px;
+	}
+
 	.button {
-		height: 30px;
+		height: 50px;
 	}
 }
 
@@ -58,6 +63,7 @@
     }
     .header {
     	text-align: left;
+		font-size: 7vh;
     }
 }
 
@@ -86,6 +92,7 @@
 	}
 
 	.header {
+		font-size: 7vh;
 		text-align: left;
 	}
 	.button {
@@ -113,7 +120,6 @@
 	border-color: rgba(58, 175, 58, .1);
 	border-radius: 4px;
 	background-color: rgba(58, 175, 58, .5);
-	padding: 6px;
 	color: white;
 }
 
@@ -129,10 +135,8 @@
 	vertical-align: middle;
 }
 .header a {
-	font-size: 7vh;
     text-decoration: none;
     color: white;
-
     -webkit-transition: 600ms all;
     -moz-transition: 600ms all;
     transition: 600ms all;
