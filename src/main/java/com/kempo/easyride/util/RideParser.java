@@ -8,6 +8,7 @@ import com.kempo.easyride.model.Rider;
 import com.kempo.easyride.model.Unclassified;
 
 import javax.xml.stream.Location;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -26,19 +27,23 @@ public class RideParser
             for(int start = crawler.getStartingRow() + 1; start < values.size(); start++) {
                 List row = values.get(start);
                 String address = LocationAPI.getFormattedAddress(row.get(crawler.getAddressColumn()).toString());
+                String colValue = row.get(start).toString();
+                if(address != null) {
+                    participants.addUnclassified(new Unclassified(colValue, "invalid location"));
+                }else{
 
-                if(address == null) {
-                    participants.addUnclassified(new Unclassified(row.toString(), "invalid location"));
-                }else {
+                    final String name = row.get(crawler.getNameColumn()).toString();
+                    final String desig = row.get(crawler.getDesignationColumn()).toString();
 
-                    if (row.get(crawler.getDesignationColumn()).toString().contains(RIDER)) { // need to fix identification
-                        participants.addRider(new Rider(row.get(crawler.getNameColumn()).toString(), row.get(crawler.getAddressColumn()).toString()));
-                    } else if (row.get(crawler.getDesignationColumn()).toString().contains(DRIVER)) { // need to fix identification
-                        participants.addDriver(new RawDriver(row.get(crawler.getNameColumn()).toString(), row.get(crawler.getAddressColumn()).toString(), (int) row.get(crawler.getSpotsColumn())));
+                    if(crawler.isStringInList(desig, Keywords.DRIVER)) {
+                        final int spots = Integer.parseInt(row.get(crawler.getSpotsColumn()).toString()); // make this parsing process better (account for words for numbers)
+                        participants.addDriver(new RawDriver(name, address, spots));
+                    }else if(crawler.isStringInList(desig, Keywords.RIDER)) {
+                        participants.addRider(new Rider(name, address));
+                    }else {
+                        participants.addUnclassified(new Unclassified(colValue, "no designations found."));
                     }
-
                 }
-
             }
         }
 

@@ -82,7 +82,7 @@ public class RideParserTest extends TestCase
         Assert.assertEquals(0, result.getUnclassifieds().size());
         Assert.assertEquals(3, result.getRiders().size());
         Assert.assertEquals("Nick", result.getRiders().get(1).getName());
-        Assert.assertEquals("100 Nicolls Rd, Stony Brook, NY 11794, USA", result.getRiders().get(2).getAddress());
+        Assert.assertEquals(true, result.getRiders().get(2).getAddress().contains("Stony Brook"));
         Assert.assertEquals(4, result.getDrivers().get(0).getSpaces());
     }
 
