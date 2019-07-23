@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-
+// GEOCODE
 public class LocationAPI {
     private static final String LOCATION_KEY = System.getenv("LOCATION_KEY");
 
@@ -28,7 +28,6 @@ public class LocationAPI {
             address.append(" " + Keywords.DEFAULT_STATE[0]);
         }
         final String formatted = address.toString().replaceAll(" ", DELIMITER);
-
         final String link = "https://maps.googleapis.com/maps/api/geocode/json?address=" + formatted + "&key=" + LOCATION_KEY;
         try {
             URL url = new URL(link);

@@ -38,6 +38,7 @@ public class RideAssigner {
             }
             Collections.sort(rider.getRiderPreferences(), new PersonComparator());
         }
+        logPreferences(riderList, driverList);
     }
 
     public void logPreferences(List<Rider> riderList, List<Driver> driverList) {
@@ -109,23 +110,6 @@ public class RideAssigner {
                             stopIndex += 1;
                             inc += 1;
                             System.out.println("adding to stop index due to " + r.getName() + " in driver's list.");
-
-                            /*
-                            // to be analyzed. LOOK OVER. compare assignments.
-                            if(inc == currentDriver.getCar().getOpenSpots()) {
-                                System.out.println("maximum stop index reached.");
-                                if(end > stopIndex) {
-                                    System.out.println("doesn't fit with driver");
-                                    return false;
-                                }else{
-                                    if(end <= stopIndex) {
-                                        System.out.println("fits with driver");
-                                        return true;
-                                    }
-                                }
-                            }
-                            */
-
                     }
                     else {
                         if (r.getCurrentCar() == null
@@ -205,17 +189,6 @@ public class RideAssigner {
                             System.out.println("driver "  + d.getName() + " has higher preference for " + currentRider.getName());
                             return false;
                         }
-
-                        /** LOOK OVER
-                        // expand on this. if both drivers have same preference, we disregard that fact that our comparing driver may not even pick this rider at all
-                        // due to his preferences before this rider. ex. Ray Li with John Lung and Dillon
-                        if ((otherPref == currentPref) && (d.getCar().getOpenSpots() - 1) < otherPref) { // to change/expand on later...
-                            System.out.println("driver " + d.getName() + " and " + currentDriver.getName() + " both prefer " + currentRider.getName() + " at " + currentPref);
-                            double curDist = MapsAPI.getDistance(currentDriver.getAddress(), currentRider.getAddress());
-                            double otherDist = MapsAPI.getDistance(d.getAddress(), currentRider.getAddress());
-                            return (curDist < otherDist);
-                        }
-                         **/
 
                     }
                     otherPref += 1;

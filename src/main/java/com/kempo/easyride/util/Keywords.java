@@ -6,7 +6,7 @@ public class Keywords {
 
     public static final String[]
             NAMES = {"name"},
-            ADDRESSES = {"address", "live"},
+            ADDRESSES = {"address", "live", "home"},
             SIZE = {"spots", "how many", "car", "you have"}; // spots question keywords
 
     public static final String[] // actual responses keywords

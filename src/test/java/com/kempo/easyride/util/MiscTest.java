@@ -10,7 +10,6 @@ import javax.xml.stream.Location;
 
 public class MiscTest extends TestCase {
 
-    private MapsAPI maps = new MapsAPI();
     public void testURLParser() {
         String URL = "https://docs.google.com/spreadsheets/d/sheetsID/edit#gid=0";
         String ID = SheetsAPI.getIDFromURL(URL);
@@ -23,8 +22,8 @@ public class MiscTest extends TestCase {
     public void testLongDistanceWithAPI() {
         String origin = "New York";
         String destination = "Seattle";
-        double dist = maps.getDistance(origin, destination);
-        Assert.assertEquals(2852.0, dist);
+        double dist = MapsAPI.getDistance(origin, destination);
+        Assert.assertEquals(2861.0, dist);
     }
 
     /**

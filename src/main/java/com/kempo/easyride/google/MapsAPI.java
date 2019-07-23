@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+// DISTANCE API
 public class MapsAPI {
     private static final String MAPS_KEY = System.getenv("MAPS_KEY"); // Google Distance Matrix API key
 

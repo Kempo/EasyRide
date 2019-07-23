@@ -56,6 +56,7 @@ public class Crawler {
                                     if (colValue.toLowerCase().contains(k)) { // if the column value contains any of the strings in the two-dimensional array requirements
                                         // set columns for designation if the data columns have not been set already.
                                         if (isStringInList(colValue, Keywords.ADDRESSES) && addressCol == -1) {
+                                            System.out.println(colValue);
                                             addressCol = colIndex;
                                         }
 
@@ -77,16 +78,6 @@ public class Crawler {
                                                 }
                                             }
                                         }
-
-                                        /**
-                                        if (colValue.contains("?") && isStringInList(colValue, Keywords.SIZE) && spotsCol == -1) {
-                                            spotsCol = colIndex;
-                                        }
-
-                                        if(colValue.contains("?") && isStringInList(colValue, Keywords.DQUESTION) && designationCol == -1) {
-                                            designationCol = colIndex;
-                                        }
-                                        **/
 
                                         if (nameCol != -1 && addressCol != -1 && designationCol != -1 && spotsCol != -1) { // if all columns needed are identified
                                             System.out.println("All columns identified.");
