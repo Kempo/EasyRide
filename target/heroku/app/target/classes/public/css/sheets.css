@@ -8,23 +8,32 @@
 	#submitSheets {
 		margin-left: 35%;
 		margin-top: 10px;
+		font-size: 25px;
 	}
+	#sheetsForm {
+		font-size: 25px;
+	}
+
 }
 
 @media screen and (min-width: 420px) {
 	.middle {
 		display: table-cell;
 	}
+	#sheetsForm {
+		font-size: 3vh;
+	}
+	#submitSheets {
+		font-size: 3vh;
+	}
 }
 
 #sheetsForm {
     text-align: left;
-    font-size: 3vh;
     margin: 0;
 }
 
 #submitSheets {
-	font-size: 3vh;
 	-webkit-transition: 600ms all;
 	-moz-transition: 600ms all;
 	transition: 600ms all;

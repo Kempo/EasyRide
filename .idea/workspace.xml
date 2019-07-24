@@ -2,35 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyRide/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyRide/Driver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyRide/EasyRide.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyRide/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyRide/MapsAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EasyRide/Rider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/Crawler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/Keywords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/Keywords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/EasyRide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/EasyRide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/RideAssigner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/RideAssigner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/LocationAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/LocationAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/MapsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/MapsAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/SheetsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/SheetsAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/RawParticipants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/RawParticipants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/OrchestratorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/OrchestratorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/RideParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/RideParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/TestUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/TestUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/easyride-1.0-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/easyride-1.0-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/easyride-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/easyride-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/system.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/application/EasyRide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/application/EasyRide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/application/RideAssigner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/application/RideAssigner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/LocationAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/LocationAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/MapsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/MapsAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/SheetsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/SheetsAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/AssignedRides.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/AssignedRides.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/RawParticipants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/RawParticipants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/RideParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/RideParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/ServerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/ServerHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/css/sheets.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/public/css/sheets.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/easyride-1.0-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/easyride-1.0-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/easyride-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/easyride-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.MiscTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.MiscTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.OrchestratorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.OrchestratorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.PreferencesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.PreferencesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.RideParserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.RideParserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.TestUtility.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.TestUtility.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.MiscTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.MiscTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.OrchestratorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.OrchestratorTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.PreferencesTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.PreferencesTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.RideParserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.RideParserTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.TestUtility.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.TestUtility.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/MiscTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/MiscTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/OrchestratorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/OrchestratorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/RideParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/RideParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/TestUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/TestUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.MiscTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.MiscTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.OrchestratorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.OrchestratorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.PreferencesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.PreferencesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.RideParserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.RideParserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.TestUtility.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.TestUtility.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.MiscTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.MiscTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.OrchestratorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.OrchestratorTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.PreferencesTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.PreferencesTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.RideParserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.RideParserTest.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -64,34 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/CrawlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreferencesTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/PreferencesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RideParserTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/RideParserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="67" column="40" lean-forward="true" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestUtility.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/TestUtility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -100,12 +97,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RideAssigner.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RideAssigner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-27">
@@ -114,11 +111,48 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.tsv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.tsv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EasyRide.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EasyRide.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PersonComparator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/PersonComparator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -127,19 +161,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocationAPI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -187,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/LocationAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/RawParticipants.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/styles.css" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/DistanceComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RiderComparator.java" />
@@ -226,6 +247,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -268,8 +290,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
-    <option name="y" value="39" />
+    <option name="x" value="92" />
+    <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="713" />
   </component>
@@ -398,9 +420,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.47356322" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
@@ -662,7 +684,7 @@
       <workItem from="1530850000425" duration="938000" />
       <workItem from="1554785428347" duration="1336000" />
       <workItem from="1556322786989" duration="21000" />
-      <workItem from="1563859007258" duration="4023000" />
+      <workItem from="1563859007258" duration="5823000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>
@@ -1043,7 +1065,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41191000" />
+    <option name="totallyTimeSpent" value="42991000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1055,7 +1077,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="39" width="1260" height="713" extended-state="0" />
+    <frame x="92" y="23" width="1260" height="713" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -1176,13 +1198,6 @@
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/EasyRide.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/brackets.desktop" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/misc/loading.gif">
       <provider selected="true" editor-type-id="images" />
@@ -1224,20 +1239,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RiderComparator.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1326,13 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -1447,35 +1441,35 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/CrawlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/OrchestratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/PersonComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/Orchestrator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -1483,6 +1477,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EasyRide.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1495,7 +1523,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.47356322" />
               </list>
             </option>
           </splitter-proportions>
@@ -1507,7 +1535,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.47356322" />
               </list>
             </option>
           </splitter-proportions>
@@ -1518,7 +1546,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.47356322" />
               </list>
             </option>
           </splitter-proportions>
@@ -1526,11 +1554,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.47356322" />
               </list>
             </option>
           </splitter-proportions>
@@ -1542,7 +1570,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.47356322" />
                 <option value="0.6" />
               </list>
             </option>
@@ -1563,11 +1591,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.sparkjava:spark-core:2.6.0</last-edited>
+          <last-edited>Maven: commons-logging:commons-logging:1.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.47356322" />
               </list>
             </option>
           </splitter-proportions>
