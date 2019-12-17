@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="com.kempo.easyride.util.OrchestratorTest" time="21.607" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="com.kempo.easyride.util.OrchestratorTest" time="71.09" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="10.0.1+10"/>
@@ -65,7 +65,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.kempo.easyride.util.OrchestratorTest" name="testWithSheetsData" time="17.204"/>
-  <testcase classname="com.kempo.easyride.util.OrchestratorTest" name="testWithTextInputAndDriversWithLimitedSpots" time="2.546"/>
-  <testcase classname="com.kempo.easyride.util.OrchestratorTest" name="testWithTextInputAndTopPreferences" time="1.857"/>
+  <testcase classname="com.kempo.easyride.util.OrchestratorTest" name="testWithSheetsData" time="50.377"/>
+  <testcase classname="com.kempo.easyride.util.OrchestratorTest" name="testWithTextInputAndDriversWithLimitedSpots" time="9.776"/>
+  <testcase classname="com.kempo.easyride.util.OrchestratorTest" name="testWithTextInputAndTopPreferences" time="10.937"/>
 </testsuite>

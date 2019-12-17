@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="com.kempo.easyride.util.RideParserTest" time="0.44" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="com.kempo.easyride.util.RideParserTest" time="9.149" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="10.0.1+10"/>
@@ -65,11 +65,11 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testRider" time="0.022"/>
-  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testEntryUnparsedWhenCannotParseLabelColumn" time="0.085"/>
-  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testDriverWhenNoSpacesListedIsUnclassified" time="0.035"/>
-  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testDriverWhenSpacesNotANumberIsUnclassified" time="0.034"/>
-  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testDriverInputHappyPath" time="0.037"/>
-  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testMultipleDrivers" time="0.19"/>
-  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testSheetsAPI" time="0.037"/>
+  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testDriverInputHappyPath" time="0.297"/>
+  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testEntryUnparsedWhenCannotParseLabelColumn" time="2.167"/>
+  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testDriverWhenNoSpacesListedIsUnclassified" time="0.52"/>
+  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testDriverWhenSpacesNotANumberIsUnclassified" time="0.039"/>
+  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testRider" time="0.207"/>
+  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testMultipleDrivers" time="5.363"/>
+  <testcase classname="com.kempo.easyride.util.RideParserTest" name="testSheetsAPI" time="0.556"/>
 </testsuite>
