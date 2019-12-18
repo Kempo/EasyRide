@@ -4,12 +4,17 @@ import com.kempo.easyride.util.Keywords;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javax.xml.bind.annotation.XmlType;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static java.time.temporal.ChronoUnit.SECONDS;
 
 // GEOCODE
 public class LocationAPI {
@@ -23,37 +28,39 @@ public class LocationAPI {
         STATE_LIST.addAll(Arrays.asList(Keywords.DEFAULT_STATE)); // adds all the keywords to the list when the class is loaded in memory
     }
 
-    public static String getFormattedAddress(String unformatted) {
-        StringBuilder address = new StringBuilder(unformatted);
-        if(!isStateDeclared(unformatted)) {
-            address.append(" " + Keywords.DEFAULT_STATE[0]);
-        }
-        final String formatted = address.toString().replaceAll(" ", DELIMITER);
-        final String link = "https://maps.googleapis.com/maps/api/geocode/json?address=" + formatted + "&key=" + LOCATION_KEY;
-        try {
-            URL url = new URL(link);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            StringBuilder response = new StringBuilder();
-            String line;
-            while((line = reader.readLine()) != null) {
-                response.append(line);
-            }
-            reader.close();
+    public static String fetchFormatted(String original) {
 
-            JSONObject obj = new JSONObject(response.toString());
-            JSONArray results = obj.getJSONArray("results");
-            if(results.isNull(0)) { // if the results are not valid
+        if(!isStateDeclared(original)) {
+            original += Keywords.DEFAULT_STATE[0];
+        }
+        try {
+
+            final HttpRequest req = HttpRequest.newBuilder()
+                    .uri(new URI("https://maps.googleapis.com/maps/api/geocode/json?address=" + original.replace(" ", DELIMITER) + "&key=" + LOCATION_KEY))
+                    .timeout(Duration.of(10, SECONDS))
+                    .GET()
+                    .build();
+
+            final HttpResponse<String> response = HttpClient
+                    .newBuilder()
+                    .build()
+                    .send(req, HttpResponse.BodyHandlers.ofString());
+
+            final JSONObject body = new JSONObject(response.body());
+            final JSONArray results = body.getJSONArray("results");
+
+            if(results.isNull(0) || results.getJSONObject(0).isNull("formatted_address")) {
                 return null;
-            }else {
-                if (!results.getJSONObject(0).isNull("formatted_address")) { // checks if 'formatted_address' is null
-                    String a = results.getJSONObject(0).get("formatted_address").toString(); // stores data
-                    return a;
-                }
             }
+
+            final String formatted = results.getJSONObject(0).get("formatted_address").toString();
+
+            return formatted;
 
         }catch(Exception e) {
             e.printStackTrace();
         }
+
         return null;
     }
 

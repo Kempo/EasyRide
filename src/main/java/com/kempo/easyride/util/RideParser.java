@@ -26,7 +26,7 @@ public class RideParser
         if(values != null && values.size() > 0) {
             for(int start = crawler.getStartingRow() + 1; start < values.size(); start++) {
                 List row = values.get(start);
-                String address = LocationAPI.getFormattedAddress(row.get(crawler.getAddressColumn()).toString());
+                String address = LocationAPI.fetchFormatted(row.get(crawler.getAddressColumn()).toString());
                 String colValue = row.get(start).toString();
                 if(address != null) {
                     participants.addUnclassified(new Unclassified(colValue, "invalid location"));
@@ -61,7 +61,7 @@ public class RideParser
             if(attrs.length < 3) {
                 participants.addUnclassified(new Unclassified(line, "not appropriate format. length: " + attrs.length));
             }else {
-                String address = LocationAPI.getFormattedAddress(attrs[1]); // the reformatted address that will specify more details if not given
+                String address = LocationAPI.fetchFormatted(attrs[1]); // the reformatted address that will specify more details if not given
                 if (address == null) // if the location is not valid
                 {
                     participants.addUnclassified(new Unclassified(line, "invalid location: '" + attrs[1] + "'"));
@@ -85,7 +85,7 @@ public class RideParser
         if(values != null && values.size() > 0) {
             for (List row : values) {
                 if(row.size() <= 4) {
-                    String address = LocationAPI.getFormattedAddress(row.get(1).toString());
+                    String address = LocationAPI.fetchFormatted(row.get(1).toString());
                     if(address == null) {
                         participants.addUnclassified(new Unclassified(row.toString(), "invalid location: '" + row.get(1).toString() + "'"));
                     }
@@ -119,7 +119,7 @@ public class RideParser
         if(values != null && values.size() > 0) {
             for (List row : values) {
                 if(row.size() <= 4) {
-                    String address = LocationAPI.getFormattedAddress(row.get(1).toString());
+                    String address = LocationAPI.fetchFormatted(row.get(1).toString());
                     if(address == null) {
                         participants.addUnclassified(new Unclassified(row.toString(), "invalid location: '" + row.get(1).toString() + "'"));
                     }
@@ -158,7 +158,7 @@ public class RideParser
         {
             try
             {
-                final int spacesInCar = Integer.valueOf(attrs[3]);
+                final int spacesInCar = Integer.parseInt(attrs[3]);
                 participants.addDriver(new RawDriver(attrs[0], addr, spacesInCar));
             }
             catch (final NumberFormatException e)

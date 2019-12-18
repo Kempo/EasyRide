@@ -18,12 +18,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>3.7.0</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <compilerVersion>10</compilerVersion>
+                    <source>13</source>
+                    <target>13</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
@@ -50,7 +52,7 @@
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>2.0.8</version>
                 <configuration>
-                    <jdkVersion>1.8</jdkVersion>
+                    <jdkVersion>10</jdkVersion>
                     <appName>kempo-easyride</appName>
                     <processTypes>
                         <web>java -jar ./target/easyride-1.0-jar-with-dependencies.jar</web>
