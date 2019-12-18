@@ -26,6 +26,20 @@ public class Rider extends Person {
         return preferences;
     }
 
+    public boolean prefersStrongest(List<Driver> real, Driver d) {
+        for(Driver other : preferences) {
+            Driver realDriver = real.get(real.indexOf(other));
+
+            if(!realDriver.getCar().isFull() && !other.name.equals(d.name)) {
+                return false;
+            }
+            if(other.name.equals(d.name)) {
+                return true;
+            }
+        }
+        return true;
+    }
+
     @Override
     public String toString()
     {

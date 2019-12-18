@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+
 // GEOCODE
 public class LocationAPI {
     private static final String LOCATION_KEY = System.getenv("LOCATION_KEY");

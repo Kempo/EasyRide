@@ -16,7 +16,7 @@ public class OrchestratorTest extends TestCase {
     private RideParser parser = new RideParser();
     private Orchestrator orchestrator = new Orchestrator(new RideAssigner());
 
-
+    /*
     public void testWithSheetsData() throws Exception {
         String dataRange = "A2:D16";
         String sheetsID = SheetsAPI.getIDFromURL("https://docs.google.com/spreadsheets/d/1wQPfybTVK-d_2F4ArVD6I_IRK7iNgY1L1rDm5PM-HVw/edit?ouid=101645746693707733801&usp=sheets_home&ths=true");
@@ -36,9 +36,10 @@ public class OrchestratorTest extends TestCase {
 
         System.out.println(result.getUnassignedOrUnparseable());
     }
+    */
 
     public void testWithTextInputAndDriversWithLimitedSpots() {
-        String request = "hello test this is a test"
+        String request = "unparseable text"
                 + "\n" + TestUtility.createTestParticipant("Tim", "Tacoma WA", "driver", 1) // driver
                 + "\n" + TestUtility.createTestParticipant("Eric", "Seattle WA", "driver", 5) // driver
                 + "\n" + TestUtility.createTestParticipant("Eugene", "Seattle, WA", "rider", 0)
@@ -74,4 +75,6 @@ public class OrchestratorTest extends TestCase {
         Assert.assertEquals(2, result.getDrivers().get(1).getCar().getOccupants().size());
         Assert.assertEquals(2, result.getDrivers().get(2).getCar().getOccupants().size());
     }
+
+
 }

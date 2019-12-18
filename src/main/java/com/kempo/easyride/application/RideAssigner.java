@@ -38,9 +38,10 @@ public class RideAssigner {
             }
             Collections.sort(rider.getRiderPreferences(), new PersonComparator());
         }
-        logPreferences(riderList, driverList);
+        // logPreferences(riderList, driverList);
     }
 
+    /*
     public void logPreferences(List<Rider> riderList, List<Driver> driverList) {
         for(Rider r : riderList) {
             System.out.println(r.getName().toUpperCase());
@@ -56,6 +57,7 @@ public class RideAssigner {
             }
         }
     }
+    */
 
 
     /**
@@ -71,6 +73,34 @@ public class RideAssigner {
     }
 
     public void assignOccupantsHelper(List<Rider> riderList, List<Driver> driverList, final AssignedRides assignedRides) {
+        /*
+            TODO: warning if there are not enough spots for each rider
+         */
+
+        int totalRiders = riderList.size();
+        int filled = 0;
+
+        while(filled < totalRiders) {
+            for(Driver driver : driverList) {
+                if(!driver.getCar().isFull()) {
+                    for(Rider r : driver.getDriverPreferences()) {
+                        Rider actualRider = riderList.get(riderList.indexOf(r));
+                        if(actualRider.getCurrentCar() == null && actualRider.prefersStrongest(driverList, driver)) {
+                            System.out.println(actualRider.getName() + " m " + driver.getName());
+                            driver.getCar().addOccupant(actualRider);
+                            actualRider.setCar(driver.getCar());
+                            filled++;
+
+                            if(driver.getCar().isFull()) {
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*
         for (Rider rider : riderList) {
             if (rider.getCurrentCar() == null) { // if the rider needs a ride
                 System.out.println("rider " + rider.getName());
@@ -94,8 +124,10 @@ public class RideAssigner {
                 assignedRides.addUnassignedRider(r);
             }
         }
+        */
     }
 
+    /*
     private boolean highestPreference(List<Rider> riderList, List<Driver> driverList, Rider currentRider, Driver currentDriver, int curDriverPref) {
         int end = curDriverPref;
         int stopIndex = currentDriver.getCar().getOpenSpots() - 1;
@@ -135,6 +167,7 @@ public class RideAssigner {
 
         return true;
     }
+    */
 
     /**
      *
@@ -142,7 +175,7 @@ public class RideAssigner {
      * @param currentDriver
      * @param riderList
      * @return true if this rider has the strongest preference for "currentDriver" or false if another rider has a stronger preference for the driver
-     */
+
     private boolean strongestRiderPreference(Rider currentRider, Driver currentDriver, List<Rider> riderList) {
         int currentPref = currentRider.getRiderPreferences().indexOf(currentDriver);
         for (Rider r : riderList) {
@@ -170,6 +203,7 @@ public class RideAssigner {
         }
         return true;
     }
+    */
 
     /**
      *
@@ -177,7 +211,7 @@ public class RideAssigner {
      * @param currentRider
      * @param driverList
      * @return true if this driver prefers "currentRider" the most or false if another driver has a stronger preference for the rider
-     */
+
     private boolean strongestDriverPreference(Driver currentDriver, Rider currentRider, List<Driver> driverList) {
         int currentPref = currentDriver.getDriverPreferences().indexOf(currentRider);
         for(Driver d : driverList) { // loops through all over drivers that isn't our current one and checks whether they prefer this rider more than our current one
@@ -197,6 +231,7 @@ public class RideAssigner {
         }
         return true;
     }
+    */
 
     /**
      *
