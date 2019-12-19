@@ -24,7 +24,7 @@ public class MiscTest extends TestCase {
     public void testLongDistanceWithAPI() {
         String origin = "New York";
         String destination = "Seattle";
-        double dist = MapsAPI.getDistance(origin, destination);
+        double dist = MapsAPI.fetchDistance(origin, destination);
         Assert.assertEquals(2861.0, dist);
     }
 
@@ -34,7 +34,7 @@ public class MiscTest extends TestCase {
     public void testShortDistancWithAPI() {
         String origin = "3040 NE 45th St, Seattle, WA 98105";
         String destination = "3042 NE 45th St, Seattle, WA 98105";
-        double dist = MapsAPI.getDistance(origin, destination);
+        double dist = MapsAPI.fetchDistance(origin, destination);
         Assert.assertEquals(true, (dist < .5)); // distances between the places should be less than half a mile
     }
 

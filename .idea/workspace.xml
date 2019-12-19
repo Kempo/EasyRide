@@ -2,191 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyRide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyRide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/EasyRide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/EasyRide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/Orchestrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/Orchestrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/EasyRide.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/RideAssigner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/RideAssigner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/LocationAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/LocationAPI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/MapsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/MapsAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/SheetsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/SheetsAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/RawDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/RawDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/RawParticipants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/RawParticipants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Rider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Rider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Unclassified.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Unclassified.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/PersonComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/PersonComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RawDriverToDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RawDriverToDriver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/commons-codec-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/commons-logging-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/google-api-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/google-api-services-sheets-v4-rev499-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/google-http-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/google-http-client-jackson2-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/google-oauth-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/google-oauth-client-java6-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/google-oauth-client-jetty-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/guava-jdk5-17.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/httpclient-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/httpcore-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jackson-core-2.1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-client-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-http-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-io-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-security-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-server-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-servlet-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-util-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-util-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-webapp-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jetty-xml-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/json-20180130.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/jsr305-1.3.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/servlet-api-2.5-20081211.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/slf4j-api-1.7.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/spark-core-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/websocket-api-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/websocket-client-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/websocket-common-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/websocket-server-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/dependency/websocket-servlet-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easyride-1.0-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/easyride-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/system.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/application/EasyRide.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/application/Orchestrator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/application/RideAssigner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/LocationAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/MapsAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/google/SheetsAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/AssignedRides.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/Driver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/RawDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/RawParticipants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/Rider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/model/Unclassified.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/PersonComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/RawDriverToDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/RideParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/com/kempo/easyride/util/ServerHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/client.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/css/sheets.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/css/tsv.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/js/sheets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/js/tsv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/misc/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/sheets.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/public/tsv.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/commons-codec-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/commons-logging-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/google-api-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/google-api-services-sheets-v4-rev499-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/google-http-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/google-http-client-jackson2-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/google-oauth-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/google-oauth-client-java6-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/google-oauth-client-jetty-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/guava-jdk5-17.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/httpclient-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/httpcore-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jackson-core-2.1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-client-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-http-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-io-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-security-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-server-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-servlet-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-util-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-util-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-webapp-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jetty-xml-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/json-20180130.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/jsr305-1.3.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/servlet-api-2.5-20081211.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/slf4j-api-1.7.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/spark-core-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/websocket-api-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/websocket-client-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/websocket-common-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/websocket-server-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/dependency/websocket-servlet-9.4.4.v20170414.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/easyride-1.0-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/easyride-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.MiscTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.OrchestratorTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.PreferencesTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.RideParserTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.RiderAssignerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/TEST-com.kempo.easyride.util.TestUtility.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.AppTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.MiscTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.OrchestratorTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.PreferencesTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.RideParserTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.RiderAssignerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/surefire-reports/com.kempo.easyride.util.TestUtility.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/MiscTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/OrchestratorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/PreferencesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/RideParserTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/test-classes/com/kempo/easyride/util/TestUtility.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/slug.tgz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.MiscTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.OrchestratorTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.PreferencesTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.RideParserTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.RiderAssignerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.kempo.easyride.util.TestUtility.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.AppTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.MiscTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.OrchestratorTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.PreferencesTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.RideParserTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.RiderAssignerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.kempo.easyride.util.TestUtility.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/AppTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/OrchestratorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/OrchestratorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/PreferencesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/PreferencesTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/RideParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/RideParserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/TestUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/TestUtility.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -472,7 +299,7 @@
       <workItem from="1573870900993" duration="1176000" />
       <workItem from="1576560604200" duration="12939000" />
       <workItem from="1576653362825" duration="875000" />
-      <workItem from="1576654664010" duration="3372000" />
+      <workItem from="1576654664010" duration="5387000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>
@@ -891,22 +718,22 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1576653806747" />
-    <state width="1358" height="244" key="GridCell.Tab.0.bottom" timestamp="1576707196755">
+    <state width="1358" height="206" key="GridCell.Tab.0.bottom" timestamp="1576735764979">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="244" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576707196755" />
-    <state width="1358" height="244" key="GridCell.Tab.0.center" timestamp="1576707196754">
+    <state width="1358" height="206" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576735764979" />
+    <state width="1358" height="206" key="GridCell.Tab.0.center" timestamp="1576735764978">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="244" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576707196754" />
-    <state width="1358" height="244" key="GridCell.Tab.0.left" timestamp="1576707196752">
+    <state width="1358" height="206" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576735764978" />
+    <state width="1358" height="206" key="GridCell.Tab.0.left" timestamp="1576735764978">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="244" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576707196752" />
-    <state width="1358" height="244" key="GridCell.Tab.0.right" timestamp="1576707196755">
+    <state width="1358" height="206" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576735764978" />
+    <state width="1358" height="206" key="GridCell.Tab.0.right" timestamp="1576735764979">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="244" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576707196755" />
+    <state width="1358" height="206" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576735764979" />
     <state x="208" y="23" width="1024" height="816" key="SettingsEditor" timestamp="1576656411396">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
