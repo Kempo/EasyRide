@@ -37,7 +37,7 @@ public class MapsAPI {
                     .send(req, HttpResponse.BodyHandlers.ofString());
 
             final JSONObject body = new JSONObject(response.body());
-            String distance = body.getJSONArray("rows").getJSONObject(0)
+            final String distance = body.getJSONArray("rows").getJSONObject(0)
                     .getJSONArray("elements").getJSONObject(0).getJSONObject("distance").get("text").toString();
             System.out.println(distance);
 

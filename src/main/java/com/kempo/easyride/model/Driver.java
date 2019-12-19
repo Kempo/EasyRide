@@ -8,8 +8,7 @@ public class Driver extends Person {
     private List<Rider> preferences = new ArrayList<>(); // the list of riders that they prefer (ordered by distance)
 
     public Driver(String n, String a, Car c) {
-        this.address = a;
-        this.name = n;
+        super(n, a);
         car = c;
     }
 
@@ -18,7 +17,6 @@ public class Driver extends Person {
     }
 
     public Car getCar() { return car; }
-
 
     @Override
     public String toString()

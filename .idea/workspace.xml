@@ -3,17 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/EasyRide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/application/RideAssigner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/LocationAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/EasyRide.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/RideAssigner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/application/RideAssigner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/LocationAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/LocationAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/MapsAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/google/MapsAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Rider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Rider.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +97,7 @@
       <recent name="com.kempo.easyride" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MiscTest">
+  <component name="RunManager" selected="JUnit.RideParserTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -242,10 +238,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MiscTest" />
         <item itemvalue="JUnit.RideParserTest" />
         <item itemvalue="JUnit.PreferencesTest" />
         <item itemvalue="JUnit.OrchestratorTest" />
+        <item itemvalue="JUnit.MiscTest" />
         <item itemvalue="JUnit.CrawlerTest" />
       </list>
     </recent_temporary>
@@ -299,7 +295,7 @@
       <workItem from="1573870900993" duration="1176000" />
       <workItem from="1576560604200" duration="12939000" />
       <workItem from="1576653362825" duration="875000" />
-      <workItem from="1576654664010" duration="5387000" />
+      <workItem from="1576654664010" duration="6726000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>
@@ -718,22 +714,22 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1576653806747" />
-    <state width="1358" height="206" key="GridCell.Tab.0.bottom" timestamp="1576735764979">
+    <state width="1358" height="206" key="GridCell.Tab.0.bottom" timestamp="1576737348319">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576735764979" />
-    <state width="1358" height="206" key="GridCell.Tab.0.center" timestamp="1576735764978">
+    <state width="1358" height="206" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576737348319" />
+    <state width="1358" height="206" key="GridCell.Tab.0.center" timestamp="1576737348318">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576735764978" />
-    <state width="1358" height="206" key="GridCell.Tab.0.left" timestamp="1576735764978">
+    <state width="1358" height="206" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576737348318" />
+    <state width="1358" height="206" key="GridCell.Tab.0.left" timestamp="1576737348318">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576735764978" />
-    <state width="1358" height="206" key="GridCell.Tab.0.right" timestamp="1576735764979">
+    <state width="1358" height="206" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576737348318" />
+    <state width="1358" height="206" key="GridCell.Tab.0.right" timestamp="1576737348319">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576735764979" />
+    <state width="1358" height="206" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576737348319" />
     <state x="208" y="23" width="1024" height="816" key="SettingsEditor" timestamp="1576656411396">
       <screen x="0" y="23" width="1440" height="816" />
     </state>

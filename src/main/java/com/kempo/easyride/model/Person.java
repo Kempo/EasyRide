@@ -15,10 +15,6 @@ public class Person
         this.address = address;
     }
 
-    public Person() {
-
-    }
-
     public String getName()
     {
         return name;
@@ -34,6 +30,11 @@ public class Person
     public double getDistanceTo() {
         return distance;
     }
+
+    public boolean isIdentical(Person p) {
+        return this.name.equals(p.name) && this.address.equals(p.address);
+    }
+
     @Override
     public String toString()
     {

@@ -5,13 +5,12 @@ import java.util.List;
 
 public class Rider extends Person {
 
-    private Car current = null; // their current car
+    private Car current; // their current car
     private final List<Driver> preferences = new ArrayList<Driver>();
 
     public Rider(String n, String a) {
-        super();
-        this.name = n;
-        this.address = a;
+        super(n, a);
+        this.current = null;
     }
 
     public Car getCurrentCar() {
@@ -30,11 +29,12 @@ public class Rider extends Person {
         for(Driver other : preferences) {
             Driver realDriver = real.get(real.indexOf(other));
 
-            if(!realDriver.getCar().isFull() && !other.name.equals(d.name)) {
-                return false;
-            }
-            if(other.name.equals(d.name)) {
+            if(other.isIdentical(d)) {
                 return true;
+            }
+
+            if(!realDriver.getCar().isFull()) {
+                return false;
             }
         }
         return true;
