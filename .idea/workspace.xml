@@ -2,14 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/assets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/assets/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/components/Logo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/components/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/components/VuetifyLogo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/layouts/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/layouts/default.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/layouts/error.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/middleware/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/nuxt.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/pages/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/pages/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/pages/inspire.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/plugins/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/static/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/static/v.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/store/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/easyride/test/Logo.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Rider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Rider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/Rider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +93,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/aaron/EasyRide/src/main/java/com/kempo/easyride/application/RideAssigner.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -85,16 +110,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/public/js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public" />
-      <recent name="H:\workspace\EasyRide\src\main\java\com\kempo\easyride" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kempo.easyride" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/public" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.kempo.easyride" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public" />
+      <recent name="H:\workspace\EasyRide\src\main\java\com\kempo\easyride" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.RideParserTest">
@@ -295,7 +320,8 @@
       <workItem from="1573870900993" duration="1176000" />
       <workItem from="1576560604200" duration="12939000" />
       <workItem from="1576653362825" duration="875000" />
-      <workItem from="1576654664010" duration="6726000" />
+      <workItem from="1576654664010" duration="9037000" />
+      <workItem from="1576885321251" duration="1550000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>
@@ -714,26 +740,30 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1576653806747" />
-    <state width="1358" height="206" key="GridCell.Tab.0.bottom" timestamp="1576737348319">
+    <state width="1358" height="206" key="GridCell.Tab.0.bottom" timestamp="1576880531621">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576737348319" />
-    <state width="1358" height="206" key="GridCell.Tab.0.center" timestamp="1576737348318">
+    <state width="1358" height="206" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576880531621" />
+    <state width="1358" height="206" key="GridCell.Tab.0.center" timestamp="1576880531620">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576737348318" />
-    <state width="1358" height="206" key="GridCell.Tab.0.left" timestamp="1576737348318">
+    <state width="1358" height="206" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576880531620" />
+    <state width="1358" height="206" key="GridCell.Tab.0.left" timestamp="1576880531620">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576737348318" />
-    <state width="1358" height="206" key="GridCell.Tab.0.right" timestamp="1576737348319">
+    <state width="1358" height="206" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576880531620" />
+    <state width="1358" height="206" key="GridCell.Tab.0.right" timestamp="1576880531621">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
-    <state width="1358" height="206" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576737348319" />
+    <state width="1358" height="206" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576880531621" />
     <state x="208" y="23" width="1024" height="816" key="SettingsEditor" timestamp="1576656411396">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="208" y="23" width="1024" height="816" key="SettingsEditor/0.23.1440.816@0.23.1440.816" timestamp="1576656411396" />
+    <state x="372" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576887626789">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="372" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1576887626789" />
     <state x="457" y="202" key="extract.method.dialog" timestamp="1576707496310">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
