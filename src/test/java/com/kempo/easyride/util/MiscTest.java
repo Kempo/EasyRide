@@ -25,7 +25,7 @@ public class MiscTest extends TestCase {
         String origin = "New York";
         String destination = "Seattle";
         double dist = MapsAPI.fetchDistance(origin, destination);
-        Assert.assertEquals(2861.0, dist);
+        Assert.assertEquals(true, (dist <= 2862 && dist >= 2861));
     }
 
     /**
