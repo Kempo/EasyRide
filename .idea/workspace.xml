@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <recent name="H:\workspace\EasyRide\src\main\java\com\kempo\easyride" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MiscTest">
+  <component name="RunManager" selected="JUnit.RideParserTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -234,11 +234,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MiscTest" />
         <item itemvalue="JUnit.RideParserTest" />
         <item itemvalue="JUnit.PreferencesTest" />
         <item itemvalue="JUnit.OrchestratorTest" />
         <item itemvalue="JUnit.CrawlerTest" />
+        <item itemvalue="JUnit.MiscTest" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +293,7 @@
       <workItem from="1576653362825" duration="875000" />
       <workItem from="1576654664010" duration="9037000" />
       <workItem from="1576885321251" duration="1685000" />
-      <workItem from="1577668546186" duration="142000" />
+      <workItem from="1577668546186" duration="2310000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>
@@ -712,30 +712,30 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1576653806747" />
-    <state width="1269" height="206" key="GridCell.Tab.0.bottom" timestamp="1577668680081">
+    <state width="1269" height="206" key="GridCell.Tab.0.bottom" timestamp="1577669353227">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1577668680081" />
+    <state width="1269" height="206" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1577669353227" />
     <state width="1358" height="206" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576880531621" />
-    <state width="1269" height="206" key="GridCell.Tab.0.center" timestamp="1577668680080">
+    <state width="1269" height="206" key="GridCell.Tab.0.center" timestamp="1577669353226">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1577668680080" />
+    <state width="1269" height="206" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1577669353226" />
     <state width="1358" height="206" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576880531620" />
-    <state width="1269" height="206" key="GridCell.Tab.0.left" timestamp="1577668680079">
+    <state width="1269" height="206" key="GridCell.Tab.0.left" timestamp="1577669353226">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1577668680079" />
+    <state width="1269" height="206" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1577669353226" />
     <state width="1358" height="206" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576880531620" />
-    <state width="1269" height="206" key="GridCell.Tab.0.right" timestamp="1577668680080">
+    <state width="1269" height="206" key="GridCell.Tab.0.right" timestamp="1577669353227">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1577668680080" />
+    <state width="1269" height="206" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1577669353227" />
     <state width="1358" height="206" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576880531621" />
-    <state x="208" y="23" width="1024" height="816" key="SettingsEditor" timestamp="1577668615176">
+    <state x="208" y="23" width="1024" height="816" key="SettingsEditor" timestamp="1577669246062">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state x="208" y="23" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1577668615176" />
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1577669246062" />
     <state x="208" y="23" width="1024" height="816" key="SettingsEditor/0.23.1440.816@0.23.1440.816" timestamp="1576656411396" />
     <state x="372" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576887626789">
       <screen x="0" y="23" width="1440" height="814" />
