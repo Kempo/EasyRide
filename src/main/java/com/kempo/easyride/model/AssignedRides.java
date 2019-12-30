@@ -55,7 +55,7 @@ public class AssignedRides {
             }
         }
         if(!getUnparseable().isEmpty()) {
-            sb.append(getUnparseable());
+            sb.append(getUnparseable()); // a single string split by <br> tags
         }
         return sb.toString();
     }
