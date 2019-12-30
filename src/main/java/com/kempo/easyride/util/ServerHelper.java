@@ -34,6 +34,6 @@ public class ServerHelper {
         final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
         System.out.println("REQUEST COMPLETE.");
-        return result.toString();
+        return result.toJSON();
     }
 }

@@ -1,5 +1,7 @@
 package com.kempo.easyride.model;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +46,10 @@ public class AssignedRides {
             sb.append(getUnassignedOrUnparseable());
         }
         return sb.toString();
+    }
+
+    public String toJSON() {
+        return new Gson().toJson(drivers);
     }
 
     public String getUnassignedOrUnparseable() {
