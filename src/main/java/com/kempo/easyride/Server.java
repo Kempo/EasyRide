@@ -5,6 +5,7 @@ import com.kempo.easyride.application.RideAssigner;
 import com.kempo.easyride.util.RideParser;
 import com.kempo.easyride.google.SheetsAPI;
 import com.kempo.easyride.util.ServerHelper;
+import org.apache.log4j.BasicConfigurator;
 
 import java.nio.charset.StandardCharsets;
 
@@ -17,9 +18,15 @@ public class Server {
 
     public static void main(String[] args)
     {
+        BasicConfigurator.configure();
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
-        enableCORS("*", "*", "*"); // only to be used for testing cases!
+        enableCORS("*", "GET, POST", "*");
+
+        exception(Exception.class, (exception, request, response) -> {
+            exception.printStackTrace();
+        });
+
         get("/ping", (req, res) -> {
             System.out.println("hello!");
             return "pong";
@@ -69,7 +76,7 @@ public class Server {
             response.header("Access-Control-Request-Method", methods);
             response.header("Access-Control-Allow-Headers", headers);
             // Note: this may or may not be necessary in your particular application
-            response.type("application/json");
+            // response.type("application/json");
         });
     }
 

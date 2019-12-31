@@ -1,11 +1,16 @@
 package com.kempo.easyride.model;
+
+import com.google.gson.annotations.Expose;
+
 /**
  * Created by dileng on 10/12/17.
  */
 public class Person
 {
+    @Expose
     protected String name;
 
+    @Expose
     protected String address;
 
     protected double distance;

@@ -1,6 +1,7 @@
 package com.kempo.easyride.model;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +39,10 @@ public class AssignedRides {
     public String toString()
     {
         final StringBuilder sb = new StringBuilder();
+
         for (final Driver d : drivers)
         {
+            System.out.println(d.getName());
             sb.append(d.toString());
         }
         if(!getUnassignedOrUnparseable().isEmpty()) {
@@ -48,8 +51,10 @@ public class AssignedRides {
         return sb.toString();
     }
 
-    public String toJSON() {
-        return new Gson().toJson(drivers);
+    public String outputJSON() {
+        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        String r = gson.toJson(drivers);
+        return r;
     }
 
     public String getUnassignedOrUnparseable() {

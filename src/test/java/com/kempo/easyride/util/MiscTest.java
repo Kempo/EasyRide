@@ -1,14 +1,19 @@
 package com.kempo.easyride.util;
 
+import com.google.gson.Gson;
 import com.kempo.easyride.google.LocationAPI;
 import com.kempo.easyride.google.MapsAPI;
 import com.kempo.easyride.google.SheetsAPI;
+import com.kempo.easyride.model.Car;
+import com.kempo.easyride.model.Driver;
+import com.kempo.easyride.model.Rider;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
 import javax.xml.stream.Location;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 
 public class MiscTest extends TestCase {
 
@@ -45,5 +50,15 @@ public class MiscTest extends TestCase {
         String f = LocationAPI.fetchFormatted("5041 35th Ave NE");
         System.out.println(f);
         Assert.assertEquals(true, f.contains("Seattle")); // "Seattle" will be part of the entire address after formatting
+    }
+
+    public void testJSONOutput() {
+        ArrayList<Driver> drivers = new ArrayList<>();
+        drivers.add(new Driver("Charles", "New York", new Car(4)));
+        drivers.get(0).getCar().addOccupant(new Rider("Aaron", "New York"));
+        drivers.add(new Driver("Nick", "Texas", new Car(2)));
+        drivers.add(new Driver("Tim", "North Dakota", new Car(3)));
+        System.out.println(new Gson().toJson(drivers));
+
     }
 }

@@ -5,8 +5,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyRide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyRide.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/ServerHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/ServerHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +72,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.47356322" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -102,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrawlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MiscTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EasyRide" />
       <extension name="coverage">
         <pattern>
@@ -111,7 +120,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.kempo.easyride.util" />
-      <option name="MAIN_CLASS_NAME" value="com.kempo.easyride.util.CrawlerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.kempo.easyride.util.MiscTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -208,20 +217,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Server" />
       <item itemvalue="JUnit.OrchestratorTest" />
-      <item itemvalue="JUnit.CrawlerTest" />
       <item itemvalue="JUnit.RideParserTest" />
       <item itemvalue="JUnit.PreferencesTest" />
       <item itemvalue="Maven.Heroku deploy" />
-      <item itemvalue="Application.Server" />
+      <item itemvalue="JUnit.MiscTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.MiscTest" />
         <item itemvalue="JUnit.RideParserTest" />
         <item itemvalue="JUnit.PreferencesTest" />
         <item itemvalue="JUnit.OrchestratorTest" />
-        <item itemvalue="JUnit.CrawlerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +285,8 @@
       <workItem from="1576653362825" duration="875000" />
       <workItem from="1576654664010" duration="9037000" />
       <workItem from="1576885321251" duration="1685000" />
-      <workItem from="1577668546186" duration="5869000" />
+      <workItem from="1577668546186" duration="6966000" />
+      <workItem from="1577777604347" duration="6423000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>
@@ -695,34 +705,34 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1576653806747" />
-    <state width="1302" height="206" key="GridCell.Tab.0.bottom" timestamp="1577731466367">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1216" height="297" key="GridCell.Tab.0.bottom" timestamp="1577816126131">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1577729411905" />
-    <state width="1302" height="206" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1577731466367" />
+    <state width="1216" height="297" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1577816126131" />
+    <state width="1302" height="206" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1577811503579" />
     <state width="1358" height="206" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576880531621" />
-    <state width="1302" height="206" key="GridCell.Tab.0.center" timestamp="1577731466366">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1216" height="297" key="GridCell.Tab.0.center" timestamp="1577816126130">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1577729411902" />
-    <state width="1302" height="206" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1577731466366" />
+    <state width="1216" height="297" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1577816126130" />
+    <state width="1302" height="206" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1577811503578" />
     <state width="1358" height="206" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576880531620" />
-    <state width="1302" height="206" key="GridCell.Tab.0.left" timestamp="1577731466365">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1216" height="297" key="GridCell.Tab.0.left" timestamp="1577816126130">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1577729411901" />
-    <state width="1302" height="206" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1577731466365" />
+    <state width="1216" height="297" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1577816126130" />
+    <state width="1302" height="206" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1577811503577" />
     <state width="1358" height="206" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576880531620" />
-    <state width="1302" height="206" key="GridCell.Tab.0.right" timestamp="1577731466367">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1216" height="297" key="GridCell.Tab.0.right" timestamp="1577816126130">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1269" height="206" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1577729411904" />
-    <state width="1302" height="206" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1577731466367" />
+    <state width="1216" height="297" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1577816126130" />
+    <state width="1302" height="206" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1577811503578" />
     <state width="1358" height="206" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576880531621" />
-    <state x="208" y="23" width="1024" height="816" key="SettingsEditor" timestamp="1577669246062">
+    <state x="208" y="23" width="1024" height="816" key="SettingsEditor" timestamp="1577777662821">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state x="208" y="23" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1577669246062" />
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1577777662821" />
     <state x="208" y="23" width="1024" height="816" key="SettingsEditor/0.23.1440.816@0.23.1440.816" timestamp="1576656411396" />
     <state x="372" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576887626789">
       <screen x="0" y="23" width="1440" height="814" />
@@ -732,6 +742,11 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="457" y="202" key="extract.method.dialog/0.23.1440.816@0.23.1440.816" timestamp="1576707496310" />
+    <state x="542" y="372" width="673" height="462" key="find.popup" timestamp="1577814366738">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="542" y="372" width="673" height="462" key="find.popup/0.23.1440.811@0.23.1440.811" timestamp="1577814366738" />
+    <state x="313" y="373" width="673" height="462" key="find.popup/0.23.1440.812@0.23.1440.812" timestamp="1577778803774" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

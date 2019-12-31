@@ -33,7 +33,7 @@ public class ServerHelper {
     public static final String getDataThroughTSV(final String request, final RideParser parser, final Orchestrator orchestrator) {
         final RawParticipants participants = parser.parseInitialRequestThroughTSV(request);
         final AssignedRides result = orchestrator.orchestrateRides(participants);
-        System.out.println("REQUEST COMPLETE.");
-        return result.toJSON();
+        System.out.println("REQUEST COMPLETE. TSV");
+        return result.outputJSON(); // test
     }
 }
