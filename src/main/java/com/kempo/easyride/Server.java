@@ -18,9 +18,11 @@ public class Server {
 
     public static void main(String[] args)
     {
+        // TODO: specify certain logging settings
         BasicConfigurator.configure();
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
+        // TODO: specify CORS policy for security
         enableCORS("*", "GET, POST", "*");
 
         exception(Exception.class, (exception, request, response) -> {

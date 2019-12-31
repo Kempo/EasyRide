@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyRide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyRide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/AssignedRides.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/ServerHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/ServerHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/model/AssignedRides.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/ServerHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kempo/easyride/util/MiscTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +275,7 @@
       <workItem from="1576654664010" duration="9037000" />
       <workItem from="1576885321251" duration="1685000" />
       <workItem from="1577668546186" duration="6966000" />
-      <workItem from="1577777604347" duration="6423000" />
+      <workItem from="1577777604347" duration="7798000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>

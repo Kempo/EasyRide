@@ -13,6 +13,7 @@ public class ServerHelper {
     public static final String getDataThroughSheets(final String sheetsID, final String dataRange, final RideParser parser, final Orchestrator orchestrator) throws Exception {
         final Sheets service = SheetsAPI.getSheetsService();
         final ValueRange values = service.spreadsheets().values().get(sheetsID, dataRange).setKey(SheetsAPI.API_KEY).execute();
+        // TODO: factor our redundant code. Rename and move this class
         String output;
         if(dataRange.isEmpty() || values == null) {
             final Crawler crawler = new Crawler(service, sheetsID);
