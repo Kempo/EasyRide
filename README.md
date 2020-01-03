@@ -1,10 +1,23 @@
 # EasyRide
+
+> A hassle-free, smart carpool organization application.
+
 Development: http://localhost:5467
+
 Production: http://kempo-easyride.herokuapp.com
-- Endpoint: `/rides`, `/ping`, `/sheets`
+- Endpoints: `/rides`, `/ping`, `/sheets`
+
+---
+###Notes
 
 Be sure to update `pom.xml`
 
 To deploy: `mvn heroku:deploy`
 
-Vue / Nuxt.js frontend will be deployed on AWS S3 (WIP).
+**Action Items**
+- [ ] OAuth2 Implementation (one-click) 
+- [ ] Smart Google Sheets crawler
+- [ ] Unit tests (especially with the assigning algorithm)
+- [ ] File structure rearrangement
+
+Vue / Nuxt.js frontend located [here.](https://github.com/Kempo/easyride-web)
