@@ -8,7 +8,8 @@ Production: http://kempo-easyride.herokuapp.com
 - Endpoints: `/rides`, `/ping`, `/sheets`
 
 ---
-### Notes
+
+###  Notes
 
 Be sure to update `pom.xml`
 
