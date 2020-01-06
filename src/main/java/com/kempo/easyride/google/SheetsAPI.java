@@ -20,7 +20,6 @@ public class SheetsAPI {
 
     private static HttpTransport HTTP_TRANSPORT;
 
-
     /**
      * Build and return an authorized Sheets API client service.
      * @return an authorized Sheets API client service
@@ -69,7 +68,4 @@ public class SheetsAPI {
         }
         return sheetID;
     }
-
-
-
 }

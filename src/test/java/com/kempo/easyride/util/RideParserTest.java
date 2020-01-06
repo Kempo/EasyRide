@@ -97,7 +97,7 @@ public class RideParserTest extends TestCase
         row1.add("5");
         vals.add(row1);
 
-        final RawParticipants result = parser.parseInitialRequestThroughSheetsWithList(vals);
+        final RawParticipants result = parser.parseInitialRequestThroughSheets(null, vals);
         Assert.assertEquals(1, result.getDrivers().size());
         Assert.assertEquals("aaron", result.getDrivers().get(0).getName());
         Assert.assertEquals(5, result.getDrivers().get(0).getSpaces());

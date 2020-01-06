@@ -78,9 +78,9 @@ public class RideParser
         return participants;
     }
 
-    public RawParticipants parseInitialRequestThroughSheets(final ValueRange result) {
+    public RawParticipants parseInitialRequestThroughSheets(final ValueRange result, final List<List<Object>> v) {
         final RawParticipants participants = new RawParticipants();
-        final List<List<Object>> values = result.getValues();
+        final List<List<Object>> values = (v == null ? result.getValues() : v);
 
         if(values != null && values.size() > 0) {
             for (List row : values) {
@@ -114,6 +114,7 @@ public class RideParser
         return participants;
     }
 
+    /*
     public RawParticipants parseInitialRequestThroughSheetsWithList(final List<List<Object>> values) {
         final RawParticipants participants = new RawParticipants();
         if(values != null && values.size() > 0) {
@@ -147,6 +148,7 @@ public class RideParser
         }
         return participants;
     }
+     */
 
     private void parseDriverThroughTSV(final RawParticipants participants, final String line, final String[] attrs, final String addr)
     {

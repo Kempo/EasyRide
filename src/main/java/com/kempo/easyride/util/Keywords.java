@@ -4,19 +4,19 @@ public class Keywords {
 
     public static final String[] DEFAULT_STATE = {"washington", "wa"}; // later on we can add it so that EasyRide accommodates for other regions
 
+    // COLUMNS
     public static final String[]
             NAMES = {"name"},
             ADDRESSES = {"address", "live", "home"},
-            SIZE = {"spots", "how many", "car", "you have"}; // spots question keywords
+            SIZE = {"spots", "how many"},
+            DESIGNATION = {"how are you"};
 
-    public static final String[] // actual responses keywords
-            RIDER = {"need", "yes"},
-            DRIVER = {"can", "no"};
+    // RESPONSES
+    public static final String[]
+            RIDER = {"need a ride"},
+            DRIVER = {"give a ride", "can drive"};
 
-    public static final String[] // designation question keywords
-            DQUESTION = {"will you","how are you", "do you"};
-
-    public static final String[][] requirements = {NAMES, ADDRESSES, SIZE, DQUESTION};
+    public static final String[][] requirements = {NAMES, ADDRESSES, SIZE, DESIGNATION};
 }
 
 

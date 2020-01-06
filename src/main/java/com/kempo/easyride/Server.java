@@ -4,7 +4,7 @@ import com.kempo.easyride.application.Orchestrator;
 import com.kempo.easyride.application.RideAssigner;
 import com.kempo.easyride.util.RideParser;
 import com.kempo.easyride.google.SheetsAPI;
-import com.kempo.easyride.util.ServerHelper;
+import com.kempo.easyride.application.EasyRide;
 import org.apache.log4j.BasicConfigurator;
 
 import java.nio.charset.StandardCharsets;
@@ -22,6 +22,7 @@ public class Server {
         BasicConfigurator.configure();
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
+
         // TODO: specify CORS policy for security
         enableCORS("*", "GET, POST", "*");
 
@@ -37,13 +38,13 @@ public class Server {
         post("/sheets", (req, res) -> {
             String url = req.queryParams("sheetsURL");
             String dataRange = req.queryParams("sheetsRange");
-            return ServerHelper.getDataThroughSheets(SheetsAPI.getIDFromURL(url), dataRange, parser, orchestrator);
+            return EasyRide.getDataThroughSheets(SheetsAPI.getIDFromURL(url), dataRange, parser, orchestrator);
         });
 
         post("/rides", (req, res) -> {
             String request = new String(req.bodyAsBytes(), StandardCharsets.UTF_8);
             request = request.replaceAll("\r\n","\n"); // to remove CRLF line terminators
-            return ServerHelper.getDataThroughTSV(request, parser, orchestrator);
+            return EasyRide.getDataThroughTSV(request, parser, orchestrator);
         });
     }
 
@@ -78,7 +79,7 @@ public class Server {
             response.header("Access-Control-Request-Method", methods);
             response.header("Access-Control-Allow-Headers", headers);
             // Note: this may or may not be necessary in your particular application
-            // response.type("application/json");
+            response.type("application/json");
         });
     }
 

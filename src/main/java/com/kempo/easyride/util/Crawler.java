@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+// TODO: redo / revise Google Sheets crawler
 public class Crawler {
 
     private final int minimumRowLength = 4; // name, address, rider/driver designation, # of spots
@@ -51,31 +52,28 @@ public class Crawler {
                     for (int colIndex = 0; colIndex < currentRow.size(); colIndex++) { // loops through all the columns in that row
                         String colValue = currentRow.get(colIndex).toString(); // gets the value of each column
                         if (colValue != null && !colValue.isEmpty()) { // if the value in each column is a question and isn't null or empty
+                            String f = colValue.toLowerCase();
                             for (String[] items : Keywords.requirements) {
                                 for (String k : items) {
-                                    if (colValue.toLowerCase().contains(k)) { // if the column value contains any of the strings in the two-dimensional array requirements
+                                    System.out.println(f + "       " + k);
+                                    if (f.contains(k)) { // if the column value contains any of the strings in the two-dimensional array requirements
                                         // set columns for designation if the data columns have not been set already.
-                                        if (isStringInList(colValue, Keywords.ADDRESSES) && addressCol == -1) {
-                                            System.out.println(colValue);
+                                        if (isStringInList(f, Keywords.ADDRESSES) && addressCol == -1) {
+                                            System.out.println("ADDRESS: " + colValue);
                                             addressCol = colIndex;
                                         }
 
-                                        if (isStringInList(colValue, Keywords.NAMES) && nameCol == -1) {
+                                        if (isStringInList(f, Keywords.NAMES) && nameCol == -1) {
+                                            System.out.println("NAME" + colValue);
                                             nameCol = colIndex;
                                         }
 
-                                        if(colValue.contains("?")) {
-                                            if(spotsCol == -1 && designationCol != -1) {
-                                                spotsCol = colIndex;
-                                            }else if(spotsCol != -1 && designationCol == -1) {
+                                        if(f.contains("?")) {
+                                            if(designationCol == -1 && isStringInList(f, Keywords.DESIGNATION)) {
                                                 designationCol = colIndex;
-                                            }else if(spotsCol == -1 && designationCol == -1) {
-                                                boolean decider = getSimilarity(colValue, Keywords.SIZE) > getSimilarity(colValue, Keywords.DQUESTION);
-                                                if(decider) {
-                                                    spotsCol = colIndex;
-                                                }else if (decider == false){
-                                                    designationCol = colIndex;
-                                                }
+                                            }
+                                            if(spotsCol == -1 && isStringInList(f, Keywords.SIZE)) {
+                                                spotsCol = colIndex;
                                             }
                                         }
 
