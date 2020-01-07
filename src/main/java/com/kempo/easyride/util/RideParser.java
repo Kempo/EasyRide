@@ -24,19 +24,21 @@ public class RideParser
         final RawParticipants participants = new RawParticipants();
         final List<List<Object>> values = crawler.getValueRange().getValues();
         if(values != null && values.size() > 0) {
-            for(int start = crawler.getStartingRow() + 1; start < values.size(); start++) {
-                List row = values.get(start);
-                String address = LocationAPI.fetchFormatted(row.get(crawler.getAddressColumn()).toString());
-                String colValue = row.get(start).toString();
-                if(address != null) {
+            for(int rowIndex = 1; rowIndex < values.size(); rowIndex++) {
+                List<Object> rowValues = values.get(rowIndex);
+
+                String colValue = rowValues.get(crawler.getAddressColumn()).toString();
+                String address = LocationAPI.fetchFormatted(colValue);
+
+                if(address == null) {
                     participants.addUnclassified(new Unclassified(colValue, "invalid location"));
                 }else{
 
-                    final String name = row.get(crawler.getNameColumn()).toString();
-                    final String desig = row.get(crawler.getDesignationColumn()).toString();
+                    final String name = rowValues.get(crawler.getNameColumn()).toString();
+                    final String desig = rowValues.get(crawler.getDesignationColumn()).toString();
 
                     if(crawler.isStringInList(desig, Keywords.DRIVER)) {
-                        final int spots = Integer.parseInt(row.get(crawler.getSpotsColumn()).toString()); // make this parsing process better (account for words for numbers)
+                        final int spots = Integer.parseInt(rowValues.get(crawler.getSpotsColumn()).toString()); // make this parsing process better (account for words for numbers)
                         participants.addDriver(new RawDriver(name, address, spots));
                     }else if(crawler.isStringInList(desig, Keywords.RIDER)) {
                         participants.addRider(new Rider(name, address));

@@ -52,6 +52,15 @@ public class MiscTest extends TestCase {
         Assert.assertEquals(true, f.contains("Seattle")); // "Seattle" will be part of the entire address after formatting
     }
 
+    /**
+     * tests to see if addresses are reformatted if they don't given enough information
+     */
+    public void testFormattedAddress2() throws InterruptedException, IOException, URISyntaxException {
+        String f = LocationAPI.fetchFormatted("Lynnwood, WA");
+        System.out.println(f);
+        Assert.assertEquals(true, f.contains("Seattle")); // "Seattle" will be part of the entire address after formatting
+    }
+
     public void testJSONOutput() {
         ArrayList<Driver> drivers = new ArrayList<>();
         drivers.add(new Driver("Charles", "New York", new Car(4)));

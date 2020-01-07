@@ -18,7 +18,6 @@ public class Crawler {
     private final String sheetsID;
 
     private int nameCol = -1, addressCol = -1, designationCol = -1, spotsCol = -1; // default = -1
-    private int startingRow = -1; // starting row that contains all the column sets
 
     /**
      * on initialization, Crawler will store the values given and then utilise them for parsing.
@@ -38,7 +37,6 @@ public class Crawler {
     public int getDesignationColumn() { return designationCol; }
     public int getSpotsColumn() { return spotsCol; }
     public ValueRange getValueRange() { return values; }
-    public int getStartingRow() { return startingRow; }
 
     /**
      * Reads through all the data and notes each column that contains the wanted values (ie. address, name, rider/driver)
@@ -55,16 +53,13 @@ public class Crawler {
                             String f = colValue.toLowerCase();
                             for (String[] items : Keywords.requirements) {
                                 for (String k : items) {
-                                    System.out.println(f + "       " + k);
                                     if (f.contains(k)) { // if the column value contains any of the strings in the two-dimensional array requirements
                                         // set columns for designation if the data columns have not been set already.
                                         if (isStringInList(f, Keywords.ADDRESSES) && addressCol == -1) {
-                                            System.out.println("ADDRESS: " + colValue);
                                             addressCol = colIndex;
                                         }
 
                                         if (isStringInList(f, Keywords.NAMES) && nameCol == -1) {
-                                            System.out.println("NAME" + colValue);
                                             nameCol = colIndex;
                                         }
 
