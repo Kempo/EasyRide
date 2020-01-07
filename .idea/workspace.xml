@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ef7b848-a879-4ab8-b74e-8676da04a11d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/google/MapsAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/Crawler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kempo/easyride/util/RideParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/CrawlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/CrawlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kempo/easyride/util/MiscTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kempo/easyride/util/RideParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +276,7 @@
       <workItem from="1576885321251" duration="1685000" />
       <workItem from="1577668546186" duration="6966000" />
       <workItem from="1577777604347" duration="16986000" />
-      <workItem from="1578271888416" duration="11877000" />
+      <workItem from="1578271888416" duration="13239000" />
     </task>
     <task id="LOCAL-00034" summary="little ui fix. will do more later">
       <created>1516475905131</created>
