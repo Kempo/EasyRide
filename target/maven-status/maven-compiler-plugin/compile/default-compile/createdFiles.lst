@@ -1,7 +1,6 @@
 com/kempo/easyride/util/PersonComparator.class
 com/kempo/easyride/model/AssignedRides.class
 com/kempo/easyride/model/Unclassified.class
-com/kempo/easyride/util/ServerHelper.class
 com/kempo/easyride/App.class
 com/kempo/easyride/application/RideAssigner.class
 com/kempo/easyride/util/RideParser.class
